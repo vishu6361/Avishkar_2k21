@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+.bodyStyle {
+    background-image: url('../img/4.gif');
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+}
+
+.bodyStyle label,.listTab, h4, .btn-lg{
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+}
+
+.prompt {
+    margin-top: 40px;
+    display: none;
+    text-align: center;
+}
+
+.profileSection {
+    display: none;
+}
+
+.listTab {
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.table-responsive {
+    max-height: 300px;
+}
+
+.footer{
+    width: 100%;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.49);
+    
+    margin-top: 100px;
+}
+
+.footer_text {
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    line-height: 150px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.border {
+    border:0px !important;
+}
+
+.btn-color{
+    background-color: #00e3ef;
+    color:white;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color:#00e3ef;
+}
+
+.nav-link{
+    color:#00e3ef;
+}
+

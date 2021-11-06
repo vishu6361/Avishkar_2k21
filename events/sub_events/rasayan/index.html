@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Rasayans - Avishkar 2020</title>
+   <link rel="shortcut icon" href="../favicon.ico">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous">
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+      </script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+   <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+   <link rel="stylesheet" type="text/css" href="../css/demo.css" />
+   <link rel="stylesheet" type="text/css" href="../css/bookblock.css" />
+   <link rel="stylesheet" type="text/css" href="css/component.css" />
+
+   <link rel="stylesheet" href="../../css/my.css"> <!-- Resource style -->
+   <link rel="stylesheet" href="../css/my.css"> <!-- Resource style -->
+   <link rel="stylesheet" href="../../../css/navbar/navbar.css">
+
+      <script src="../js/modernizr.custom.js"></script>
+</head>
+
+<body>
+
+   <nav class="navbar navbar-expand-md navbar-dark">
+		<!--class navbar-expand-md-->
+		<div class="container-fluid">
+		  <a class="navbar-brand pt-0 pb-0" href="../../../index.html">
+			<img class="navbar-items-logo" src="../../../img/Neon_triangle.png" height="80" alt="">
+		  </a>
+	
+		  <button class="navbar-toggler ml-auto pt-0 pb-0" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+	
+		  <div class="collapse navbar-collapse pt-0 pb-0" id="navbarSupportedContent">
+			  <ul class="navbar-nav ml-auto style">
+				<li class="nav-item">
+				  <a class="nav-link font-weight-bold" href="../../../events/">EVENTS</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link font-weight-bold" href="../../../schedule/">SCHEDULE</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link font-weight-bold" href="../../../sponsors/">SPONSORS</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link font-weight-bold" href="../../../team/">TEAM</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link font-weight-bold" id="faq-link" href="../../../faq/">FAQ</a>
+				</li>
+			  </ul>
+			
+			<!--login div container-->
+			<div id="login">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" id="navbarDropdown" role="button" onclick="showPendingRequests()"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-right:12px">
+							<img class="navbar-items-logo" src="../../../img/notification.svg"><span class="badge badge-warning" id="notificationCount"></span></a>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="pendingRequests" style="display: none; background-color: black;">
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<img class="navbar-items-logo" src="../../../img/person.svg">
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="background-color: black;">
+							<a class="dropdown-item" href="../../../profile/index.html" style = "color:#00E3EF;">Profile</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="../../../create team/createteam.html" style = "color:#00E3EF;">Manage Teams</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#" onclick="logout()" style = "color:#00E3EF;">Logout</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+	
+			<div id="notlogin" style="display: none;">
+			  <ul class="navbar-nav ml-auto style">
+				<li class="nav-item">
+				  <a class="nav-link font-weight-bold" href="../../../register/login.html">Login</a>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+	  </nav>
+	
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color:black">Confirmation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <div>
+              <h5 style="color:black"><small>Do you want to accept or reject the request?</small></h5>
+         </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" onclick="acceptRequest()">Accept</button>
+        <button type="button" class="btn btn-primary" onclick="rejectRequest()">Reject</button>
+      </div>
+     </div>
+   </div>
+</div>
+<!--Modal ends here-->
+<!--select team modal start here-->
+<div class="modal" id="selectTeamModal" tabindex="-1" role="dialog" aria-labelledby="selectTeamModalLabel" aria-hidden="true" style="z-index: 5000;">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="selectTeamModalLabel" style="color:black">Select Team to Register</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <select id="teamDropdownMenu">
+       </select>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary" onclick="registerAfterSelectingTeam(event)">Register</button>
+    </div>
+  </div>
+</div>
+</div>
+<!--select team modal ends here-->
+
+   <main class="cd-main-content">
+
+      <header class="header" style="position: relative;">
+         <h1>RASAYANS</h1>
+         
+      </header>
+
+      <div id="scroll-wrap" class="container mybookcont">
+         <div class="main">
+            <div id="bookshelf" class="bookshelf">
+               <figure>
+                  <div class="book" data-book="book-1"></div>
+                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                  <figcaption>
+                     <h2>Quiziosity</h2>
+                  </figcaption>
+                  <div class="details">
+                  </div>
+               </figure>
+               <figure>
+                  <div class="book" data-book="book-2"></div>
+                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                  <figcaption>
+                     <h2>Chemethlon</h2>
+                  </figcaption>
+                  <div class="details">
+                  </div>
+               </figure>
+               <figure>
+                  <div class="book" data-book="book-3"></div>
+                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                  <figcaption>
+                     <h2>Compress-e-xcel</h2>
+                  </figcaption>
+                  <div class="details">
+                  </div>
+               </figure>
+               <figure>
+                  <div class="book" data-book="book-4"></div>
+                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                  <figcaption>
+                     <h2>INDUSTRIAL DESIGN PROBLEM</h2>
+                  </figcaption>
+                  <div class="details">
+                  </div>
+               </figure>
+               <figure>
+                  <div class="book" data-book="book-5"></div>
+                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                  <figcaption>
+                     <h2>ChemQ</h2>
+                  </figcaption>
+                  <div class="details">
+                  </div>
+               </figure>
+               <figure>
+                  <div class="book" data-book="book-6"></div>
+                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                  <figcaption>
+                     <h2>Simulazione</h2>
+                  </figcaption>
+                  <div class="details">
+                  </div>
+               </figure>
+            </div>
+         </div>
+         <!-- /main -->
+      </div>
+
+
+      <div>
+         <h3 style="text-align:center;font-family: 'Orbitron',sans-serif;font-size: 2.3em;margin-top: 2%;color:white;">
+            Branch Coordinator's
+         </h3>
+         <!-- Button Container -->
+         <div id="btns">
+            <!-- Start Button 1 -->
+            <div class="btn">
+               <div class="btn-inner">
+                  <div class="btn-top">
+                     <!-- Icon -->
+                     <!-- Title -->
+                     <h4>Saurabh Verma</h4>
+                  </div>
+                  <!-- End ButtonTop -->
+                  <div class="btn-bottom">
+                     <!-- Icon -->
+                     <!-- Title -->
+                     <h4>Saurabh Verma</h4>
+                     <!-- Text -->
+                     <p>8400352478<br>vermasaurabh1999@gmail.com</p>
+                     <!-- End Button Bottom -->
+                  </div>
+                  <!-- End Button Inner -->
+               </div>
+               <!-- End Button 1 -->
+            </div>
+            <!-- Start Button 2 -->
+            <div class="btn">
+               <div class="btn-inner">
+                  <div class="btn-top">
+                     <!-- Icon -->
+                     <!-- Title -->
+                     <h4>Nitesh</h4>
+                  </div>
+                  <!-- End ButtonTop -->
+                  <div class="btn-bottom">
+                     <!-- Icon -->
+                     <!-- Title -->
+                     <h4>Nitesh</h4>
+                     <!-- Text -->
+                     <p>8708649151<br>niteshsharma241529@gmail.com</p>
+                     <!-- End Button Bottom -->
+                  </div>
+                  <!-- End Button Inner -->
+               </div>
+               <!-- End Button 2 -->
+            </div>
+
+
+         </div>
+
+         <!-- /container -->
+         <!-- Fullscreen BookBlock -->
+         <!-- for demo purpose we repeat each bookblock -->
+         <div class="bb-custom-wrapper" id="book-1">
+            <div class="bb-bookblock">
+               <div class="bb-item">
+                  <div class="bb-custom-side page-layout-1">
+                     <h3>
+                        Rasayans<span>Quiziosity</span>
+                     </h3>
+                  </div>
+                  <div class="bb-custom-side page-layout-1">
+                     <p>“Sometimes the hardest pieces of a puzzle to assemble, are the ones missing from the box”
+                     </p>
+                     <div class="d-flex justify-content-center download-list">
+                        <button type="button" style="margin: 5px; display: none;" data-event-id="quiziosity" class="btn btn-success download-list">Download List</button>
+                     </div>
+                     <div class="d-flex justify-content-center register-button" style="left: 50%; top: 70%;">
+                        <button type="button" id="quiziosityButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item">
+                  <div class="bb-custom-side page-layout-2">
+                     <div>
+                        <h3>About</h3>
+                        <p>Put on your thinking caps as Rasayans ’20 brings to you its flagship puzzling event. Get ready to experience mind boggling brain teasers, trivia and logical puzzles as this event tests your wits and unlocks new levels of thinking. Connect the dots, crack the clues and emerge victorious in this fun-filled extravaganza.
+                        </p>
+                     </div>
+                     <div>
+                        <h3 style="font-size: 2em">Participation Criteria</h3>
+                        <p><u>Team size</u> : 1 - 2</p>
+                        <p><u>Years participating</u> :<br>
+                           <ul>
+                              <li>II year</li>
+                              <li>III year</li>
+                           </ul>
+                        </p>
+                        <p>Open to all branches. No branch or year restriction in team formation (except final year)                        </p>
+                     </div>
+                  </div>
+                  <div class="bb-custom-side page-layout-2">
+                     <div>
+                        <h3 style="font-size: 2em">Contact Info</h3>
+                        <p>
+                           <ul>
+                              <li>Yogen Sood          <ul>
+                                    <li>yogensood99@gmail.com</li>
+                                    <li>9814489296</li>
+                                 </ul>
+                              </li>
+                              <li>Manas Sharma      <ul>
+                                    <li>manas.anp.sharma@gmail.com</li>
+                                    <li>9452460030</li>
+                                 </ul>
+                              </li>
+                              <li>Jigesha Yadav       <ul>
+                                    <li>jigeshayadav@gmail.com</li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </p>
+                     </div>
+                     <div>
+                        <h3>Rules</h3>
+                        <p>
+                           <u>Round 1:</u><br><br>Puzzles, Brain teasers (Elimination)
+                           <br><br>
+                           <u>Round 2:</u><br><br>Surprise Round  (Finals)<br><br>
+                        </p>
+                     </div>
+                     <div>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- /bb-bookblock -->
+            <nav>
+               <a href="#" class="bb-nav-prev">Previous</a>
+               <a href="#" class="bb-nav-next">Next</a>
+               <a href="#" class="bb-nav-close">Close</a>
+            </nav>
+         </div>
+         <!-- /bb-custom-wrapper -->
+         <div class="bb-custom-wrapper" id="book-2">
+            <div class="bb-bookblock">
+               <div class="bb-item">
+                  <div class="bb-custom-side page-layout-1">
+                     <h3>
+                        Rasayans<span>Chemethlon</span>
+                     </h3>
+                  </div>
+                  <div class="bb-custom-side page-layout-1">
+                     <p>“Why fit in, when you can stand out?”</p>
+                     <div class="d-flex justify-content-center download-list">
+                        <button type="button" style="margin: 5px; display: none;" data-event-id="chemethlon" class="btn btn-success download-list">Download List</button>
+                     </div>
+                     <div class="d-flex justify-content-center register-button" style="left: 50%; top: 70%;">
+                        <button type="button" id="chemethlonButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item">
+                  <div class="bb-custom-side page-layout-2">
+                     <div>
+                        <h3>About</h3>
+                        <p>Feeling the placement woe? Does the campus placement season give you sleepless nights? Team
+                           Rasayans presents ‘Chemethlon’, an exciting brew of aptitude test, communication skills for
+                           group discussion and knowledge for personal interviews. It will not only help you perfect
+                           your techniques but will also allow you to get valuable feedback and coaching on your
+                           performance. An added bonus of preparing and practicing is the self-confidence, which you
+                           will gain. So put your skills to test and advance with a new excitement in the next level.
+
+                        </p>
+                     </div>
+                     <div>
+                        <h3 style="font-size: 2em">Participation Criteria</h3>
+                        <p><u>Team size</u> : Individual</p>
+                        <p><u>Years participating</u> :<br>
+                           <ul>
+                              <li>II year</li>
+                              <li>III year</li>
+                           </ul>
+                        </p>
+                     </div>
+                  </div>
+                  <div class="bb-custom-side page-layout-2">
+                     <div>
+                        <h3 style="font-size: 2em">Contact Info</h3>
+                        <p>
+                           <ul>
+                              <li>Aadisha Singh <ul>
+                                    <li>aadisha.singh27@gmail.com</li>
+                                 </ul>
+                              </li>
+                              <li>Vijay Kumar Shukla <ul>
+                                    <li>vshukla@mnnit.ac.in</li>
+                                    <li>9653072549</li>
+                                 </ul>
+                              </li>
+                              <li>Nishanth Pandey<ul>
+                                    <li>nishanthpandey1234@gmail.com</li>
+                                    <li>8639123320</li>
+                                 </ul>
+                              </li>
+
+                           </ul>
+                        </p>
+                     </div>
+                     <div>
+                        <h3>Rules</h3>
+                        <p>
+                           <u>Round 1:</u><br><br>Aptitude + technical test<br><br>
+                           <u>Round 2:</u><br><br>'Just a minute' - Speak on the allotted topic for a minute. <br><br>
+                           <u>Round 3:</u><br><br>Interviews- Technical (core/consultancy+software) and HR. <br><br>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- /bb-bookblock -->
+            <nav>
+               <a href="#" class="bb-nav-prev">Previous</a>
+               <a href="#" class="bb-nav-next">Next</a>
+               <a href="#" class="bb-nav-close">Close</a>
+            </nav>
+         </div>
+
+         <div class="bb-custom-wrapper" id="book-3">
+            <div class="bb-bookblock">
+               <div class="bb-item">
+                  <div class="bb-custom-side page-layout-1">
+                     <h3>
+                        Rasayans<span>Compress-e-xcel</span>
+                     </h3>
+                  </div>
+                  <div class="bb-custom-side page-layout-1">
+                     <p>“Excel it efficiently”</p>
+                     <div class="d-flex justify-content-center download-list">
+                        <button type="button" style="margin: 5px; display: none;" data-event-id="compressexcel" class="btn btn-success download-list">Download List</button>
+                     </div>
+                     <div class="d-flex justify-content-center register-button">
+                        <button type="button" id="compressexcelButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
+                     </div>
+                     <div class="d-flex justify-content-center download-problem-statement">
+                        <button type="button" style="background-color: darkslategrey; color:white;" class="btn"><a href="https://drive.google.com/file/d/1jlJlg9J9hr811OapDzdFOFmrA4HjqK_I/view?usp=sharing" target="_blank" style="text-transform: capitalize;">Problem Statements</a></button>  
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item">
+                  <div class="bb-custom-side page-layout-2">
+                     <div>
+                        <h3>About</h3>
+                        <p>
+                           Suggest some theoretical point to increase the efficiency and calculate the efficiency on the basis of provided data
+                        </p>
+                     </div>
+                     <div>
+                        <h3 style="font-size: 2em">Participation Criteria</h3>
+                        <p>A team consists of two people with at least one chemical engineering student
+                        </p>
+                     </div>
+                  </div>
+                  <div class="bb-custom-side page-layout-2">
+                     <div>
+                        <h3 style="font-size: 2em">Contact Info</h3>
+                        <p>
+                           <ul>
+                              <li>Shubham Mishra                                 <ul>
+                                    <li>shubhampbh364@gmail.com</li>
+                                    <li>9455917334</li>
+                                 </ul>
+                              </li>
+                              <li>Krishna Raj Singh Hazari<ul>
+                                    <li>srkhazari@gmail.com</li>
+                                    <li>9369001713</li>
+                                 </ul>
+                              </li>
+                              <li>Parikshit Pandey                                 <ul>
+                                    <li>Parikshit@mnnit.ac.in</li>
+                                    <li>8145385684</li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </p>
+                     </div>
+                     <div>
+                        <h3>Rules</h3>
+                        <p>
+                           No elimination round. 
+                        </p>
+                        <p>⦁	First second and third place-winner will be decided on the basis of the outcome of their project.</p>
+                     </div>
+                     <div>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- /bb-bookblock -->
+            <nav>
+               <a href="#" class="bb-nav-prev">Previous</a>
+               <a href="#" class="bb-nav-next">Next</a>
+               <a href="#" class="bb-nav-close">Close</a>
+            </nav>
+         </div>
+
+         <!-- /bb-custom-wrapper -->
+         <div class="bb-custom-wrapper" id="book-4">
+            <div class="bb-bookblock">
+               <div class="bb-item">
+                  <div class="bb-custom-side page-layout-1">
+                     <h3>
+                        Rasayans<span>INDUSTRIAL DESIGN PROBLEM</span>
+                     </h3>
+                  </div>
+                  <div class="bb-custom-side page-layout-1">
+                     <p>"Design is not just what it looks like and feels like. Design is how it works."</p>
+                     <div class="d-flex justify-content-center download-list">
+                        <button type="button" style="margin: 5px; display: none;" data-event-id="industrialdesignproblem" class="btn btn-success download-list">Download List</button>
+                     </div>
+                     <div class="d-flex justify-content-center register-button">
+                        <button type="button" id="industrialdesignproblemButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
+                     </div>
+                     <div class="d-flex justify-content-center download-problem-statement">
+                        <button type="button" style="background-color: darkslategrey; color:white;" class="btn"><a href="https://drive.google.com/drive/folders/1A1ay4-FYgSf4ojep1rZdzM-P_ZcuWeLA?usp=sharing" target="_blank" style="text-transform: capitalize;">Problem Statements</a></button>  
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item">
+                  <div class="bb-custom-side page-layout-2">
+                     <div>
+                        <h3>About</h3>
+                        <p>Industries are an indispensable part of our society. Almost everything we use in our daily lives is manufactured by industries. But what we are unaware of is the number of challenges these 
+                           industries face on a daily basis. The Industrial Design Problem competition requires you to put on your thinking caps and come up with an innovative detailed solution to the problem specified below by presenting your solution in the form of a presentation .
+                           
+                        </p>
+                     </div>
+                     <div>
+                        <h3 style="font-size: 2em">Participation Criteria</h3>
+                        <p>2nd and 3rd  year B-tech Students from Chemical Engineering</p>
+                     </div>
+                  </div>
+                  <div class="bb-custom-side page-layout-2">
+                     <div>
+                        <h3 style="font-size: 2em">Contact Info</h3>
+                        <p>
+                           <ul>
+                              <li>Anshika Srivastava <ul>
+                                    <li>ansisriv17@gmail.com</li>
+                                 </ul>
+                              </li>
+                              <li>Tushar Mittal <ul>
+                                    <li>tusharmittal070@gmail.com </li>
+                                    <li>90689 57631</li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </p>
+                     </div>
+                     <div>
+                        <h3>Rules</h3>
+                        <p>Team size: Two members (at max.)                        </p>
+                        <p><u>1st Round:</u><br><br>Elimination Round<br><br>
+                           <u>2nd Round: Final</u></p>
+                           <p>Format: Presentation Based Event.                           </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- /bb-bookblock -->
+            <nav>
+               <a href="#" class="bb-nav-prev">Previous</a>
+               <a href="#" class="bb-nav-next">Next</a>
+               <a href="#" class="bb-nav-close">Close</a>
+            </nav>
+         </div>
+
+
+         <div class="bb-custom-wrapper" id="book-5">
+            <div class="bb-bookblock">
+               <div class="bb-item">
+                  <div class="bb-custom-side page-layout-1">
+                     <h3>
+                        Rasayans<span>ChemQ</span>
+                     </h3>
+                  </div>
+                  <div class="bb-custom-side page-layout-1">
+                     <p>'Questions are the engines of the intellect , the cerebral machines which convert energy into motion and <br>CURIOSITY TO CONTROLLED INQUIRY' ----David H. Fishcher</p>
+                     <div class="d-flex justify-content-center download-list">
+                        <button type="button" style="margin: 5px; display: none;" data-event-id="chemQ" class="btn btn-success download-list">Download List</button>
+                     </div>
+                     <div class="d-flex justify-content-center register-button" style="left: 50%; top: 80%;">
+                        <button type="button" id="chemQButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item">
+                  <div class="bb-custom-side page-layout-2">
+                     <div>
+                        <h3>About</h3>
+                        <p>Hello Chemical Engineers!<br><br>
+                           Here's an event to find your 'Chemical Quotient' which tests your General Knowledge and conceptual knowledge regarding Chemical Engineering. So, fasten your belts and get your brains working to the solution ... but quick.
+
+                        </p>
+                     </div>
+                     <div>
+                        <h3 style="font-size: 2em">Participation Criteria</h3>
+                        <p>Team of TWO. Atleast one participant should be from Chemical Engineering branch.                        </p>
+                     </div>
+                  </div>
+                  <div class="bb-custom-side page-layout-2">
+                     <div>
+                        <h3 style="font-size: 2em">Contact Info</h3>
+                        <p>
+                           <ul>
+                              <li>Branzil <ul>
+                                    <li>branzil.nbj@gmail.com</li>
+                                    <li>8279951110</li>
+                                 </ul>
+                              </li>
+                              <li>Saumya Somra<ul>
+                                    <li>saumyasomra@mnnit.ac.in</li>
+                                 </ul>
+                              </li>
+                              <li>Shivam Sharma<ul>
+                                 <li>shivamsharma@mnnit.ac.in</li>
+                                    <li>7597601330</li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </p>
+                     </div>
+                     <div>
+                        <h3>Rules</h3>
+                        <p>This is a quiz type event.                        </p>
+                        <p>
+                           <u>Round 1:</u><br><br>Elimination , all teams can participate.
+                           Format - Question answer type (most probably MCQs and One word
+                           Answers and recognise the image type)
+                           Platforms -  Google forms or Hacker earth type <br><br>
+                           <u>Round 2:</u><br><br>Final , Winners will be decided in this round.
+                           Only teams who qualified round 1 can participate.
+                                      Format - Ques-Ans type but via ppt.
+                                      Platform - MS Teams or Similiar with viva type round.<br><br>
+                        </p>
+                        <p>*one special round may be conducted.</p>
+                     </div>
+                     <div>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- /bb-bookblock -->
+            <nav>
+               <a href="#" class="bb-nav-prev">Previous</a>
+               <a href="#" class="bb-nav-next">Next</a>
+               <a href="#" class="bb-nav-close">Close</a>
+            </nav>
+         </div>
+
+
+         <div class="bb-custom-wrapper" id="book-6">
+            <div class="bb-bookblock">
+               <div class="bb-item">
+                  <div class="bb-custom-side page-layout-1">
+                     <h3>
+                        Rasayans<span>Simulazione</span>
+                     </h3>
+                  </div>
+                  <div class="bb-custom-side page-layout-1">
+                     <p>"Think Twice. Code Once"</p>
+                     <div class="d-flex justify-content-center download-list">
+                        <button type="button" style="margin: 5px; display: none;" data-event-id="simulazione" class="btn btn-success download-list">Download List</button>
+                     </div>
+                     <div class="d-flex justify-content-center register-button" style="left: 50%; top: 70%;">
+                        <button type="button" id="simulazioneButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
+                     </div>
+                  </div>
+               </div>
+               <div class="bb-item">
+                  <div class="bb-custom-side page-layout-2">
+                     <div>
+                        <h3>About</h3>
+                        <p>The event will test logical and sequential planning (the basis of all simulations). It also challenges you to think logically and find optimized solution of real world problems on MATLAB. The platform of the event is MATLAB (offline users) or GNU OCTAVE (online users without MATLAB software, all commands same as MATLAB). The classes for event will help you understand and build your own simulation and execute it in MATLAB and GNU OCTAVE. Focus is on coding not on code.
+                        </p>
+                     </div>
+                     <div>
+                        <h3 style="font-size: 2em">Participation Criteria</h3>
+                        <p><u>Team size</u> :  2 for third year
+                           3 for second year
+        (Open to all branches)</p>
+                     </div>
+                  </div>
+                  <div class="bb-custom-side page-layout-2">
+                     <div>
+                        <h3 style="font-size: 2em">Contact Info</h3>
+                        <p>
+                           <ul>
+                              <li>Alok Jaiswal<ul>
+                                    <li> 01121511j@gmail.com</li>
+                                    <li>8175051109 </li>
+                                 </ul>
+                              </li>
+                              <li>Shivam Garg<ul>
+                                 <li>shivamgarg014@gmail.com</li>
+                                    <li>8950627527 </li>
+
+                                 </ul>
+                              </li>
+                           </ul>
+                        </p>
+                     </div>
+                     <div>
+                        <h3>Rules</h3>
+                        <p>Teams can use only MATLAB OR GNU OCTAVE (if MATLAB can not be used / downloaded /installed) based on your preference but not both. Team members can use any platform for practise but will have to go with anyone in rounds. The rounds are as follows:-</p>
+                        <p>
+                           <u>Round 1:</u><br><br>Elimination- Judged by performance in test (puzzles) based on combination of Mathematics, programming and MATLAB commands.                           <br><br>
+                           <u>Round 2:</u><br><br>Final - Final round based on solving real world problem.<br><br>
+
+                        </p>
+                     </div>
+                     <div>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- /bb-bookblock -->
+            <nav>
+               <a href="#" class="bb-nav-prev">Previous</a>
+               <a href="#" class="bb-nav-next">Next</a>
+               <a href="#" class="bb-nav-close">Close</a>
+            </nav>
+         </div>
+
+
+
+   </main>
+   <div class="footer d-flex align-items-center justify-content-center">
+      <p class="footer_text" style="margin-bottom: 0">All Rights Reserved &copy; MNNIT Allahabad, 2020</p>
+   </div>
+   <script src="../js/bookblock.min.js"></script>
+   <script src="../js/classie.js"></script>
+   <script src="../js/bookshelf.js"></script>
+   <script type="text/javascript">
+      $("header").append("<div class='glitch-window'></div>");
+      $("h1.glitched").clone().appendTo(".glitch-window");
+   </script>
+      <script src="../../../js/navbar/main.js"></script> <!-- Resource jQuery -->
+      <script src="../../js/eventRegister.js"></script>
+   
+</body>
+
+</html>

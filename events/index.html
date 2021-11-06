@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="demo-3">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Events | Avishkar 2020</title>
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="./css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="./css/component.css" />
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous">
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      
+	<script src="js/snap.svg-min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Allerta" rel="stylesheet">
+	<!--link rel="stylesheet" href="css/navbar/reset.css"> <!-- CSS reset -->
+	<!--link rel="stylesheet" href="css/navbar/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" type="text/css" href="css/my.css" />
+	<link rel="stylesheet" type="text/css" href="../css/navbar/navbar.css">
+	<style>
+		#myVideo {
+		  	position: relative;
+		  	right: 0;
+		  	bottom: 0;
+		  	min-width: 100%; 
+		  	min-height: 100%;
+		}
+
+		.glitched {
+			font-family: 'Orbitron', sans-serif;
+		}
+	</style>
+</head>
+<body>
+	<!-- <video autoplay muted loop id="myVideo">
+  		<source src="../images/video_ngIQb4dO_F7FJ.mp4" type="video/mp4">
+	</video>
+	 -->
+	<nav class="navbar navbar-expand-md navbar-dark">
+		<!--class navbar-expand-md-->
+		<div class="container-fluid">
+		  <a class="navbar-brand pt-0 pb-0" href="../index.html">
+			<img class="navbar-items-logo" src="../img/Neon_triangle.png" height="80" alt="">
+		  </a>
+	
+		  <button class="navbar-toggler ml-auto pt-0 pb-0" type="button" data-toggle="collapse"
+			data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+	
+		  <div class="collapse navbar-collapse pt-0 pb-0" id="navbarSupportedContent">
+			  <ul class="navbar-nav ml-auto style">
+				<li class="nav-item">
+				  <a class="nav-link font-weight-bold" href="../events/">EVENTS</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link font-weight-bold" href="../schedule/">SCHEDULE</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link font-weight-bold" href="../sponsors/">SPONSORS</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link font-weight-bold" href="../team/">TEAM</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link font-weight-bold" id="faq-link" href="../faq/">FAQ</a>
+				</li>
+			  </ul>
+			
+			<!--login div container-->
+			<div id="login">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" id="navbarDropdown" role="button" onclick="showPendingRequests()"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<img class="navbar-items-logo" src="../img/notification.svg"><span class="badge badge-warning" id="notificationCount"></span></a>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="pendingRequests" style="display: none; background-color: black;">
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<img class="navbar-items-logo" src="../img/person.svg">
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="background-color: black;">
+							<a class="dropdown-item" href="../profile/index.html" style = "color:#00E3EF;">Profile</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="../create team/createteam.html" style = "color:#00E3EF;">Manage Teams</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#" onclick="logout()" style = "color:#00E3EF;">Logout</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+	
+			<div id="notlogin" style="display: none;">
+			  <ul class="navbar-nav ml-auto style">
+				<li class="nav-item">
+				  <a class="nav-link font-weight-bold" href="../register/login.html">Login</a>
+				</li>
+			  </ul>
+			</div>
+		  </div>
+		</div>
+	  </nav>
+	
+	
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel" style="color:black">Confirmation</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+				<div>
+			  		<h5 style="color:black"><small>Do you want to accept or reject the request?</small></h5>
+				</div>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-success" onclick="acceptRequest()">Accept</button>
+			  <button type="button" class="btn btn-primary" onclick="rejectRequest()">Reject</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	<main class="cd-main-content">
+		<div class="container">
+
+			<header class="header" style="position: relative; top:100px;">
+				<!-- <h1 class="glitched">Events</h1> -->
+				<h1 id = "title_heading">
+					Events
+					<!-- <font color="#61bb46">E</font>
+					<font color="#fdb827">v</font>
+					<font color="#f5821f">e</font>
+					<font color="#e03a3e">n</font>
+					<font color="#963d97">t</font>
+					<font color="#009ddc">s</font> -->
+				</h1>
+			</header>
+
+			<section id="grid" class="grid clearfix">
+				<a href="sub_events/cyberquest" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+					<figure>
+						<img src="img/1.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="#333">
+							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " />
+						</svg>
+						<figcaption>
+							<h2>Cyberquest</h2>
+							<p>A quest for top notch programmers and hackers.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="sub_events/dynamix" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+					<figure>
+						<img src="img/2.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
+							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+						<figcaption>
+							<h2>Aerodynamix</h2>
+							<p>The winner isn't the one who is the fastest but the one who refuses to lose.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="sub_events/electromania" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+					<figure>
+						<img src="img/3.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
+							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+						<figcaption>
+							<h2>Electromania</h2>
+							<p>Dive into the fascinating world of electronic circuits and silicon chips.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="sub_events/genesis" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+					<figure>
+						<img src="img/4.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
+							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+						<figcaption>
+							<h2>Genesis</h2>
+							<p>Biotech - Splice of life.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="sub_events/mechrocosm" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+					<figure>
+						<img src="img/5.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
+							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+						<figcaption>
+							<h2>MECHROCOSM</h2>
+							<p>A blend of all flavours of mechanical engineering.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="sub_events/nirmaan" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+					<figure>
+						<img src="img/6.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
+							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+						<figcaption>
+							<h2>Nirmaan</h2>
+							<p>It takes both sides to build a bridge.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="sub_events/oligopoly" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+					<figure>
+						<img src="img/7.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
+							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+						<figcaption>
+							<h2>Oligopoly</h2>
+							<p>Show your managerial, leadership, communication skills.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="sub_events/powersurge" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+					<figure>
+						<img src="img/8.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
+							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+						<figcaption>
+							<h2>Powersurge</h2>
+							<p>Let the current within you ameliorate and empower the world.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="sub_events/rasayan" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z"
+					style="margin-right: 1px;">
+					<figure>
+						<img src="img/9.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
+							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+						<figcaption>
+							<h2>RASAYANS</h2>
+							<p>Experience an amalgamation of mind boggling events.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="sub_events/robomania" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+					<figure>
+						<img src="img/10.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
+							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+						<figcaption>
+							<h2>ROBOMANIA</h2>
+							<p>Keep Calm and build robots.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="sub_events/monopoly" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+					<figure>
+						<img src="img/11.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="#333">
+							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " />
+						</svg>
+						<figcaption>
+							<h2>Monopoly</h2>
+							<p>Discover a leader in you, move ahead.</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="sub_events/kreedomania" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z"
+					style="margin-left: -1px;">
+					<figure>
+						<img src="img/12.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="#333">
+							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " />
+						</svg>
+						<figcaption>
+							<h2>Kreedomania</h2>
+							<p>Do you bleed game !!</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="sub_events/gnosiomania" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+					<figure>
+						<img src="img/13.png" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
+							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+						<figcaption>
+							<h2>Gnosiomania</h2>
+							<p>Let the mind boggling begin!!</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+				<a href="sub_events/scienceExhibition/index.html" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+					<figure>
+						<img src="img/14.bmp" />
+						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
+							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
+						<figcaption>
+							<h2>Science Exhibition</h2>
+							<p>Let the creativity begin!!</p>
+							<button>View</button>
+						</figcaption>
+					</figure>
+				</a>
+			</section>
+
+
+
+
+
+		</div><!-- /container -->
+	</main>
+
+	<div class="footer d-flex align-items-center justify-content-center">
+		<p class="footer_text" style="margin-bottom: 0">All Rights Reserved &copy; MNNIT Allahabad, 2020</p>
+	</div>
+
+	<script>
+		(function () {
+
+			function init() {
+				var speed = 300,
+					easing = mina.backout;
+
+				[].slice.call(document.querySelectorAll('#grid > a')).forEach(function (el) {
+					var s = Snap(el.querySelector('svg')), path = s.select('path'),
+						pathConfig = {
+							from: path.attr('d'),
+							to: el.getAttribute('data-path-hover')
+						};
+
+					el.addEventListener('mouseenter', function () {
+						path.animate({ 'path': pathConfig.to }, speed, easing);
+					});
+
+					el.addEventListener('mouseleave', function () {
+						path.animate({ 'path': pathConfig.from }, speed, easing);
+					});
+				});
+			}
+
+			init();
+
+		})();
+	</script>
+	<script type="text/javascript">
+		$("header").append("<div class='glitch-window'></div>");
+		$("h1.glitched").clone().appendTo(".glitch-window");
+	</script>
+
+	<script src="../js/navbar/main.js"></script> <!-- Resource jQuery -->
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+		integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

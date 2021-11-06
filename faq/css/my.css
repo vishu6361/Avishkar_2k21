@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+body{
+    background: url("../../img/4.gif");
+    overflow: visible;
+    overflow-x:hidden;
+    background-size:cover;
+    background-repeat: no-repeat; 
+    color:white;
+}
+.accordion {
+  width: 95%;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+}
+.accordion .card {
+  background-color: transparent;
+  color: white;
+}
+
+.accordion .card h2 {
+  font-size: large;
+}
+
+.accordion .card .card-body {
+  padding-left: 2rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color:rgba(0, 0, 0, 1);
+  font-size: 1.4rem;
+}
+
+.card-header {
+  border-width: 2px;
+  border-color: white;
+  cursor: pointer;
+}
+
+
+.footer{
+  width: 100%;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.49);
+
+ }
+ .footer_text{
+  font-size: 18px;
+  color:white;
+  font-weight: 400;
+    text-align: center;
+ }
+
+.title{
+  margin: 30px;
+  font-family: 'Orbitron';
+  font-size: 30px;
+}
+
+.pab-btn{
+  font-size: 20px;
+}
+
+.ans_p{
+  font-size:18px;
+}
+@media only screen and (max-width: 600px) and (min-width: 200px)  {
+    header.header h1{
+        font-size: 3rem;
+        color: #222222;
+        text-align: center;
+        
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+    .glitch-window{
+        display: none;
+    }
+    .cd-logo img {
+      margin-top: -0px;
+       height: 50px;
+    }
+}
+
+/*Toaster color*/
+#toast-container > .toast-success {
+  background-color: green;
+  color:white;
+}
+#toast-container > .toast-error {
+  background-color: red;
+  color:white;
+}
+
+#toast-container > .toast-warning {
+  background-color:yellow;
+  color: white;
+}
+

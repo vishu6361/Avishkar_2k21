@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Nirmaan - Avishkar 2020</title>
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous">
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+      </script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+      </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+      
+      <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+      <link rel="stylesheet" type="text/css" href="../css/demo.css" />
+      <link rel="stylesheet" type="text/css" href="../css/bookblock.css" />
+      <link rel="stylesheet" type="text/css" href="css/component.css" />
+
+      <link rel="stylesheet" href="../../css/my.css"> <!-- Resource style -->
+      <link rel="stylesheet" href="../css/my.css"> <!-- Resource style -->
+      <link rel="stylesheet" href="../../../css/navbar/navbar.css">
+
+      <script src="../js/modernizr.custom.js"></script>
+   </head>
+   <body>
+
+      
+      <nav class="navbar navbar-expand-md navbar-dark">
+         <!--class navbar-expand-md-->
+         <div class="container-fluid">
+           <a class="navbar-brand pt-0 pb-0" href="../../../index.html">
+            <img class="navbar-items-logo" src="../../../img/Neon_triangle.png" height="80" alt="">
+           </a>
+      
+           <button class="navbar-toggler ml-auto pt-0 pb-0" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+           </button>
+      
+           <div class="collapse navbar-collapse pt-0 pb-0" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto style">
+               <li class="nav-item">
+                 <a class="nav-link font-weight-bold" href="../../../events/">EVENTS</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link font-weight-bold" href="../../../schedule/">SCHEDULE</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link font-weight-bold" href="../../../sponsors/">SPONSORS</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link font-weight-bold" href="../../../team/">TEAM</a>
+               </li>
+               <li class="nav-item">
+                 <a class="nav-link font-weight-bold" id="faq-link" href="../../../faq/">FAQ</a>
+               </li>
+              </ul>
+            
+            <!--login div container-->
+            <div id="login">
+               <ul class="navbar-nav ml-auto">
+                  <li class="nav-item dropdown">
+                     <a class="nav-link" href="#" id="navbarDropdown" role="button" onclick="showPendingRequests()"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-right:12px">
+                        <img class="navbar-items-logo" src="../../../img/notification.svg"><span class="badge badge-warning" id="notificationCount"></span></a>
+                     </a>
+                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="pendingRequests" style="display: none; background-color: black;">
+                     </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="navbar-items-logo" src="../../../img/person.svg">
+                     </a>
+                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="background-color: black;">
+                        <a class="dropdown-item" href="../../../profile/index.html" style = "color:#00E3EF;">Profile</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../../../create team/createteam.html" style = "color:#00E3EF;">Manage Teams</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#" onclick="logout()" style = "color:#00E3EF;">Logout</a>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+      
+            <div id="notlogin" style="display: none;">
+              <ul class="navbar-nav ml-auto style">
+               <li class="nav-item">
+                 <a class="nav-link font-weight-bold" href="../../../register/login.html">Login</a>
+               </li>
+              </ul>
+            </div>
+           </div>
+         </div>
+        </nav>
+      
+	
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="exampleModalLabel" style="color:black">Confirmation</h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+				<div>
+			  		<h5 style="color:black"><small>Do you want to accept or reject the request?</small></h5>
+				</div>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-success" onclick="acceptRequest()">Accept</button>
+			  <button type="button" class="btn btn-primary" onclick="rejectRequest()">Reject</button>
+			</div>
+		  </div>
+		</div>
+	</div>
+<!--Modal ends here-->
+<!--select team modal start here-->
+<div class="modal" id="selectTeamModal" tabindex="-1" role="dialog" aria-labelledby="selectTeamModalLabel" aria-hidden="true" style="z-index: 5000;">
+   <div class="modal-dialog" role="document">
+     <div class="modal-content">
+       <div class="modal-header">
+         <h5 class="modal-title" id="selectTeamModalLabel" style="color:black">Select Team to Register</h5>
+         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>
+       <div class="modal-body">
+         <select id="teamDropdownMenu">
+          </select>
+       </div>
+       <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         <button type="button" class="btn btn-primary" onclick="registerAfterSelectingTeam(event)">Register</button>
+       </div>
+     </div>
+   </div>
+ </div>
+ <!--select team modal ends here-->
+
+      <main class="cd-main-content">
+
+         <header class="header" style="position: relative;">
+               <h1>NIRMAAN</h1>
+         </header>
+
+      <div id="scroll-wrap" class="container mybookcont">
+         <div class="main">
+            <div id="bookshelf" class="bookshelf">
+               <figure>
+                  <div class="book" data-book="book-1"></div>
+                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                  <figcaption>
+                     <h2>Linkidge</h2>
+                  </figcaption>
+                  <div class="details">
+                  </div>
+               </figure>
+               <figure>
+                  <div class="book" data-book="book-2"></div>
+                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                  <figcaption>
+                     <h2>Constrengtho</h2>
+                  </figcaption>
+                  <div class="details">
+                  </div>
+               </figure>
+               <figure>
+                  <div class="book" data-book="book-3"></div>
+                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                  <figcaption>
+                     <h2>Ziggurare</h2>
+                  </figcaption>
+                  <div class="details">
+                  </div>
+               </figure>
+               <figure>
+                  <div class="book" data-book="book-4"></div>
+                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                  <figcaption>
+                     <h2>Cognizance</h2>
+                  </figcaption>
+                  <div class="details">
+                  </div>
+               </figure>
+               <figure>
+                  <div class="book" data-book="book-5"></div>
+                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                  <figcaption>
+                     <h2>Terraquiz</h2>
+                  </figcaption>
+                  <div class="details">
+                  </div>
+               </figure>
+               <figure>
+                  <div class="book" data-book="book-6"></div>
+                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                  <figcaption>
+                     <h2>Ppt-Con</h2>
+                  </figcaption>
+                  <div class="details">
+                  </div>
+               </figure>
+               <figure>
+                  <div class="book" data-book="book-7"></div>
+                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                  <figcaption>
+                     <h2>SHUTTER UP</h2>
+                  </figcaption>
+                  <div class="details">
+                  </div>
+               </figure>
+            </div>
+         </div>
+         <!-- /main -->
+      </div>
+
+
+      <div>
+            <h3 style="text-align:center;font-family: 'Orbitron',sans-serif;font-size: 2.3em;margin-top: 2%;color:white;">
+               Branch Coordinator's
+            </h3>
+            <!-- Button Container -->
+         <div id="btns">
+           <!-- Start Button 1 -->
+           <div class="btn" id="btn-1-Nirmaan">
+             <div class="btn-inner">
+               <div class="btn-top">
+                 <!-- Icon -->
+                 <!-- Title -->
+                 <h4>Akshat Jain</h4>
+               </div>
+               <!-- End ButtonTop -->
+               <div class="btn-bottom" id="btn-bottom-exception-component-css-file">
+                 <!-- Icon -->
+                 <!-- Title -->
+                 <h4>Akshat Jain</h4>
+                 <!-- Text -->
+                 <p>7651920675<br>akshat.jain@mnnit.ac.in</p>
+                 <!-- End Button Bottom -->
+               </div>
+               <!-- End Button Inner -->
+             </div>
+             <!-- End Button 1 -->
+           </div>
+           <!-- Start Button 2 -->
+           <div class="btn" id="btn-2-Nirmaan">
+             <div class="btn-inner">
+               <div class="btn-top">
+                 <!-- Icon -->
+                 <!-- Title -->
+                 <h4>Dikshant Singh</h4>
+               </div>
+               <!-- End ButtonTop -->
+               <div class="btn-bottom" id="btn-bottom-exception-component-css-file">
+                 <!-- Icon -->
+                 <!-- Title -->
+                 <h4>Dikshant Singh</h4>
+                 <!-- Text -->
+                  <p>9005427787<br>dikshant.singh@mnnit.ac.in</p>
+                 <!-- End Button Bottom -->
+               </div>
+               <!-- End Button Inner -->
+             </div>
+             <!-- End Button 2 -->
+           </div>
+      </div>
+
+
+      <!-- /container -->
+      <!-- Fullscreen BookBlock -->
+      <!-- for demo purpose we repeat each bookblock -->
+      <div class="bb-custom-wrapper" id="book-1">
+         <div class="bb-bookblock">
+            <div class="bb-item">
+               <div class="bb-custom-side page-layout-1">
+                  <h3>
+                     Nirmaan<span>Linkidge</span>
+                  </h3>
+               </div>
+               <div class="bb-custom-side page-layout-1">
+                  <p>Making your vision come true, that is all what you would do.</p>
+                  <div class="d-flex justify-content-center download-list">
+                     <button type="button" style="margin: 5px; display: none;" data-event-id="linkidge" class="btn btn-success download-list">Download List</button>
+                  </div>
+                  <div class="d-flex justify-content-center register-button">
+                     <button type="button" id="linkidgeButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
+                  </div>
+                  <div class="d-flex justify-content-center download-problem-statement">
+                     <button type="button" style="background-color: darkslategrey; color:white;" class="btn"><a href="#" target="_blank" style="text-transform: capitalize;">Problem Statements</a></button>  
+                  </div>
+               </div>
+            </div>
+            <div class="bb-item">
+               <div class="bb-custom-side page-layout-2">
+                  <div>
+                     <h3>About</h3>
+                     <p>"An idiot can build a bridge that stands but it takes an engineer to build a bridge that barely stands."
+                        This pure technical event will give you a platform where you will visualise, analyse and conceptualize about the structures. The participants will learn about the behaviour of different members of given structure and all that takes to build safe and stable structures.
+                     </p>
+                  </div>
+                  <div>
+                     <h3 style="font-size: 2em">Participation Criteria</h3>
+                      <p><u>Team size</u> : &nbsp;&nbsp; 3</p>
+                      <p>Average CPI of team should be less than 8.4</p>
+                      <p>No cross-year teams allowed</p>
+                      <p>Only civil engineering branch students are allowed</p>
+                  </div>
+               </div>
+               <div class="bb-custom-side page-layout-2">
+                  <div>
+                     <h3 style="font-size: 2em">Contact Info</h3>
+                     <p><ul>
+                     <li>Hrithik Bhardwaj<ul><li>hrithik204@gmail.com</li><li>9621192817</li></ul></li>
+                     <li>Sushantika Singh<ul><li>sushantika0206@gmail.com</li></ul></li>
+                     <li>Akshat Jain<ul><li>akshatjain301200@gmail.com</li><li>7651920675</li></ul></li>
+                     </ul></p>
+                  </div>
+                  <div>
+                        <h3>Rules</h3>
+                     <p><u>Round 1:</u><br><br>Written Test(Quiz)<br><br>
+                        <u>Round 2:</u><br><br>Report Submission<br><br>
+                        <u>Round 3:</u><br><br>Presentation<br><br>
+                        <u>Round 4:</u><br><br>Viva Voce
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- /bb-bookblock -->
+         <nav>
+            <a href="#" class="bb-nav-prev">Previous</a>
+            <a href="#" class="bb-nav-next">Next</a>
+            <a href="#" class="bb-nav-close">Close</a>
+         </nav>
+      </div>
+      <!-- /bb-custom-wrapper -->
+      <div class="bb-custom-wrapper" id="book-2">
+         <div class="bb-bookblock">
+            <div class="bb-item">
+               <div class="bb-custom-side page-layout-1">
+                  <h3>
+                     Nirmaan<span>Constrengtho</span>
+                  </h3>
+               </div>
+               <div class="bb-custom-side page-layout-1">
+                  <p>Quality is what you should pursue to make solid reputation of your crew</p>
+                  <div class="d-flex justify-content-center download-list">
+                     <button type="button" style="margin: 5px; display: none;" data-event-id="constrengtho" class="btn btn-success download-list">Download List</button>
+                  </div>
+                  <div class="d-flex justify-content-center register-button">
+                     <button type="button" id="constrengthoButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
+                  </div>
+                  <div class="d-flex justify-content-center download-problem-statement">
+                     <button type="button" style="background-color: darkslategrey; color:white;" class="btn"><a href="#" target="_blank" style="text-transform: capitalize;">Problem Statements</a></button>  
+                  </div>
+               </div>
+            </div>
+            <div class="bb-item">
+               <div class="bb-custom-side page-layout-2">
+                  <div>
+                     <h3>About</h3>
+                     <p>Civil engineering is incomplete without knowledge of concrete. All constructions, whether a minor or a major one, require use of concrete. So, the wait is over. Here we are presenting Constrengtho 2020, the best opportunity to test your skill, knowledge and understanding about concrete and to use theoretical concepts to solve real world problems. So, roll up your sleeves and let your passion flow. Read about concrete, explore about concrete and learn about concrete.
+                     </p>
+                  </div>
+                  <div>
+                     <h3 style="font-size: 2em">Participation Criteria</h3>
+                     <p><u>Team size</u> : &nbsp;&nbsp;4(minimum-3)</p>
+                     <p>Average CPI of team should be less than 8.3</p>
+                     <p>No cross-year teams allowed</p>
+                     <p>Only civil engineering branch students are allowed</p>
+                  </div>
+               </div>
+               <div class="bb-custom-side page-layout-2">
+                  <div>
+                     <h3 style="font-size: 2em">Contact Info</h3>
+                     <p><ul>
+                     <li>Anitya Khare<ul><li>anityasagar1999@gmail.com</li><li>9260998971</li></ul></li>
+                     <li>Jagriti Agrawal<ul><li>jagritiagrawalhnd@gmail.com</li></ul></li>
+                     <li>Manmeet Singh<ul><li>manmeetsinghsln@gmail.com</li><li>8948777737</li></ul></li>
+                     </ul></p>
+                  </div>
+                  <div>
+                     <h3>Rules</h3>
+                     <p><u>Round 1:</u><br><br>Quiz<br><br>
+                     <u>Round 2:</u><br><br>Abstract Submission<br><br>
+                     <u>Round 3:</u><br><br>Report Submission<br><br>
+                     <u>Round 4:</u><br><br>Viva Voce
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- /bb-bookblock -->
+         <nav>
+            <a href="#" class="bb-nav-prev">Previous</a>
+            <a href="#" class="bb-nav-next">Next</a>
+            <a href="#" class="bb-nav-close">Close</a>
+         </nav>
+      </div>
+
+      <div class="bb-custom-wrapper" id="book-3">
+         <div class="bb-bookblock">
+            <div class="bb-item">
+               <div class="bb-custom-side page-layout-1">
+                  <h3>
+                     Nirmaan<span>Ziggurare</span>
+                  </h3>
+               </div>
+               <div class="bb-custom-side page-layout-1">
+                  <p>We shape our buildings; thereafter, they shape us</p>
+                  <div class="d-flex justify-content-center download-list">
+                     <button type="button" style="margin: 5px; display: none;" data-event-id="ziggurare" class="btn btn-success download-list">Download List</button>
+                  </div>
+                  <div class="d-flex justify-content-center register-button">
+                     <button type="button" id="ziggurareButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
+                  </div>
+                  <div class="d-flex justify-content-center download-problem-statement">
+                     <button type="button" style="background-color: darkslategrey; color:white;" class="btn"><a href="#" target="_blank" style="text-transform: capitalize;">Problem Statements</a></button>  
+                  </div>
+               </div>
+            </div>
+            <div class="bb-item">
+               <div class="bb-custom-side page-layout-2">
+                  <div>
+                     <h3>About</h3>
+                     <p>Got bored of designing and analysing common structures every day? Ziggurare furnishes you an opportunity to try something new! Civil engineering is a field which is directly linked with practical experiences in constructing structures and models are requisite for analysis of structures and demonstration of many basic engineering concepts
+                     </p>
+                  </div>
+                  <div>
+                     <h3 style="font-size: 2em">Participation Criteria</h3>
+                     <p><u>Team size</u> : &nbsp;&nbsp; 4(minimum-3)</p>
+                     <p>No cross-year teams allowed</p>
+                     <p>Only civil engineering branch students are allowed</p>
+                  </div>
+               </div>
+               <div class="bb-custom-side page-layout-2">
+                  <div>
+                     <h3 style="font-size: 2em">Contact Info</h3>
+                     <p><ul>
+                     <li>Ashish rana<ul><li>rashishsingh40@gmail.com</li><li>9559155678</li></ul></li>
+                     <li>Prashant giri<ul><li>prashant210798@gmail.com</li><li>8854916499</li></ul></li>
+                     <li>Abhishek Kumar<ul><li>abhishekkr7599@gmail.com</li><li>9838816243</li></ul></li>
+                     </ul></p>
+                  </div>
+                  <div>
+                     <h3>Rules</h3>
+                     <p><u>Round 1:</u><br><br>Plan Submission<br><br>
+                     <u>Round 2:</u><br><br>Planning and modelling of given plan<br><br>
+                     <u>Round 3:</u><br><br>Viva Voce
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- /bb-bookblock -->
+         <nav>
+            <a href="#" class="bb-nav-prev">Previous</a>
+            <a href="#" class="bb-nav-next">Next</a>
+            <a href="#" class="bb-nav-close">Close</a>
+         </nav>
+      </div>
+
+      <!-- /bb-custom-wrapper -->
+      <div class="bb-custom-wrapper" id="book-4">
+         <div class="bb-bookblock">
+            <div class="bb-item">
+               <div class="bb-custom-side page-layout-1">
+                  <h3>
+                     Nirmaan<span>Cognizance</span>
+                  </h3>
+               </div>
+               <div class="bb-custom-side page-layout-1">
+                  <p>Come and show us what makes you &quot;YOU&quot;.</p>
+                  <div class="d-flex justify-content-center download-list">
+                     <button type="button" style="margin: 5px; display: none;" data-event-id="cognizance" class="btn btn-success download-list">Download List</button>
+                  </div>
+                  <div class="d-flex justify-content-center register-button">
+                     <button type="button" id="cognizanceButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
+                  </div>
+                  <div class="d-flex justify-content-center download-problem-statement">
+                     <button type="button" style="background-color: darkslategrey; color:white;" class="btn"><a href="#" target="_blank" style="text-transform: capitalize;">Problem Statements</a></button>  
+                  </div>
+               </div>
+            </div>
+            <div class="bb-item">
+               <div class="bb-custom-side page-layout-2">
+                  <div>
+                     <h3>About</h3>
+                     <p>"Beauty gets the attention, personality gets the heart." Abiding by this statement and keeping pace with the modern day requires technical and soft skills in abundance. So, buckle up to test and improve the same and discover hidden aspects of your personality via Cognizance 2k20. A mosaic of arduous challenges, COGNIZANCE provides you with a platform to explore the vast intersecting planes of theoretical reasoning and pragmatism.
+                        Amidst testing times, gear up to step out of your comfort zones, in the comfort of your homes. The event involves aptitude, technical, PI round resembling both campus placements and the selection process in GATE/ESE.
+                     </p>
+                  </div>
+                  <div>
+                     <h3 style="font-size: 2em">Participation Criteria</h3>
+                     <p><u>Team size</u> : &nbsp;&nbsp; Individual Event</p>
+                  </div>
+               </div>
+               <div class="bb-custom-side page-layout-2">
+                  <div>
+                     <h3 style="font-size: 2em">Contact Info</h3>
+                     <p><ul>
+                     <li>Abhijay Shukla<ul><li>shuklaabhijay2013@gmail.com</li><li>9793513083</li></ul></li>
+                     <li>Anubhav Pathak<ul><li>pathakanubhav9935@gmail.com</li><li>7355924030</li></ul></li>
+                     <li>Pulkit Garg<ul><li>pulkitgarg100@gmail.com</li><li>8384894969</li></ul></li>
+                     </ul></p>
+                  </div>
+                  <div>
+                     <h3>Rules</h3>
+                     <p><u>Round 1:</u><br><br>Written Test<br><br>
+                     <u>Round 2:</u><br><br>Surprise Round<br><br>
+                     <u>Round 3:</u><br><br>Personal Interview
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- /bb-bookblock -->
+         <nav>
+            <a href="#" class="bb-nav-prev">Previous</a>
+            <a href="#" class="bb-nav-next">Next</a>
+            <a href="#" class="bb-nav-close">Close</a>
+         </nav>
+      </div>
+      <!-- /bb-custom-wrapper -->
+      <div class="bb-custom-wrapper" id="book-5">
+         <div class="bb-bookblock">
+            <div class="bb-item">
+               <div class="bb-custom-side page-layout-1">
+                  <h3>
+                     Nirmaan<span>Terraquiz</span>
+                  </h3>
+               </div>
+               <div class="bb-custom-side page-layout-1">
+                  <p>I&#39;m not going to kill you. I&#39;m just gonna Quiz you really really bad</p>
+                  <div class="d-flex justify-content-center download-list">
+                     <button type="button" style="margin: 5px; display: none;" data-event-id="terraquiz" class="btn btn-success download-list">Download List</button>
+                  </div>
+                  <div class="d-flex justify-content-center register-button">
+                     <button type="button" id="terraquizButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
+                  </div>
+                  <div class="d-flex justify-content-center download-problem-statement">
+                     <button type="button" style="background-color: darkslategrey; color:white;" class="btn"><a href="#" target="_blank" style="text-transform: capitalize;">Problem Statements</a></button>  
+                  </div>
+               </div>
+            </div>
+            <div class="bb-item">
+               <div class="bb-custom-side page-layout-2">
+                  <div>
+                     <h3>About</h3>
+                     <p>"If you are curious, you'll find the puzzles around you. If you are determined, you will solve them.”
+                        So, figure out your knowledge and luck in the tri-round event TERRAQUIZ. Find your mates and check your aptitude potential, answer general knowledge questions, solve trivia’s and puzzles with a pinch of civil engineering experience.
+                     </p>
+                  </div>
+                  <div>
+                     <h3 style="font-size: 2em">Participation Criteria</h3>
+                     <p><u>Team size</u> : &nbsp;&nbsp; 3</p>
+                     <p>Average CPI of team should be less than 8.4</p>
+                     <p>No cross-year teams allowed</p>
+                     <p>Inter branch teams allowed (Minimum 1 &nbsp; from civil and others from any branch)</p>
+                  </div>
+               </div>
+               <div class="bb-custom-side page-layout-2">
+                  <div>
+                     <h3 style="font-size: 2em">Contact Info</h3>
+                      <p><ul>
+                     <li>Mukesh Kumar Mukul<ul><li>mukeshgautam1999@gmail.com</li><li>6306041954</li></ul></li>
+                     <li>Rahul Kumar<ul><li>rahul109915@gmail.com</li><li>9973969649</li></ul></li>
+                     <li>Ayush Kumar Singh<ul><li>ayushkumarsingh777@gmail.com</li><li>7906730193</li></ul></li>
+                     </ul></p>
+                  </div>
+                  <div>
+                     <h3>Rules</h3>
+                     <p><u>Round 1:</u><br><br>Aptitude &amp; Logical Reasoning Round<br><br>
+                     <u>Round 2:</u><br><br>Technical Round<br><br>
+                     <u>Round 3:</u><br><br>Quiz Round
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div> 
+         <!-- /bb-bookblock -->
+         <nav>
+            <a href="#" class="bb-nav-prev">Previous</a>
+            <a href="#" class="bb-nav-next">Next</a>
+            <a href="#" class="bb-nav-close">Close</a>
+         </nav>
+      </div>
+
+      <div class="bb-custom-wrapper" id="book-6">
+         <div class="bb-bookblock">
+            <div class="bb-item">
+               <div class="bb-custom-side page-layout-1">
+                  <h3>
+                     Nirmaan<span>PPT-CON</span>
+                  </h3>
+               </div>
+               <div class="bb-custom-side page-layout-1">
+                  <p>Slide your ideas through presentation</p>
+                  <div class="d-flex justify-content-center download-list">
+                     <button type="button" style="margin: 5px; display: none;" data-event-id="pptcon" class="btn btn-success download-list">Download List</button>
+                  </div>
+                  <div class="d-flex justify-content-center register-button">
+                     <button type="button" id="pptconButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
+                  </div>
+                  <div class="d-flex justify-content-center download-problem-statement">
+                     <button type="button" style="background-color: darkslategrey; color:white;" class="btn"><a href="#" target="_blank" style="text-transform: capitalize;">Problem Statements</a></button>  
+                  </div>
+               </div>
+            </div>
+            <div class="bb-item">
+               <div class="bb-custom-side page-layout-2">
+                  <div>
+                     <h3>About</h3>
+                     <p>"The ability to express an idea is well-nigh as important as the idea itself."
+                        So, we are here with an event which will give you a platform to learn and develop presentation and communication skills and will give you an open environment to show your creativity. Topics will be related to your given areas of interest whether technical or non-technical.
+                     </p>
+                  </div>
+                  <div>
+                     <h3 style="font-size: 2em">Participation Criteria</h3>
+                      <p><u>Team size</u> : &nbsp;&nbsp; 4(minimum-3)</p>
+                      <p>No cross-year teams allowed</p>
+                     <p>Only civil engineering branch students are allowed</p>
+                  </div>
+               </div>
+               <div class="bb-custom-side page-layout-2">
+                  <div>
+                     <h3 style="font-size: 2em">Contact Info</h3>
+                     <p><ul>
+                     <li>Harleen Kaur<ul><li>harleenhora48@gmail.com</li></ul></li>
+                     <li>Arunabh Srivastava<ul><li>arunabh.srivastava99@gmail.com</li><li>9115004616</li></ul></li>
+                     <li>Aishwarya Rai<ul><li>aish.mnnit99@gmail.com</li></ul></li>
+                     </ul></p>
+                  </div>
+                  <div>
+                        <h3>Rules</h3>
+                     <p><u>Round 1:</u><br><br>Synopsis<br><br>
+                     <u>Round 2:</u><br><br>PPT Round<br><br>
+                     <u>Round 3:</u><br><br>Viva Voce
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- /bb-bookblock -->
+         <nav>
+            <a href="#" class="bb-nav-prev">Previous</a>
+            <a href="#" class="bb-nav-next">Next</a>
+            <a href="#" class="bb-nav-close">Close</a>
+         </nav>
+      </div>
+
+      <div class="bb-custom-wrapper" id="book-7">
+         <div class="bb-bookblock">
+            <div class="bb-item">
+               <div class="bb-custom-side page-layout-1">
+                  <h3>
+                     Nirmaan<span>Shutter Up</span>
+                  </h3>
+               </div>
+               <div class="bb-custom-side page-layout-1">
+                  <p>Capturing life. Creating Art.</p>
+                  <div class="d-flex justify-content-center download-list">
+                     <button type="button" style="margin: 5px; display: none;" data-event-id="shutterup" class="btn btn-success download-list">Download List</button>
+                  </div>
+                  <div class="d-flex justify-content-center register-button">
+                     <button type="button" id="shutterupButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
+                  </div>
+                  <div class="d-flex justify-content-center download-problem-statement">
+                     <button type="button" style="background-color: darkslategrey; color:white;" class="btn"><a href="#" target="_blank" style="text-transform: capitalize;">Problem Statements</a></button>  
+                  </div>
+               </div>
+            </div>
+            <div class="bb-item">
+               <div class="bb-custom-side page-layout-2">
+                  <div>
+                     <h3>About</h3>
+                     <p>Do you love to capture the interesting and beautiful scenes around you? Do you stay up at nights worrying about “composition”? If yes, then look no further. The NIRMAAN's Online Photography Contest “SHUTTER UP” to you! Take out your cameras and smartphones and
+                        click away!</p>
+                  </div>
+                  <div>
+                     <h3 style="font-size: 2em">Participation Criteria</h3>
+                      <p><u>Team size</u> : Individual event</p>
+                      <p>Open to all</p>
+                  </div>
+               </div>
+               <div class="bb-custom-side page-layout-2">
+                  <div>
+                     <h3 style="font-size: 2em">Contact Info</h3>
+                     <p><ul>
+                     <li>Himalay Naik<ul><li>himalaynaik@hotmail.com</li><li>9935080009</li></ul></li>
+                     <li>Vimal Kumar<ul><li>vimal.singh671@gmail.com</li><li>8789775378</li></ul></li>
+                     <li>Ankit Kumar Tripathi<ul><li>aktripathi00001@gmail.com</li><li>8318613153</li></ul></li>
+                     </ul></p>
+                  </div>
+                  <div>
+                        <h3>Rules</h3>
+                     <p><u>Round 1:</u><br><br>Single round Online Event (Photo Submission)<br><br>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- /bb-bookblock -->
+         <nav>
+            <a href="#" class="bb-nav-prev">Previous</a>
+            <a href="#" class="bb-nav-next">Next</a>
+            <a href="#" class="bb-nav-close">Close</a>
+         </nav>
+      </div>
+
+      </main>
+      <div class="footer d-flex align-items-center justify-content-center">
+         <p class="footer_text" style="margin-bottom: 0">All Rights Reserved &copy; MNNIT Allahabad, 2020</p>
+       </div>
+      <script src="../js/bookblock.min.js"></script>
+      <script src="../js/classie.js"></script>
+      <script src="../js/bookshelf.js"></script>
+      <script type="text/javascript">
+         $("header").append("<div class='glitch-window'></div>");
+         $( "h1.glitched" ).clone().appendTo( ".glitch-window" );
+      </script>
+         <script src="../../../js/navbar/main.js"></script> <!-- Resource jQuery -->
+         <script src="../../js/eventRegister.js"></script>
+      
+   </body>
+</html>
