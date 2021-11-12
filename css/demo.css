@@ -164,6 +164,7 @@ a:focus {
 .content {
 	overflow: hidden;
 	padding: 0;
+	opacity: 0.8;
 }
 
 #scene.clickable{

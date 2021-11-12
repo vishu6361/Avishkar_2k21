@@ -9,3 +9,22 @@
 .dud {
   color: #757575;
 }
+
+@font-face {
+  font-family: Avishkar;
+  src: url(../fonts/metro-retro.regular.ttf);
+}
+
+h1 {
+  font-family: Avishkar;
+}
+
+@font-face {
+  font-family: sub-head;
+  src: url(../fonts/HolleighCaps-yLeZ.ttf);
+}
+
+p {
+  font-family: sub-head;
+  font-size: 24px;
+}
