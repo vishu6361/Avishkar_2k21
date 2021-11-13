@@ -20,11 +20,11 @@ h1 {
 }
 
 @font-face {
-  font-family: sub-head;
-  src: url(../fonts/HolleighCaps-yLeZ.ttf);
+  font-family: slogan1;
+  src: url(../fonts/metro-retro.regular.ttf);
 }
 
 p {
-  font-family: sub-head;
+  font-family: slogan1;
   font-size: 24px;
 }
