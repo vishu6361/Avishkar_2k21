@@ -30,6 +30,7 @@
 	<link href="css/hover.css" rel="stylesheet" media="all">
 	<link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 	<link rel="stylesheet" href="css/my.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/background.css">
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161923538-7"></script>
@@ -45,8 +46,9 @@
 
 <body>
 
+	<div id="canvas_container"></div>
 
-	<nav class="navbar navbar-expand-md navbar-dark">
+	<nav class="navbar navbar-expand-md navbar-dark" style="z-index: 1; margin-top: -100vh;">
 		<!--class navbar-expand-md-->
 		<div class="container-fluid">
 			<a class="navbar-brand pt-0 pb-0" href="../index.html">
@@ -151,9 +153,10 @@
 	<main class="cd-main-content">
 
 		<div class="container">
-			<div class="row" style="margin-top: 50px;font-size:2em">
+			<div class="row" style="margin-top: 50px;font-size:2em;">
 				<h1 class="text-center header"
-					style="color:#e3e9f7 !important;font-family: Allerta;font-size: 5rem;text-shadow: 5px 8px 5px #000080;font-weight: 900;">
+					style="color:#e3e9f7 !important;font-family: Allerta;font-size: 4rem;text-shadow: 5px 8px 5px #000080;font-weight: 900;
+					z-index: 1;">
 					SPONSORS</h1>
 			</div>
 
@@ -358,6 +361,8 @@
 		<p class="footer_text" style="margin-bottom: 0">All Rights Reserved &copy; MNNIT Allahabad, 2020</p>
 	</div>
 	<script src="../js/navbar/main.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js'></script>
+	<script src="js/background.js"></script>
 
 </body>
 
