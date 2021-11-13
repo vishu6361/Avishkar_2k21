@@ -1,194 +1,205 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Electromania - Avishkar 2020</title>
-      <link rel="shortcut icon" href="../favicon.ico">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-		integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous">
-      </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-      </script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-      </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-      
-      <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
-      <link rel="stylesheet" type="text/css" href="../css/demo.css" />
-      <link rel="stylesheet" type="text/css" href="../css/bookblock.css" />
-      <link rel="stylesheet" type="text/css" href="css/component.css" />
 
-      <link rel="stylesheet" href="../../css/my.css"> <!-- Resource style -->
-      <link rel="stylesheet" href="../css/my.css"> <!-- Resource style -->
-      <link rel="stylesheet" href="../../../css/navbar/navbar.css">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electromania - Avishkar 2020</title>
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-      <script src="../js/modernizr.custom.js"></script>
-   </head>
-   <body>
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bookblock.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
 
-      
-      <nav class="navbar navbar-expand-md navbar-dark">
-         <!--class navbar-expand-md-->
-         <div class="container-fluid">
-           <a class="navbar-brand pt-0 pb-0" href="../../../index.html">
-            <img class="navbar-items-logo" src="../../../img/Neon_triangle.png" height="80" alt="">
-           </a>
-      
-           <button class="navbar-toggler ml-auto pt-0 pb-0" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-           </button>
-      
-           <div class="collapse navbar-collapse pt-0 pb-0" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto style">
-               <li class="nav-item">
-                 <a class="nav-link font-weight-bold" href="../../../events/">EVENTS</a>
-               </li>
-               <li class="nav-item">
-                 <a class="nav-link font-weight-bold" href="../../../schedule/">SCHEDULE</a>
-               </li>
-               <li class="nav-item">
-                 <a class="nav-link font-weight-bold" href="../../../sponsors/">SPONSORS</a>
-               </li>
-               <li class="nav-item">
-                 <a class="nav-link font-weight-bold" href="../../../team/">TEAM</a>
-               </li>
-               <li class="nav-item">
-                 <a class="nav-link font-weight-bold" id="faq-link" href="../../../faq/">FAQ</a>
-               </li>
-              </ul>
-            
-            <!--login div container-->
-            <div id="login">
-               <ul class="navbar-nav ml-auto">
-                  <li class="nav-item dropdown">
-                     <a class="nav-link" href="#" id="navbarDropdown" role="button" onclick="showPendingRequests()"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-right:12px">
-                        <img class="navbar-items-logo" src="../../../img/notification.svg"><span class="badge badge-warning" id="notificationCount"></span></a>
-                     </a>
-                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="pendingRequests" style="display: none; background-color: black;">
-                     </div>
-                  </li>
-                  <li class="nav-item dropdown">
-                     <a class="nav-link" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="navbar-items-logo" src="../../../img/person.svg">
-                     </a>
-                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" style="background-color: black;">
-                        <a class="dropdown-item" href="../../../profile/index.html" style = "color:#00E3EF;">Profile</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="../../../create team/createteam.html" style = "color:#00E3EF;">Manage Teams</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" onclick="logout()" style = "color:#00E3EF;">Logout</a>
-                     </div>
-                  </li>
-               </ul>
+    <link rel="stylesheet" href="../../css/my.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="../css/my.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="../../../css/navbar/navbar.css">
+
+    <script src="../js/modernizr.custom.js"></script>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <!--class navbar-expand-md-->
+        <div class="container-fluid">
+            <a class="navbar-brand pt-0 pb-0" href="../../../index.html">
+                <img class="navbar-items-logo" src="../../../img/Neon_triangle.png" height="80" alt="">
+            </a>
+
+            <button class="navbar-toggler ml-auto pt-0 pb-0" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse pt-0 pb-0" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto style">
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="../../../events/">EVENTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="../../../schedule/">SCHEDULE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="../../../sponsors/">SPONSORS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="../../../team/">TEAM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" id="faq-link" href="../../../faq/">FAQ</a>
+                    </li>
+                </ul>
+
+                <!--login div container-->
+                <div id="login">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button"
+                                onclick="showPendingRequests()" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" style="margin-right:12px">
+                                <img class="navbar-items-logo" src="../../../img/notification.svg"><span
+                                    class="badge badge-warning" id="notificationCount"></span></a>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
+                                id="pendingRequests" style="display: none; background-color: black;">
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img class="navbar-items-logo" src="../../../img/person.svg">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
+                                style="background-color: black;">
+                                <a class="dropdown-item" href="../../../profile/index.html"
+                                    style="color:#00E3EF;">Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="../../../create team/createteam.html"
+                                    style="color:#00E3EF;">Manage Teams</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" onclick="logout()" style="color:#00E3EF;">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="notlogin" style="display: none;">
+                    <ul class="navbar-nav ml-auto style">
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" href="../../../register/login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-      
-            <div id="notlogin" style="display: none;">
-              <ul class="navbar-nav ml-auto style">
-               <li class="nav-item">
-                 <a class="nav-link font-weight-bold" href="../../../register/login.html">Login</a>
-               </li>
-              </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color:black">Confirmation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <h5 style="color:black"><small>Do you want to accept or reject the request?</small></h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="acceptRequest()">Accept</button>
+                    <button type="button" class="btn btn-primary" onclick="rejectRequest()">Reject</button>
+                </div>
             </div>
-           </div>
-         </div>
-        </nav>
-      
-
-	
-	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-		  <div class="modal-content">
-			<div class="modal-header">
-			  <h5 class="modal-title" id="exampleModalLabel" style="color:black">Confirmation</h5>
-			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			  </button>
-			</div>
-			<div class="modal-body">
-				<div>
-			  		<h5 style="color:black"><small>Do you want to accept or reject the request?</small></h5>
-				</div>
-			</div>
-			<div class="modal-footer">
-			  <button type="button" class="btn btn-success" onclick="acceptRequest()">Accept</button>
-			  <button type="button" class="btn btn-primary" onclick="rejectRequest()">Reject</button>
-			</div>
-		  </div>
-		</div>
-	</div>
-<!--Modal ends here-->
-<!--select team modal start here-->
-<div class="modal" id="selectTeamModal" tabindex="-1" role="dialog" aria-labelledby="selectTeamModalLabel" aria-hidden="true" style="z-index: 5000;">
-   <div class="modal-dialog" role="document">
-     <div class="modal-content">
-       <div class="modal-header">
-         <h5 class="modal-title" id="selectTeamModalLabel" style="color:black">Select Team to Register</h5>
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-           <span aria-hidden="true">&times;</span>
-         </button>
-       </div>
-       <div class="modal-body">
-         <select id="teamDropdownMenu">
-          </select>
-       </div>
-       <div class="modal-footer">
-         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-         <button type="button" class="btn btn-primary" onclick="registerAfterSelectingTeam(event)">Register</button>
-       </div>
-     </div>
-   </div>
- </div>
- <!--select team modal ends here-->
+        </div>
+    </div>
+    <!--Modal ends here-->
+    <!--select team modal start here-->
+    <div class="modal" id="selectTeamModal" tabindex="-1" role="dialog" aria-labelledby="selectTeamModalLabel"
+        aria-hidden="true" style="z-index: 5000;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="selectTeamModalLabel" style="color:black">Select Team to Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <select id="teamDropdownMenu">
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary"
+                        onclick="registerAfterSelectingTeam(event)">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--select team modal ends here-->
 
 
-      <main class="cd-main-content">
+    <main class="cd-main-content">
 
-         <header class="header" style="position: relative;">
-               <h1>ELECTROMANIA</h1>
-         </header>
+        <header class="header" style="position: relative;">
+            <h1>ELECTROMANIA</h1>
+        </header>
 
-      <div id="scroll-wrap" class="container mybookcont">
-         <div class="main">
-            <div id="bookshelf" class="bookshelf">
-               <figure>
-                  <div class="book" data-book="book-1"></div>
-                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
-                  <figcaption>
-                     <h2>Circuit of the Day</h2>
-                  </figcaption>
-                  <div class="details">
-                  </div>
-               </figure>
-               <figure>
-                  <div class="book" data-book="book-6"></div>
-                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
-                  <figcaption>
-                     <h2>Codotron</h2>
-                  </figcaption>
-                  <div class="details">
-                  </div>
-               </figure>
-               <figure>
-                  <div class="book" data-book="book-8"></div>
-                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
-                  <figcaption>
-                     <h2>Research Gap</h2>
-                  </figcaption>
-                  <div class="details">
-                  </div>
-               </figure>
-               <!-- <figure>
+        <div id="scroll-wrap" class="container mybookcont">
+            <div class="main">
+                <div id="bookshelf" class="bookshelf">
+                    <figure>
+                        <div class="book" data-book="book-1"></div>
+                        <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                        <figcaption>
+                            <h2>Circuit of the Day</h2>
+                        </figcaption>
+                        <div class="details">
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="book" data-book="book-6"></div>
+                        <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                        <figcaption>
+                            <h2>Codotron</h2>
+                        </figcaption>
+                        <div class="details">
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="book" data-book="book-8"></div>
+                        <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                        <figcaption>
+                            <h2>Research Gap</h2>
+                        </figcaption>
+                        <div class="details">
+                        </div>
+                    </figure>
+                    <!-- <figure>
                   <div class="book" data-book="book-3"></div>
                   <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
                   <figcaption>
@@ -197,25 +208,25 @@
                   <div class="details">
                   </div>
                </figure> -->
-               <figure>
-                  <div class="book" data-book="book-4"></div>
-                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
-                  <figcaption>
-                     <h2> FPGA Design event</h2>
-                  </figcaption>
-                  <div class="details">
-                  </div>
-               </figure>
-               <figure>
-                  <div class="book" data-book="book-5"></div>
-                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
-                  <figcaption>
-                     <h2>Quintathlon</h2>
-                  </figcaption>
-                  <div class="details">
-                  </div>
-               </figure>
-               <!-- <figure>
+                    <figure>
+                        <div class="book" data-book="book-4"></div>
+                        <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                        <figcaption>
+                            <h2> FPGA Design event</h2>
+                        </figcaption>
+                        <div class="details">
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="book" data-book="book-5"></div>
+                        <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                        <figcaption>
+                            <h2>Quintathlon</h2>
+                        </figcaption>
+                        <div class="details">
+                        </div>
+                    </figure>
+                    <!-- <figure>
                   <div class="book" data-book="book-6"></div>
                   <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
                   <figcaption>
@@ -224,51 +235,52 @@
                   <div class="details">
                   </div>
                </figure> -->
-               <figure>
-                  <div class="book" data-book="book-7"></div>
-                  <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
-                  <figcaption>
-                     <h2>InnoDev</h2>
-                  </figcaption>
-                  <div class="details">
-                  </div>
-               </figure>
+                    <figure>
+                        <div class="book" data-book="book-7"></div>
+                        <div class="buttons"><a href="#">View More</a><a href="#"></a></div>
+                        <figcaption>
+                            <h2>InnoDev</h2>
+                        </figcaption>
+                        <div class="details">
+                        </div>
+                    </figure>
+                </div>
             </div>
-         </div>
-         <!-- /main -->
-      </div>
+            <!-- /main -->
+        </div>
 
 
-      <div>
-            <h3 style="text-align:center;font-family: 'Orbitron',sans-serif;font-size: 2.3em;margin-top: 2%;color:white;">
-               Branch Coordinator's
+        <div>
+            <h3
+                style="text-align:center;font-family: 'Orbitron',sans-serif;font-size: 2.3em;margin-top: 2%;color:white;">
+                Branch Coordinator's
             </h3>
             <!-- Button Container -->
-         <div id="btns">
-           <div class="btn" id="btn-1-Electromania">
-             <div class="btn-inner">
-               <div class="btn-top">
-                 <h4>Ashwini Kumar</h4>
-               </div>
-               <div class="btn-bottom" id="btn-bottom-exception-component-css-file">
-                 <h4>Ashwini Kumar</h4>
-                 <p>9031033363<br>ashwini.kumar@mnnit.ac.in</p>
-               </div>
-             </div>
-           </div>
+            <div id="btns">
+                <div class="btn" id="btn-1-Electromania">
+                    <div class="btn-inner">
+                        <div class="btn-top">
+                            <h4>Ashwini Kumar</h4>
+                        </div>
+                        <div class="btn-bottom" id="btn-bottom-exception-component-css-file">
+                            <h4>Ashwini Kumar</h4>
+                            <p>9031033363<br>ashwini.kumar@mnnit.ac.in</p>
+                        </div>
+                    </div>
+                </div>
 
-           <div class="btn" id="btn-2-Electromania">
-             <div class="btn-inner">
-               <div class="btn-top">
-                 <h4>Rohit Raj Anand</h4>
-               </div>
-               <div class="btn-bottom" id="btn-bottom-exception-component-css-file">
-                 <h4>Rohit Raj Anand</h4>
-                  <p>9523816344<br>rohit.raj@mnnit.ac.in</p>
-               </div>
-             </div>
-           </div>
-           <!-- <div class="btn">
+                <div class="btn" id="btn-2-Electromania">
+                    <div class="btn-inner">
+                        <div class="btn-top">
+                            <h4>Rohit Raj Anand</h4>
+                        </div>
+                        <div class="btn-bottom" id="btn-bottom-exception-component-css-file">
+                            <h4>Rohit Raj Anand</h4>
+                            <p>9523816344<br>rohit.raj@mnnit.ac.in</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="btn">
              <div class="btn-inner">
                <div class="btn-top">
                  <i class="fa fa-ship"></i>
@@ -296,70 +308,87 @@
                </div>
             </div>
          </div> -->
-           
-      </div>
-      <!-- /container -->
-      <!-- Fullscreen BookBlock -->
-      <!-- for demo purpose we repeat each bookblock -->
-      <div class="bb-custom-wrapper" id="book-1">
-         <div class="bb-bookblock">
-            <div class="bb-item">
-               <div class="bb-custom-side page-layout-1">
-                  <h3>
-                     Electromania<span>Circuit of the Day</span>
-                  </h3>
-               </div>
-               <div class="bb-custom-side page-layout-1">
-                  <p>Searching is as interesting as finding.</p>
-                  <div class="d-flex justify-content-center download-list">
-                     <button type="button" style="margin: 5px; display: none;" data-event-id="circuitoftheday" class="btn btn-success download-list">Download List</button>
-                  </div>
-                  <div class="d-flex justify-content-center register-button" style="left: 50%; top: 70%;">
-                     <button type="button" id="circuitofthedayButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
-                  </div>
-                  
-               </div>
+
             </div>
-            <div class="bb-item">
-               <div class="bb-custom-side page-layout-2">
-                  <div>
-                     <h3>About</h3>
-                     <p>A week long event which is all about simulation of electronic circuits. An event where you have to think in all multi dimensions which will amalgamate your creativity and your knowledge in electronics. You will have to develop the circuits to solve the real world problems presented one at a time.
-                     </p>
-                  </div>
-                  <div>
-                     <h3 style="font-size: 2em">Participation Criteria</h3>
-                    <ul>
-                      <li>B.Tech. 2nd (ECE+EE) , 3rd (ECE+EE) year students</li>
-                      <li>Team of maximum: 2 (with minimum 1 ECE member)</li>
-                    </ul></p>
-                  </div>
-               </div>
-               <div class="bb-custom-side page-layout-2">
-                  <div>
-                     <h3 style="font-size: 2em">Contact Info</h3>
-                     <p><ul>
-                     <li>Siddharth Suman<ul><li>siddharth322000@gmail.com</li><li>9113403591</li></ul></li>
-                     <li>Vikas Jangid<ul><li>vikasjangid1211@gmail.com</li><li>7300046203</li></ul></li>
-                     <li>Abhishek Kumar Singh<ul><li>abhishek54780@gmail.com</li><li>7054144987</li></ul></li>
-                     </ul></p>
-                  </div>
-                  <div>
-                     <h3>Rules</h3>
-                     <p>7 days, 7 circuit simulation problems having varying level of difficulties and rewards</p>
-                  </div>
-               </div>
+            <!-- /container -->
+            <!-- Fullscreen BookBlock -->
+            <!-- for demo purpose we repeat each bookblock -->
+            <div class="bb-custom-wrapper" id="book-1">
+                <div class="bb-bookblock">
+                    <div class="bb-item">
+                        <div class="bb-custom-side page-layout-1">
+                            <h3>
+                                Electromania<span>Circuit of the Day</span>
+                            </h3>
+                        </div>
+                        <div class="bb-custom-side page-layout-1">
+                            <p>Searching is as interesting as finding.</p>
+                            <div class="d-flex justify-content-center download-list">
+                                <button type="button" style="margin: 5px; display: none;"
+                                    data-event-id="circuitoftheday" class="btn btn-success download-list">Download
+                                    List</button>
+                            </div>
+                            <div class="d-flex justify-content-center register-button" style="left: 50%; top: 70%;">
+                                <button type="button" id="circuitofthedayButtonId"
+                                    style="background-color: darkslategrey; color:white;"
+                                    onclick="registerForEvent(event)" class="btn">Register</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="bb-item">
+                        <div class="bb-custom-side page-layout-2">
+                            <div>
+                                <h3>About</h3>
+                                <p>A week long event which is all about simulation of electronic circuits. An event
+                                    where you have to think in all multi dimensions which will amalgamate your
+                                    creativity and your knowledge in electronics. You will have to develop the circuits
+                                    to solve the real world problems presented one at a time.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 2em">Participation Criteria</h3>
+                                <ul>
+                                    <li>B.Tech. 2nd (ECE+EE) , 3rd (ECE+EE) year students</li>
+                                    <li>Team of maximum: 2 (with minimum 1 ECE member)</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bb-custom-side page-layout-2">
+                            <div>
+                                <h3 style="font-size: 2em">Contact Info</h3>
+                                <p>
+                                <ul>
+                                    <li>Manognya Bokka<ul>
+                                            <li>manognya.bokka@gmail.comm</li>
+                                        </ul>
+                                    </li>
+                                    <li>Keertiman Singh<ul>
+                                            <li>keertimansingh01@gmail.com</li>
+                                            <li>6265671102</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                </p>
+                            </div>
+                            <div>
+                                <h3>Rules</h3>
+                                <p>7 days, 7 circuit simulation problems having varying level of difficulties and
+                                    rewards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /bb-bookblock -->
+                <nav>
+                    <a href="#" class="bb-nav-prev">Previous</a>
+                    <a href="#" class="bb-nav-next">Next</a>
+                    <a href="#" class="bb-nav-close">Close</a>
+                </nav>
             </div>
-         </div>
-         <!-- /bb-bookblock -->
-         <nav>
-            <a href="#" class="bb-nav-prev">Previous</a>
-            <a href="#" class="bb-nav-next">Next</a>
-            <a href="#" class="bb-nav-close">Close</a>
-         </nav>
-      </div>
-      <!-- /bb-custom-wrapper -->
-      <!-- <div class="bb-custom-wrapper" id="book-2">
+            <!-- /bb-custom-wrapper -->
+            <!-- <div class="bb-custom-wrapper" id="book-2">
          <div class="bb-bookblock">
             <div class="bb-item">
                <div class="bb-custom-side page-layout-1">
@@ -406,435 +435,679 @@ Scores of both the rounds will be added for the final results.</p>
                </div>
             </div>
          </div> -->
-         <!-- /bb-bookblock -->
-         <!-- <nav>
+            <!-- /bb-bookblock -->
+            <!-- <nav>
             <a href="#" class="bb-nav-prev">Previous</a>
             <a href="#" class="bb-nav-next">Next</a>
             <a href="#" class="bb-nav-close">Close</a>
          </nav>
       </div> -->
 
-      <div class="bb-custom-wrapper" id="book-8">
-         <div class="bb-bookblock">
-            <div class="bb-item">
-               <div class="bb-custom-side page-layout-1">
-                  <h3>
-                     Electromania<span>Research Gap</span>
-                  </h3>
-               </div>
-               <div class="bb-custom-side page-layout-1">
-                  <p>Microcontrollers to the rescue.</p>
-                  <div class="d-flex justify-content-center download-list">
-                     <button type="button" style="margin: 5px; display: none;" data-event-id="researchgap" class="btn btn-success download-list">Download List</button>
-                  </div>
-                  <div class="d-flex justify-content-center register-button">
-                     <button type="button" id="researchgapButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
-                  </div>
-                  <div class="d-flex justify-content-center download-problem-statement">
-                     <button type="button" style="background-color: darkslategrey; color:white;" class="btn"><a href="https://drive.google.com/file/d/12_XkfGfGlNGgm_MeAx1blLnyg40WtUzU/view?usp=sharing" 
-                        target="_blank" style="text-transform: capitalize;">Problem Statements</a></button>  
-                  </div>
-               </div>
-            </div>
+            <div class="bb-custom-wrapper" id="book-8">
+                <div class="bb-bookblock">
+                    <div class="bb-item">
+                        <div class="bb-custom-side page-layout-1">
+                            <h3>
+                                Electromania<span>Research Gap</span>
+                            </h3>
+                        </div>
+                        <div class="bb-custom-side page-layout-1">
+                            <p>Microcontrollers to the rescue.</p>
+                            <div class="d-flex justify-content-center download-list">
+                                <button type="button" style="margin: 5px; display: none;" data-event-id="researchgap"
+                                    class="btn btn-success download-list">Download List</button>
+                            </div>
+                            <div class="d-flex justify-content-center register-button">
+                                <button type="button" id="researchgapButtonId"
+                                    style="background-color: darkslategrey; color:white;"
+                                    onclick="registerForEvent(event)" class="btn">Register</button>
+                            </div>
+                            <div class="d-flex justify-content-center download-problem-statement">
+                                <button type="button" style="background-color: darkslategrey; color:white;"
+                                    class="btn"><a
+                                        href="https://drive.google.com/file/d/12_XkfGfGlNGgm_MeAx1blLnyg40WtUzU/view?usp=sharing"
+                                        target="_blank" style="text-transform: capitalize;">Problem
+                                        Statements</a></button>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="bb-item">
-               <div class="bb-custom-side page-layout-2">
-                  <div>
-                     <h3>About</h3>
-                     <p>This event aims to help students with ideas to present themselves in front of highly talented people whose research have been published in IEEE or similar journals.
-                     </p>
-                  </div>
-                  <div>
-                     <h3 style="font-size: 2em">Participation Criteria</h3><br>
-                    <ul>
-                      <li>ECE, EE 2nd year and 3rd year</li>
-                      <li>Team of maximum  : Individual</li>
-                    </ul>
-                    <br><br>
-                    <h3 style="font-size: 2em">Contact Info</h3>
-                     <p><ul>
-                     <li>Prateek Anand<ul><li>8400351755</li></ul></li>
-                     <li>Astitva Srivastav<ul><li>8881320109</li></ul></li>
-                     </ul></p>
-                  </div>
-               </div>
-               <div class="bb-custom-side page-layout-2">
-                  <div>
-                     <h3 style="font-size: 2em">Event Rules</h3>
-                     <p><u>Round 1</u><br><br>
-                        Candidates have to submit an abstract of their research which he had done on any of the topics or themes mentioned below. NOTE: plagiarism will not be accepted so avoid copying from any of the websites. Do your own research and write on your own, take help from the internet just to collect information but ideas should be strictly yours.<br><br>
-<u>Round 2</u><br><br> In this round presentation or your research will take place (possibly on MS teams). You have to present your work in front of judges and explain them.</p>
-                     <br><p><font size="4"><u>Note</u></font></p>
-                     <p>
-                        <ul>
-                           <li>On that day only you will have to present paper based on IEEE format. The paper has to be submitted in pdf format</li>
-                           <li>Candidate will be judged on the basis of his quality of work, presentation and way of writing his/her article in IEEE format</li>
-                        </ul>
-                     </p>
-                     <h3 style="font-size: 2em">Themes</h3>
-                     <p>Digital India, Smart City, Smart Agriculture, Swachcha Bharat, E governance</p>
-                  </div>
-                  <div>
-                     <!-- <h3 style="font-size: 2em">Themes</h3>
+                    <div class="bb-item">
+                        <div class="bb-custom-side page-layout-2">
+                            <div>
+                                <h3>About</h3>
+                                <p>This event aims to help students with ideas to present themselves in front of highly
+                                    talented people whose research have been published in IEEE or similar journals.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 2em">Participation Criteria</h3><br>
+                                <ul>
+                                    <li>ECE, EE 2nd year and 3rd year</li>
+                                    <li>Team of maximum : Individual</li>
+                                </ul>
+                                <br><br>
+                                <h3 style="font-size: 2em">Contact Info</h3>
+                                <p>
+                                <ul>
+                                    <li>Prateek Anand<ul>
+                                            <li>8400351755</li>
+                                        </ul>
+                                    </li>
+                                    <li>Astitva Srivastav<ul>
+                                            <li>8881320109</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bb-custom-side page-layout-2">
+                            <div>
+                                <h3 style="font-size: 2em">Event Rules</h3>
+                                <p><u>Round 1</u><br><br>
+                                    Candidates have to submit an abstract of their research which he had done on any of
+                                    the topics or themes mentioned below. NOTE: plagiarism will not be accepted so avoid
+                                    copying from any of the websites. Do your own research and write on your own, take
+                                    help from the internet just to collect information but ideas should be strictly
+                                    yours.<br><br>
+                                    <u>Round 2</u><br><br> In this round presentation or your research will take place
+                                    (possibly on MS teams). You have to present your work in front of judges and explain
+                                    them.
+                                </p>
+                                <br>
+                                <p>
+                                    <font size="4"><u>Note</u></font>
+                                </p>
+                                <p>
+                                <ul>
+                                    <li>On that day only you will have to present paper based on IEEE format. The paper
+                                        has to be submitted in pdf format</li>
+                                    <li>Candidate will be judged on the basis of his quality of work, presentation and
+                                        way of writing his/her article in IEEE format</li>
+                                </ul>
+                                </p>
+                                <h3 style="font-size: 2em">Themes</h3>
+                                <p>Digital India, Smart City, Smart Agriculture, Swachcha Bharat, E governance</p>
+                            </div>
+                            <div>
+                                <!-- <h3 style="font-size: 2em">Themes</h3>
                      <p>Digital India, Smart City, Smart Agriculture, Swachcha Bharat, E governance</p> -->
-                     <!-- <br><br> -->
-                     <h3 style="font-size: 2em">Topics</h3>
-                     <p>
-                        <ul>
-                           <li>Artificial Intelligence</li>
-                           <li>Optical communication</li>
-                           <li>5G/ Mobile communication</li>
-                           <li>Renewable energy resources</li>
-                           <li>Control Systems/ robotics</li>
-                           <li>Embedded</li>
-                           <li>Computer Networking</li>
-                           <li>Blockchain</li>
-                           <li>VLSI design</li>
-                           <li>Analog Electronics</li>
-                           <li>Big data</li>
-                           <li>Cyber security</li>
-                           <li>RT/ Wireless communication</li>
-                           <li>Cyber security</li>
-                           <li>Power and energy system</li>
-                           <li>Sanitization</li>
-                        </ul>
-                     </p>
-                     <!-- <br><br> -->
-                     <p><font size="4"><u>Note</u></font></p>
-                     <p>You can choose any other topic of your choice after approval from the coordinators</p>
-                  </div>
-               </div>
+                                <!-- <br><br> -->
+                                <h3 style="font-size: 2em">Topics</h3>
+                                <p>
+                                <ul>
+                                    <li>Artificial Intelligence</li>
+                                    <li>Optical communication</li>
+                                    <li>5G/ Mobile communication</li>
+                                    <li>Renewable energy resources</li>
+                                    <li>Control Systems/ robotics</li>
+                                    <li>Embedded</li>
+                                    <li>Computer Networking</li>
+                                    <li>Blockchain</li>
+                                    <li>VLSI design</li>
+                                    <li>Analog Electronics</li>
+                                    <li>Big data</li>
+                                    <li>Cyber security</li>
+                                    <li>RT/ Wireless communication</li>
+                                    <li>Cyber security</li>
+                                    <li>Power and energy system</li>
+                                    <li>Sanitization</li>
+                                </ul>
+                                </p>
+                                <!-- <br><br> -->
+                                <p>
+                                    <font size="4"><u>Note</u></font>
+                                </p>
+                                <p>You can choose any other topic of your choice after approval from the coordinators
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /bb-bookblock -->
+                <nav>
+                    <a href="#" class="bb-nav-prev">Previous</a>
+                    <a href="#" class="bb-nav-next">Next</a>
+                    <a href="#" class="bb-nav-close">Close</a>
+                </nav>
             </div>
 
-         </div>
-         <!-- /bb-bookblock -->
-         <nav>
-            <a href="#" class="bb-nav-prev">Previous</a>
-            <a href="#" class="bb-nav-next">Next</a>
-            <a href="#" class="bb-nav-close">Close</a>
-         </nav>
-      </div>
+            <div class="bb-custom-wrapper" id="book-3">
+                <div class="bb-bookblock">
+                    <div class="bb-item">
+                        <div class="bb-custom-side page-layout-1">
+                            <h3>
+                                Electromania<span>Impromptu</span>
+                            </h3>
+                        </div>
+                        <div class="bb-custom-side page-layout-1">
+                            <p>Where spontaneity matters.</p>
+                            <div class="d-flex justify-content-center download-list">
+                                <button type="button" style="margin: 5px; display: none;" data-event-id="impromptu"
+                                    class="btn btn-success download-list">Download List</button>
+                            </div>
+                            <div class="d-flex justify-content-center register-button" style="left: 50%; top: 70%;">
+                                <button type="button" id="impromptuButtonId"
+                                    style="background-color: darkslategrey; color:white;"
+                                    onclick="registerForEvent(event)" class="btn">Register</button>
+                            </div>
 
-      <div class="bb-custom-wrapper" id="book-3">
-         <div class="bb-bookblock">
-            <div class="bb-item">
-               <div class="bb-custom-side page-layout-1">
-                  <h3>
-                     Electromania<span>Impromptu</span>
-                  </h3>
-               </div>
-               <div class="bb-custom-side page-layout-1">
-                  <p>Where spontaneity matters.</p>
-                  <div class="d-flex justify-content-center download-list">
-                     <button type="button" style="margin: 5px; display: none;" data-event-id="impromptu" class="btn btn-success download-list">Download List</button>
-                  </div>
-                  <div class="d-flex justify-content-center register-button" style="left: 50%; top: 70%;">
-                     <button type="button" id="impromptuButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
-                  </div>
-                  
-               </div>
+                        </div>
+                    </div>
+                    <div class="bb-item">
+                        <div class="bb-custom-side page-layout-2">
+                            <div>
+                                <h3>About</h3>
+                                <p>
+                                    Electromania presents you with Impromptu, an on the spot circuit designing event
+                                    which tests
+                                    the fundamentals of an Electronics Engineer, their presence of mind and their
+                                    ability to
+                                    overcome various circuit designing challenges and to solve them with limited
+                                    resources.
+                                    An on-the spot circuit designing event which tests the fundamentals of the
+                                    electronics engineer ,their presence of mind and their ability to overcome various
+                                    circuit designing challenges with limited resources .
+                                </p>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 2em">Participation Criteria</h3>
+                                <ul>
+                                    <li>2nd (ECE+EE) , 3rd (ECE+EE) year students , M.Tech 1st year .</li>
+                                    <li>Team of maximum: 2 , minimum 1 ECE member</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bb-custom-side page-layout-2">
+                            <div>
+                                <h3 style="font-size: 2em">Contact Info</h3>
+                                <p>
+                                <ul>
+                                    <li>Palak Mishra<ul>
+                                            <li>​mishra99palak@gmail.com</li>
+                                        </ul>
+                                    </li>
+                                    <li>Shveta<ul>
+                                            <li>shvetashikha88@gmail.com</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                </p>
+                            </div>
+                            <div>
+                                <h3>Rules</h3>
+                                <p><u>1st Round: Written Round (Objective)</u><br><br>Basic concepts related to
+                                    Electronics are tested.<br><br>
+                                    <u>2nd Round (Only For 2nd Year and 3rd year):</u><br><br>Written Round (Subjective)
+                                    Approach towards solving the circuits is tested.
+                                    <br><br>
+                                    <u>3rd Round: On Spot Circuit Designing:</u><br><br>Problem statements are given and
+                                    you have to present a working model of the same onsite.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /bb-bookblock -->
+                <nav>
+                    <a href="#" class="bb-nav-prev">Previous</a>
+                    <a href="#" class="bb-nav-next">Next</a>
+                    <a href="#" class="bb-nav-close">Close</a>
+                </nav>
             </div>
-            <div class="bb-item">
-               <div class="bb-custom-side page-layout-2">
-                  <div>
-                     <h3>About</h3>
-                     <p>
-                     	Electromania presents you with Impromptu, an on the spot circuit designing event which tests
-the fundamentals of an Electronics Engineer, their presence of mind and their ability to
-overcome various circuit designing challenges and to solve them with limited resources.
-An on-the spot circuit designing event which tests the fundamentals of the electronics engineer ,their presence of mind and their ability to overcome various circuit designing challenges with limited resources .
-                     </p>
-                  </div>
-                  <div>
-                     <h3 style="font-size: 2em">Participation Criteria</h3>
-                     <ul><li>2nd (ECE+EE) , 3rd (ECE+EE) year students , M.Tech 1st year .</li>
-                      <li>Team of maximum: 2 , minimum 1 ECE member</li></ul></p>
-                  </div>
-               </div>
-               <div class="bb-custom-side page-layout-2">
-                  <div>
-                     <h3 style="font-size: 2em">Contact Info</h3>
-                     <p><ul>
-                     <li>Shubham Tripathi <ul><li>9415095093</li><li>​ shubham11ece@gmail.com</li></ul></li>
-                     </ul></p>
-                  </div>
-                  <div>
-                     <h3>Rules</h3>
-                     <p><u>1st Round: Written Round (Objective)</u><br><br>Basic concepts related to Electronics are tested.<br><br>
-<u>2nd Round (Only For 2nd Year and 3rd year):</u><br><br>Written Round (Subjective) Approach towards solving the circuits is tested.
-<br><br>
-<u>3rd Round: On Spot Circuit Designing:</u><br><br>Problem statements are given and you have to present a working model of the same onsite.</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- /bb-bookblock -->
-         <nav>
-            <a href="#" class="bb-nav-prev">Previous</a>
-            <a href="#" class="bb-nav-next">Next</a>
-            <a href="#" class="bb-nav-close">Close</a>
-         </nav>
-      </div>
 
-      <!-- /bb-custom-wrapper -->
-      <div class="bb-custom-wrapper" id="book-4">
-         <div class="bb-bookblock">
-            <div class="bb-item">
-               <div class="bb-custom-side page-layout-1">
-                  <h3>
-                     Electromania<span>FPGA Design event</span>
-                  </h3>
-               </div>
-               <div class="bb-custom-side page-layout-1">
-                  <p>Reinvent future with all programmable devices!</p>
-                  <div class="d-flex justify-content-center download-list">
-                     <button type="button" style="margin: 5px; display: none;" data-event-id="fpga" class="btn btn-success download-list">Download List</button>
-                  </div>
-                  <div class="d-flex justify-content-center register-button">
-                     <button type="button" id="fpgaButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
-                  </div>
-                  <div class="d-flex justify-content-center download-problem-statement">
-                     <button type="button" style="background-color: darkslategrey; color:white;" class="btn"><a href=" https://drive.google.com/file/d/1Tvqvux7pcT-e_Uzw3GHxp23aRn8e3CFb/view?usp=sharing"
-                         target="_blank" style="text-transform: capitalize;">Problem Statements</a></button>  
-                  </div>
-               </div>
+            <!-- /bb-custom-wrapper -->
+            <div class="bb-custom-wrapper" id="book-4">
+                <div class="bb-bookblock">
+                    <div class="bb-item">
+                        <div class="bb-custom-side page-layout-1">
+                            <h3>
+                                Electromania<span>FPGA Design event</span>
+                            </h3>
+                        </div>
+                        <div class="bb-custom-side page-layout-1">
+                            <p>Reinvent future with all programmable devices!</p>
+                            <div class="d-flex justify-content-center download-list">
+                                <button type="button" style="margin: 5px; display: none;" data-event-id="fpga"
+                                    class="btn btn-success download-list">Download List</button>
+                            </div>
+                            <div class="d-flex justify-content-center register-button">
+                                <button type="button" id="fpgaButtonId"
+                                    style="background-color: darkslategrey; color:white;"
+                                    onclick="registerForEvent(event)" class="btn">Register</button>
+                            </div>
+                            <div class="d-flex justify-content-center download-problem-statement">
+                                <button type="button" style="background-color: darkslategrey; color:white;"
+                                    class="btn"><a
+                                        href=" https://drive.google.com/file/d/1Tvqvux7pcT-e_Uzw3GHxp23aRn8e3CFb/view?usp=sharing"
+                                        target="_blank" style="text-transform: capitalize;">Problem
+                                        Statements</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-item">
+                        <div class="bb-custom-side page-layout-2">
+                            <div>
+                                <h3>About</h3>
+                                <p>An event to design with programmable logic devices like FPGA. So gear up with your
+                                    innovative idea and get ready to make your own chip. In this event the very basics
+                                    of your digital electronics concepts and your verilog coding skills will be tested.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 2em">Participation Criteria</h3>
+                                <ul>
+                                    <li>B.Tech. 2nd (ECE+EE) , 3rd (ECE+EE) year students , M.Tech 1st year . </li>
+                                    <li>Team of maximum: 3 (with majority ECE members)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bb-custom-side page-layout-2">
+                            <div>
+                                <h3 style="font-size: 2em">Contact Info</h3>
+                                <p>
+                                <ul>
+                                    <li>Saurabh Kumar Yadav<ul>
+                                            <li>8318623674</li>
+                                            <li>saurabh99184@gmail.com</li>
+                                        </ul>
+                                    </li>
+                                    <li>Ankit Yadav<ul>
+                                            <li>7266857747</li>
+                                            <li>ankit0505yadav@gmail.com</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                </p>
+                            </div>
+                            <div>
+                                <h3>Rules</h3>
+                                <p><u>Round 1:</u><br><br>Abstract submission and progress report. Here the abstract
+                                    would be evaluated and
+                                    the teams would be given green signals.<br><br>
+                                    <u>Round 2:</u><br><br>Simulation result verification.
+                                    <br><br>
+                                    <u>Round 3:</u><br><br>Presentation and working demonstration.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /bb-bookblock -->
+                <nav>
+                    <a href="#" class="bb-nav-prev">Previous</a>
+                    <a href="#" class="bb-nav-next">Next</a>
+                    <a href="#" class="bb-nav-close">Close</a>
+                </nav>
             </div>
-            <div class="bb-item">
-               <div class="bb-custom-side page-layout-2">
-                  <div>
-                     <h3>About</h3>
-                     <p>An event to design with programmable logic devices like FPGA. So gear up with your innovative idea and get ready to make your own chip. In this event the very basics of your digital electronics concepts and your verilog coding skills will be tested.
-                     </p>
-                  </div>
-                  <div>
-                     <h3 style="font-size: 2em">Participation Criteria</h3>
-                      <ul><li>B.Tech.  2nd (ECE+EE) , 3rd (ECE+EE) year students , M.Tech 1st year . </li>
-                        <li>Team of maximum: 3 (with majority ECE members)</li></ul>
-                  </div>
-               </div>
-               <div class="bb-custom-side page-layout-2">
-                  <div>
-                     <h3 style="font-size: 2em">Contact Info</h3>
-                     <p><ul>
-                     <li>Adityan Srivastava<ul><li>8005344146</li></ul></li>
-                     <li>Varun Sharma<ul><li>8887284453</li></ul></li>
-                     </ul></p>
-                  </div>
-                  <div>
-                     <h3>Rules</h3>
-                     <p><u>Round 1:</u><br><br>Abstract submission and progress report. Here the abstract would be evaluated and
-the teams would be given green signals.<br><br>
-<u>Round 2:</u><br><br>Simulation result verification.
-<br><br>
-<u>Round 3:</u><br><br>Presentation and working demonstration.</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- /bb-bookblock -->
-         <nav>
-            <a href="#" class="bb-nav-prev">Previous</a>
-            <a href="#" class="bb-nav-next">Next</a>
-            <a href="#" class="bb-nav-close">Close</a>
-         </nav>
-      </div>
-      <!-- /bb-custom-wrapper -->
-      <div class="bb-custom-wrapper" id="book-5">
-         <div class="bb-bookblock">
-            <div class="bb-item">
-               <div class="bb-custom-side page-layout-1">
-                  <h3>
-                     Electromania<span>Quintathlon</span>
-                  </h3>
-               </div>
-               <div class="bb-custom-side page-layout-1">
-                  <p>An insight into placements.</p>
-                  <div class="d-flex justify-content-center download-list">
-                     <button type="button" style="margin: 5px; display: none;" data-event-id="quintathalon" class="btn btn-success download-list">Download List</button>
-                  </div>
-                  <div class="d-flex justify-content-center register-button" style="left: 50%; top: 70%;">
-                     <button type="button" id="quintathalonButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
-                  </div>
-                  
-               </div>
-            </div>
-            <div class="bb-item">
-               <div class="bb-custom-side page-layout-2">
-                  <div>
-                     <h3>About</h3>
-                     <p>On the lines of actual placement process, each round is based on rounds conducted by major companies that visit during campus placements. The rounds include Online tests followed by interviews.</p>
-                  </div>
-                  <div>
-                     <h3 style="font-size: 2em">Participation Criteria</h3>
-                     <ul><li>B.Tech. 1st  (All branches) , 2nd (ECE) , 3rd  (ECE) year students.</li>
-                      <li>Compulsory for B.Tech 2nd and 3rd year ECE students.</li></ul>
-                  </div>
-               </div>
-               <div class="bb-custom-side page-layout-2">
-                  <div>
-                     <h3 style="font-size: 2em">Contact Info</h3>
-                      <p><ul>
-                     <li>Anupa Saahu<ul><li>anupasaahu13@gmail.com</li></ul></li>
-                     <li>Amisha Agarwal<ul><li>amishaagarwal1998@gmail.com</li></ul></li>
-                     <li>Vatsal Grover<ul><li>8400339198</li></ul></li>
-                     </ul></p>
-                  </div>
-                  <div>
-                     <h3>Rules</h3>
-                     <p><u>Round 1:</u><br><br>ONLINE – 2nd year (1)
-                        3rd year software(2), 3rd year core (1)
-                        Consultancy (optional for 3rd year)<br><br>
-<u>Round 2:</u><br><br>TECHNICAL INTERVIEW – 2nd year (1)
-3rd year software (1), 3rd year core (2)
-<br><br>
-<u>Round 3:</u><br><br>HR INTERVIEW – 2nd year (1)
-3rd year (1)
-Consultancy (optional for 3rd year)
-</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- /bb-bookblock -->
-         <nav>
-            <a href="#" class="bb-nav-prev">Previous</a>
-            <a href="#" class="bb-nav-next">Next</a>
-            <a href="#" class="bb-nav-close">Close</a>
-         </nav>
-      </div>
-      <!-- /bb-custom-wrapper -->
-      <div class="bb-custom-wrapper" id="book-6">
-         <div class="bb-bookblock">
-            <div class="bb-item">
-               <div class="bb-custom-side page-layout-1">
-                  <h3>
-                     Electromania<span>Codotron</span>
-                  </h3>
-               </div>
-               <div class="bb-custom-side page-layout-1">
-                  <p>Magic is not an illusion, it’s an application.</p>
-                  <div class="d-flex justify-content-center download-list">
-                     <button type="button" style="margin: 5px; display: none;" data-event-id="codotron" class="btn btn-success download-list">Download List</button>
-                  </div>
-                  <div class="d-flex justify-content-center register-button" style="left: 50%; top: 70%;">
-                     <button type="button" id="codotronButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
-                  </div>
-               </div>
-            </div>
-            <div class="bb-item">
-               <div class="bb-custom-side page-layout-2">
-                  <div>
-                     <h3>About</h3>
-                     <p>“Make it work, make it right, make it fast.” Codotron is a flagship coding event of Electromania to test competitive programming skills.
-                     </p>
-                  </div>
-                  <div>
-                     <h3 style="font-size: 2em">Participation Criteria</h3>
-                     <p><u>Team size</u> : 3 ( with 1 ECE member )</p>
-                     <p>B.Tech 2nd ( ECE + EE ) , 3rd ( ECE + EE ) year students, M.Tech 1st year</p>
-                  </div>
-               </div>
-               <div class="bb-custom-side page-layout-2">
-                  <div>
-                     <h3 style="font-size: 2em">Contact Info</h3>
-                     <p><ul>
-                     <li>Nikhil Agrawal<ul><li>6396828741</li><li>nikhil.agrawalsrt30@gmail.com</li></ul></li>
-                     <li>Mohit Dogra<ul><li>9882413530 </li><li>​mohit2598@gmail.com</li></ul></li>
-                     </ul></p>
-                  </div>
-                  <div>
-                     <h3>Rules</h3>
-                     <p><u>Online Elimination Round</u><br><br>
-                        There will be MCQ Question and subjective questions. This round is basically to know the software knowledge of participants. Top scorers will get selected for final online round and others will get eliminated.<br><br>
-<u>Online Final Round</u><br><br>
-It is a 5 hours online coding round. It will test your problem modelling and coding skills.</p>
-                  </div>
-               </div>
-            </div>
-          </div>
-         <!-- /bb-bookblock -->
-         <nav>
-            <a href="#" class="bb-nav-prev">Previous</a>
-            <a href="#" class="bb-nav-next">Next</a>
-            <a href="#" class="bb-nav-close">Close</a>
-         </nav>
-      </div> 
-      <!-- /bb-custom-wrapper -->
+            <!-- /bb-custom-wrapper -->
+            <div class="bb-custom-wrapper" id="book-5">
+                <div class="bb-bookblock">
+                    <div class="bb-item">
+                        <div class="bb-custom-side page-layout-1">
+                            <h3>
+                                Electromania<span>Quintathlon</span>
+                            </h3>
+                        </div>
+                        <div class="bb-custom-side page-layout-1">
+                            <p>An insight into placements.</p>
+                            <div class="d-flex justify-content-center download-list">
+                                <button type="button" style="margin: 5px; display: none;" data-event-id="quintathalon"
+                                    class="btn btn-success download-list">Download List</button>
+                            </div>
+                            <div class="d-flex justify-content-center register-button" style="left: 50%; top: 70%;">
+                                <button type="button" id="quintathalonButtonId"
+                                    style="background-color: darkslategrey; color:white;"
+                                    onclick="registerForEvent(event)" class="btn">Register</button>
+                            </div>
 
-      <div class="bb-custom-wrapper" id="book-7">
-         <div class="bb-bookblock">
-            <div class="bb-item">
-               <div class="bb-custom-side page-layout-1">
-                  <h3>
-                     Electromania<span>InnoDev</span>
-                  </h3>
-               </div>
-               <div class="bb-custom-side page-layout-1">
-                  <p>Think twice, code once</p>
-                  <div class="d-flex justify-content-center download-list">
-                     <button type="button" style="margin: 5px; display: none;" data-event-id="innodev" class="btn btn-success download-list">Download List</button>
-                  </div>
-                  <div class="d-flex justify-content-center register-button">
-                     <button type="button" id="innodevButtonId" style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)" class="btn">Register</button>  
-                  </div>
-                  <div class="d-flex justify-content-center download-problem-statement">
-                     <button type="button" style="background-color: darkslategrey; color:white;" class="btn"><a href="https://drive.google.com/file/d/1A0jyxvJ0X6RKyUvDt4wdG2r6-baGgvSC/view?usp=sharing"
-                         target="_blank" style="text-transform: capitalize;">Problem Statements</a></button>  
-                  </div>
-               </div>
+                        </div>
+                    </div>
+                    <div class="bb-item">
+                        <div class="bb-custom-side page-layout-2">
+                            <div>
+                                <h3>About</h3>
+                                <p>On the lines of actual placement process, each round is based on rounds conducted by
+                                    major companies that visit during campus placements. The rounds include Online tests
+                                    followed by interviews.</p>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 2em">Participation Criteria</h3>
+                                <ul>
+                                    <li>B.Tech. 1st (All branches) , 2nd (ECE) , 3rd (ECE) year students.</li>
+                                    <li>Compulsory for B.Tech 2nd and 3rd year ECE students.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bb-custom-side page-layout-2">
+                            <div>
+                                <h3 style="font-size: 2em">Contact Info</h3>
+                                <p>
+                                <ul>
+                                    <li>Mayank Bhola<ul>
+                                            <li>9956680844</li>
+                                            <li>mayank.20185156@mnnit.ac.in</li>
+                                        </ul>
+                                    </li>
+                                    <li>Devansh Shukla<ul>
+                                            <li>7376421517</li>
+                                            <li>devanshjsr@gmail.com</li>
+                                        </ul>
+                                    </li>
+                                    <li>Simran Kumari<ul>
+                                            <li>simrankeshri20@gmail.com</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                </p>
+                            </div>
+                            <div>
+                                <h3>Rules</h3>
+                                <p><u>Round 1:</u><br><br>ONLINE – 2nd year (1)
+                                    3rd year software(2), 3rd year core (1)
+                                    Consultancy (optional for 3rd year)<br><br>
+                                    <u>Round 2:</u><br><br>TECHNICAL INTERVIEW – 2nd year (1)
+                                    3rd year software (1), 3rd year core (2)
+                                    <br><br>
+                                    <u>Round 3:</u><br><br>HR INTERVIEW – 2nd year (1)
+                                    3rd year (1)
+                                    Consultancy (optional for 3rd year)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /bb-bookblock -->
+                <nav>
+                    <a href="#" class="bb-nav-prev">Previous</a>
+                    <a href="#" class="bb-nav-next">Next</a>
+                    <a href="#" class="bb-nav-close">Close</a>
+                </nav>
             </div>
-            <div class="bb-item">
-               <div class="bb-custom-side page-layout-2">
-                  <div>
-                     <h3>About</h3>
-                     <p>Software Development event under Electromania . Each group will be mentored until the completion of the project which can be made on any development platform.
-                     </p>
-                  </div>
-                  <div>
-                     <h3 style="font-size: 2em">Participation Criteria</h3>
-                     <ul><li>B.Tech. 2nd  (ECE+EE) , 3rd (ECE+EE) year students , M.Tech. 1st year .</li><li>Team of maximum: 4 (with at least 1 ECE student)</li></ul>
-                  </div>
-               </div>
-               <div class="bb-custom-side page-layout-2">
-                  <div>
-                     <h3 style="font-size: 2em">Contact Info</h3>
-                     <p><ul>
-                     <li>Ashwini Ojha<ul><li>9031033363</li><li>ojha.ashwini.1998@gmail.com</li></ul></li>
-                     <li>Rohit Anand<ul><li>9523816344</li><li>raj.anand.rohit@gmail.com</li></ul></li>
-                     </ul></p>
-                  </div>
-                  <div>
-                     <h3>Rules</h3>
-                     <p>
-                        <u>Mid-Term Evaluation Round:</u><br><br>Progress is analysed and needful suggestions are provided. <br><br>
-                        <u>Final Evaluation Round:</u><br><br>The project is judged on some criteria, followed by a presentation.
-                     </p>
-                  </div>
-               </div>
+            <!-- /bb-custom-wrapper -->
+            <div class="bb-custom-wrapper" id="book-6">
+                <div class="bb-bookblock">
+                    <div class="bb-item">
+                        <div class="bb-custom-side page-layout-1">
+                            <h3>
+                                Electromania<span>Codotron</span>
+                            </h3>
+                        </div>
+                        <div class="bb-custom-side page-layout-1">
+                            <p>Magic is not an illusion, it’s an application.</p>
+                            <div class="d-flex justify-content-center download-list">
+                                <button type="button" style="margin: 5px; display: none;" data-event-id="codotron"
+                                    class="btn btn-success download-list">Download List</button>
+                            </div>
+                            <div class="d-flex justify-content-center register-button" style="left: 50%; top: 70%;">
+                                <button type="button" id="codotronButtonId"
+                                    style="background-color: darkslategrey; color:white;"
+                                    onclick="registerForEvent(event)" class="btn">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-item">
+                        <div class="bb-custom-side page-layout-2">
+                            <div>
+                                <h3>About</h3>
+                                <p>“Make it work, make it right, make it fast.” Codotron is a flagship coding event of
+                                    Electromania to test competitive programming skills.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 2em">Participation Criteria</h3>
+                                <p><u>Team size</u> : 3 ( with 1 ECE member )</p>
+                                <p>B.Tech 2nd ( ECE + EE ) , 3rd ( ECE + EE ) year students, M.Tech 1st year</p>
+                            </div>
+                        </div>
+                        <div class="bb-custom-side page-layout-2">
+                            <div>
+                                <h3 style="font-size: 2em">Contact Info</h3>
+                                <p>
+                                <ul>
+                                    <li>Ayush Srivastava<ul>
+                                            <li>9454373496</li>
+                                            <li>iayush.srivastava99@gmail.com</li>
+                                        </ul>
+                                    </li>
+                                    <li>Vivek Rai<ul>
+                                            <li>6386138944 </li>
+                                            <li>​vivekrai5839@gmail.com</li>
+                                        </ul>
+                                    </li>
+                                    <li>Deepanshu Raj<ul>
+                                            <li>9318357385 </li>
+                                            <li>dcode711@gmail.com</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                </p>
+                            </div>
+                            <div>
+                                <h3>Rules</h3>
+                                <p><u>Online Elimination Round</u><br><br>
+                                    There will be MCQ Question and subjective questions. This round is basically to know
+                                    the software knowledge of participants. Top scorers will get selected for final
+                                    online round and others will get eliminated.<br><br>
+                                    <u>Online Final Round</u><br><br>
+                                    It is a 5 hours online coding round. It will test your problem modelling and coding
+                                    skills.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /bb-bookblock -->
+                <nav>
+                    <a href="#" class="bb-nav-prev">Previous</a>
+                    <a href="#" class="bb-nav-next">Next</a>
+                    <a href="#" class="bb-nav-close">Close</a>
+                </nav>
             </div>
-         </div>
-         <!-- /bb-bookblock -->
-         <nav>
-            <a href="#" class="bb-nav-prev">Previous</a>
-            <a href="#" class="bb-nav-next">Next</a>
-            <a href="#" class="bb-nav-close">Close</a>
-         </nav>
-      </div>
-      
-      </div>
-      <!-- /bb-custom-wrapper -->
-      </main>
-      <div class="footer d-flex align-items-center justify-content-center">
-         <p class="footer_text" style="margin-bottom: 0">All Rights Reserved &copy; MNNIT Allahabad, 2020</p>
-       </div>
-      <script src="../js/bookblock.min.js"></script>
-      <script src="../js/classie.js"></script>
-      <script src="../js/bookshelf.js"></script>
-      <script type="text/javascript">
-         $("header").append("<div class='glitch-window'></div>");
-         $( "h1.glitched" ).clone().appendTo( ".glitch-window" );
-      </script>
-      <script src="../../../js/navbar/main.js"></script> <!-- Resource jQuery -->
-      <script src="../../js/eventRegister.js"></script>      
-   </body>
+            <!-- /bb-custom-wrapper -->
+
+            <div class="bb-custom-wrapper" id="book-7">
+                <div class="bb-bookblock">
+                    <div class="bb-item">
+                        <div class="bb-custom-side page-layout-1">
+                            <h3>
+                                Electromania<span>InnoDev</span>
+                            </h3>
+                        </div>
+                        <div class="bb-custom-side page-layout-1">
+                            <p>Think twice, code once</p>
+                            <div class="d-flex justify-content-center download-list">
+                                <button type="button" style="margin: 5px; display: none;" data-event-id="innodev"
+                                    class="btn btn-success download-list">Download List</button>
+                            </div>
+                            <div class="d-flex justify-content-center register-button">
+                                <button type="button" id="innodevButtonId"
+                                    style="background-color: darkslategrey; color:white;"
+                                    onclick="registerForEvent(event)" class="btn">Register</button>
+                            </div>
+                            <div class="d-flex justify-content-center download-problem-statement">
+                                <button type="button" style="background-color: darkslategrey; color:white;"
+                                    class="btn"><a
+                                        href="https://drive.google.com/file/d/1A0jyxvJ0X6RKyUvDt4wdG2r6-baGgvSC/view?usp=sharing"
+                                        target="_blank" style="text-transform: capitalize;">Problem
+                                        Statements</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bb-item">
+                        <div class="bb-custom-side page-layout-2">
+                            <div>
+                                <h3>About</h3>
+                                <p>Software Development event under Electromania . Each group will be mentored until the
+                                    completion of the project which can be made on any development platform.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 style="font-size: 2em">Participation Criteria</h3>
+                                <ul>
+                                    <li>B.Tech. 2nd (ECE+EE) , 3rd (ECE+EE) year students , M.Tech. 1st year .</li>
+                                    <li>Team of maximum: 4 (with at least 1 ECE student)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bb-custom-side page-layout-2">
+                            <div>
+                                <h3 style="font-size: 2em">Contact Info</h3>
+                                <p>
+                                <ul>
+                                    <li>Om Singh<ul>
+                                            <li>6388639626</li>
+                                            <li>omsingh6903@gmail.com</li>
+                                        </ul>
+                                    </li>
+                                    <li>Aman Sanjay Tibrewal<ul>
+                                            <li>9726270260</li>
+                                            <li>amantibrewal310@gmail.com</li>
+                                        </ul>
+                                    </li>
+                                    <li>Mayank Choudhary<ul>
+                                            <li>9382314865</li>
+                                            <li>choudhary.roni@gmail.com</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                </p>
+                            </div>
+                            <div>
+                                <h3>Rules</h3>
+                                <p>
+                                    <u>Mid-Term Evaluation Round:</u><br><br>Progress is analysed and needful
+                                    suggestions are provided. <br><br>
+                                    <u>Final Evaluation Round:</u><br><br>The project is judged on some criteria,
+                                    followed by a presentation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /bb-bookblock -->
+                <nav>
+                    <a href="#" class="bb-nav-prev">Previous</a>
+                    <a href="#" class="bb-nav-next">Next</a>
+                    <a href="#" class="bb-nav-close">Close</a>
+                </nav>
+            </div>
+
+        </div>
+
+        <!-- /bb-custom-wrapper -->
+        <!-- 
+
+
+            Added a new book. Mind Sweeper
+            
+                    Mind Sweeper. Add details
+        
+        
+                -->
+        <div class="bb-custom-wrapper" id="book-8">
+            <div class="bb-bookblock">
+                <div class="bb-item">
+                    <div class="bb-custom-side page-layout-1">
+                        <h3>
+                            Electromania<span>Mind Sweeper</span>
+                        </h3>
+                    </div>
+                    <div class="bb-custom-side page-layout-1">
+                        <p>Think twice, code once</p>
+                        <div class="d-flex justify-content-center download-list">
+                            <button type="button" style="margin: 5px; display: none;" data-event-id="innodev"
+                                class="btn btn-success download-list">Download List</button>
+                        </div>
+                        <div class="d-flex justify-content-center register-button">
+                            <button type="button" id="innodevButtonId"
+                                style="background-color: darkslategrey; color:white;" onclick="registerForEvent(event)"
+                                class="btn">Register</button>
+                        </div>
+                        <div class="d-flex justify-content-center download-problem-statement">
+                            <button type="button" style="background-color: darkslategrey; color:white;" class="btn"><a
+                                    href="https://drive.google.com/file/d/1A0jyxvJ0X6RKyUvDt4wdG2r6-baGgvSC/view?usp=sharing"
+                                    target="_blank" style="text-transform: capitalize;">Problem
+                                    Statements</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bb-item">
+                    <div class="bb-custom-side page-layout-2">
+                        <div>
+                            <h3>About</h3>
+                            <p>Add details
+                            </p>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 2em">Participation Criteria</h3>
+                            <ul>
+                                <li>B.Tech. 2nd (ECE+EE) , 3rd (ECE+EE) year students , M.Tech. 1st year .</li>
+                                <li>Team of maximum: 4 (with at least 1 ECE student)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bb-custom-side page-layout-2">
+                        <div>
+                            <h3 style="font-size: 2em">Contact Info</h3>
+                            <p>
+                            <ul>
+                                <li>Sumit Ojha<ul>
+                                        <li>7773029320</li>
+                                        <li>sumitsojha8@gmail.com</li>
+                                    </ul>
+                                </li>
+                                <li>Tanay Agarwal<ul>
+                                        <li>9073115955</li>
+                                        <li>tanay5175@gmail.com</li>
+                                    </ul>
+                                </li>
+                                <li>Gaurav Kumar<ul>
+                                        <li>7762029894</li>
+                                        <li>gauravk26800@gmail.com</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
+                        <div>
+                            <h3>Rules</h3>
+                            <p>
+                                <u>Mid-Term Evaluation Round:</u><br><br>Progress is analysed and needful
+                                suggestions are provided. <br><br>
+                                <u>Final Evaluation Round:</u><br><br>The project is judged on some criteria,
+                                followed by a presentation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /bb-bookblock -->
+            <nav>
+                <a href="#" class="bb-nav-prev">Previous</a>
+                <a href="#" class="bb-nav-next">Next</a>
+                <a href="#" class="bb-nav-close">Close</a>
+            </nav>
+        </div>
+
+        </div>
+        <!-- /bb-custom-wrapper -->
+    </main>
+    <div class="footer d-flex align-items-center justify-content-center">
+        <p class="footer_text" style="margin-bottom: 0">All Rights Reserved &copy; MNNIT Allahabad, 2020</p>
+    </div>
+    <script src="../js/bookblock.min.js"></script>
+    <script src="../js/classie.js"></script>
+    <script src="../js/bookshelf.js"></script>
+    <script type="text/javascript">
+        $("header").append("<div class='glitch-window'></div>");
+        $("h1.glitched").clone().appendTo(".glitch-window");
+    </script>
+    <script src="../../../js/navbar/main.js"></script> <!-- Resource jQuery -->
+    <script src="../../js/eventRegister.js"></script>
+</body>
+
 </html>
