@@ -48,7 +48,7 @@ function init() {
     const loader = new THREE.TextureLoader();
 
     // Planet
-    const texturePlanet = loader.load('https://i.ibb.co/h94JBXy/saturn3-ljge5g.jpg');
+    const texturePlanet = loader.load('https://2.bp.blogspot.com/-Jfw4jY6vBWM/UkbwZhdKxuI/AAAAAAAAK94/QTmtnuDFlC8/s1600/2_no_clouds_4k.jpg');
     texturePlanet.anisotropy = 16;
     const planetGeometry = new THREE.SphereBufferGeometry(10, 50, 50);
     const planetMaterial = new THREE.MeshLambertMaterial({
