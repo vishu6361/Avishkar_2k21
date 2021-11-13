@@ -203,6 +203,10 @@
 	left: -180%;
 }
 
+.img-wrapper h2 {
+    font-size: 1.5rem;
+}
+
 .img-wrapper img
 {
 	/* height: 400px; */
