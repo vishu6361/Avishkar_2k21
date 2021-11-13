@@ -80,7 +80,7 @@ body {
 .card:nth-child(1) .card-face {
   background: linear-gradient(-135deg, rgba(255, 153, 153, 1), rgba(218, 11, 11, 1));
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.15), inset 0 0 0 2px rgba(255, 153, 153, 0.75);
-  /* transform: translateY(43.3333333333px) rotate(-27.0833333333deg); */
+  transform: translateY(43.3333333333px) rotate(-27.0833333333deg);
 }
 .card:nth-child(1) .card-face .card-label {
   color: rgba(219, 0, 0, 1);
@@ -88,7 +88,7 @@ body {
 }
 .card:nth-child(1):hover .card-face {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), inset 0 0 0 2px rgba(255, 153, 153, 0.75);
-  /* transform: translateY(-100px) rotate(0deg) scale(2); */
+  transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
 }
@@ -101,7 +101,7 @@ body {
 .card:nth-child(2) .card-face {
   background: linear-gradient(-135deg, rgba(255, 153, 197, 1), rgba(218, 11, 100, 1));
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.15), inset 0 0 0 2px rgba(255, 153, 197, 0.75);
-  /* transform: translateY(36.6666666667px) rotate(-22.9166666667deg); */
+  transform: translateY(36.6666666667px) rotate(-22.9166666667deg);
 }
 .card:nth-child(2) .card-face .card-label {
   color: rgba(219, 0, 94, 1);
@@ -109,7 +109,7 @@ body {
 }
 .card:nth-child(2):hover .card-face {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), inset 0 0 0 2px rgba(255, 153, 197, 0.75);
-  /* transform: translateY(-100px) rotate(0deg) scale(2); */
+  transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
 }
