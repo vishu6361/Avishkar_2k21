@@ -24,26 +24,18 @@
 	<!--link rel="stylesheet" href="css/navbar/style.css"> <!-- Resource style -->
 	<link rel="stylesheet" type="text/css" href="css/my.css" />
 	<link rel="stylesheet" type="text/css" href="../css/navbar/navbar.css">
-	<style>
-		#myVideo {
-		  	position: relative;
-		  	right: 0;
-		  	bottom: 0;
-		  	min-width: 100%; 
-		  	min-height: 100%;
-		}
-
-		.glitched {
-			font-family: 'Orbitron', sans-serif;
-		}
-	</style>
+	<link rel="stylesheet" href="https://use.typekit.net/vad8env.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/background.css">
 </head>
 <body>
 	<!-- <video autoplay muted loop id="myVideo">
   		<source src="../images/video_ngIQb4dO_F7FJ.mp4" type="video/mp4">
 	</video>
 	 -->
-	<nav class="navbar navbar-expand-md navbar-dark">
+	  <div id="canvas_container"></div>
+
+	<nav class="navbar navbar-expand-md navbar-dark" style="z-index: 1; margin-top: -100vh;">
 		<!--class navbar-expand-md-->
 		<div class="container-fluid">
 		  <a class="navbar-brand pt-0 pb-0" href="../index.html">
@@ -137,237 +129,89 @@
 		</div>
 	  </div>
 
-	<main class="cd-main-content">
-		<div class="container">
+	  <!-- partial:index.partial.html -->
+	  <div class='cards'>
+		<a href="sub_events/cyberquest">
+		<div class='card'>
+		  <div class='card-face'>
+			<div class='card-label'>CyberQuest</div>
+			<div class="card-body">A quest for top notch programmers and hackers.</div>
+			<button type="button" class="card-button">Click for Info</button>
+		  </div>
+		</div>
+		</a>
+		<div class='card'>
+		  <div class='card-face'>
+			<div class='card-label'>Electromania</div>
+		  </div>
+		</div>
+		<div class='card'>
+		  <div class='card-face'>
+			<div class='card-label'>PowerSurge</div>
+		  </div>
+		</div>
+		<div class='card'>
+		  <div class='card-face'>
+			<div class='card-label'>Rasayans</div>
+		  </div>
+		</div>
+		<div class='card'>
+		  <div class='card-face'>
+			<div class='card-label'>Mechrocosm</div>
+		  </div>
+		</div>
+		<div class='card'>
+		  <div class='card-face'>
+			<div class='card-label'>Nirmaan</div>
+		  </div>
+		</div>
+		<div class='card'>
+		  <div class='card-face'>
+			<div class='card-label'>Genesis</div>
+		  </div>
+		</div>
+		<div class='card'>
+		  <div class='card-face'>
+			<div class='card-label'>Oligopoly</div>
+		  </div>
+		</div>
+		<div class='card'>
+		  <div class='card-face'>
+			<div class='card-label'>Monopoly</div>
+		  </div>
+		</div>
+		<div class='card'>
+		  <div class='card-face'>
+			<div class='card-label'>Robomania</div>
+		  </div>
+		</div>
+		<div class='card'>
+		  <div class='card-face'>
+			<div class='card-label'>Aerodynamix</div>
+		  </div>
+		</div>
+		<div class='card'>
+		  <div class='card-face'>
+			<div class='card-label'>Astrowing</div>
+		  </div>
+		</div>
+		<div class='card'>
+		  <div class='card-face'>
+			<div class='card-label'>Kreedomania</div>
+		  </div>
+		</div>
+		<div class='card'>
+		  <div class='card-face'>
+			<div class='card-label'>Gnosiomania</div>
+		  </div>
+		</div>
+	  </div>
+	  <!-- partial -->
+	  
+	  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js'></script>
+	  <script src="js/background.js"></script>
 
-			<header class="header" style="position: relative; top:100px;">
-				<!-- <h1 class="glitched">Events</h1> -->
-				<h1 id = "title_heading">
-					Events
-					<!-- <font color="#61bb46">E</font>
-					<font color="#fdb827">v</font>
-					<font color="#f5821f">e</font>
-					<font color="#e03a3e">n</font>
-					<font color="#963d97">t</font>
-					<font color="#009ddc">s</font> -->
-				</h1>
-			</header>
-
-			<section id="grid" class="grid clearfix">
-				<a href="sub_events/cyberquest" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
-					<figure>
-						<img src="img/1.png" />
-						<svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="#333">
-							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " />
-						</svg>
-						<figcaption>
-							<h2>Cyberquest</h2>
-							<p>A quest for top notch programmers and hackers.</p>
-							<button>View</button>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="sub_events/dynamix" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
-					<figure>
-						<img src="img/2.png" />
-						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
-							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
-						<figcaption>
-							<h2>Aerodynamix</h2>
-							<p>The winner isn't the one who is the fastest but the one who refuses to lose.</p>
-							<button>View</button>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="sub_events/electromania" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
-					<figure>
-						<img src="img/3.png" />
-						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
-							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
-						<figcaption>
-							<h2>Electromania</h2>
-							<p>Dive into the fascinating world of electronic circuits and silicon chips.</p>
-							<button>View</button>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="sub_events/genesis" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
-					<figure>
-						<img src="img/4.png" />
-						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
-							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
-						<figcaption>
-							<h2>Genesis</h2>
-							<p>Biotech - Splice of life.</p>
-							<button>View</button>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="sub_events/mechrocosm" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
-					<figure>
-						<img src="img/5.png" />
-						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
-							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
-						<figcaption>
-							<h2>MECHROCOSM</h2>
-							<p>A blend of all flavours of mechanical engineering.</p>
-							<button>View</button>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="sub_events/nirmaan" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
-					<figure>
-						<img src="img/6.png" />
-						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
-							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
-						<figcaption>
-							<h2>Nirmaan</h2>
-							<p>It takes both sides to build a bridge.</p>
-							<button>View</button>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="sub_events/oligopoly" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
-					<figure>
-						<img src="img/7.png" />
-						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
-							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
-						<figcaption>
-							<h2>Oligopoly</h2>
-							<p>Show your managerial, leadership, communication skills.</p>
-							<button>View</button>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="sub_events/powersurge" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
-					<figure>
-						<img src="img/8.png" />
-						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
-							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
-						<figcaption>
-							<h2>Powersurge</h2>
-							<p>Let the current within you ameliorate and empower the world.</p>
-							<button>View</button>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="sub_events/rasayan" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z"
-					style="margin-right: 1px;">
-					<figure>
-						<img src="img/9.png" />
-						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
-							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
-						<figcaption>
-							<h2>RASAYANS</h2>
-							<p>Experience an amalgamation of mind boggling events.</p>
-							<button>View</button>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="sub_events/robomania" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
-					<figure>
-						<img src="img/10.png" />
-						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
-							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
-						<figcaption>
-							<h2>ROBOMANIA</h2>
-							<p>Keep Calm and build robots.</p>
-							<button>View</button>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="sub_events/monopoly" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
-					<figure>
-						<img src="img/11.png" />
-						<svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="#333">
-							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " />
-						</svg>
-						<figcaption>
-							<h2>Monopoly</h2>
-							<p>Discover a leader in you, move ahead.</p>
-							<button>View</button>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="sub_events/kreedomania" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z"
-					style="margin-left: -1px;">
-					<figure>
-						<img src="img/12.png" />
-						<svg viewBox="0 0 180 320" preserveAspectRatio="none" fill="#333">
-							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " />
-						</svg>
-						<figcaption>
-							<h2>Kreedomania</h2>
-							<p>Do you bleed game !!</p>
-							<button>View</button>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="sub_events/gnosiomania" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
-					<figure>
-						<img src="img/13.png" />
-						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
-							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
-						<figcaption>
-							<h2>Gnosiomania</h2>
-							<p>Let the mind boggling begin!!</p>
-							<button>View</button>
-						</figcaption>
-					</figure>
-				</a>
-				<a href="sub_events/scienceExhibition/index.html" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
-					<figure>
-						<img src="img/14.bmp" />
-						<svg viewBox="0 0 180 320" preserveAspectRatio="none">
-							<path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z " /></svg>
-						<figcaption>
-							<h2>Science Exhibition</h2>
-							<p>Let the creativity begin!!</p>
-							<button>View</button>
-						</figcaption>
-					</figure>
-				</a>
-			</section>
-
-
-
-
-
-		</div><!-- /container -->
-	</main>
-
-	<div class="footer d-flex align-items-center justify-content-center">
-		<p class="footer_text" style="margin-bottom: 0">All Rights Reserved &copy; MNNIT Allahabad, 2020</p>
-	</div>
-
-	<script>
-		(function () {
-
-			function init() {
-				var speed = 300,
-					easing = mina.backout;
-
-				[].slice.call(document.querySelectorAll('#grid > a')).forEach(function (el) {
-					var s = Snap(el.querySelector('svg')), path = s.select('path'),
-						pathConfig = {
-							from: path.attr('d'),
-							to: el.getAttribute('data-path-hover')
-						};
-
-					el.addEventListener('mouseenter', function () {
-						path.animate({ 'path': pathConfig.to }, speed, easing);
-					});
-
-					el.addEventListener('mouseleave', function () {
-						path.animate({ 'path': pathConfig.from }, speed, easing);
-					});
-				});
-			}
-
-			init();
-
-		})();
-	</script>
+	
 	<script type="text/javascript">
 		$("header").append("<div class='glitch-window'></div>");
 		$("h1.glitched").clone().appendTo(".glitch-window");
