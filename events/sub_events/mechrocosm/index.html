@@ -29,14 +29,16 @@
     <link rel="stylesheet" href="../../css/my.css"> <!-- Resource style -->
     <link rel="stylesheet" href="../css/my.css"> <!-- Resource style -->
     <link rel="stylesheet" href="../../../css/navbar/navbar.css">
+    <link rel="stylesheet" href="../../css/background.css">
 
     <script src="../js/modernizr.custom.js"></script>
 </head>
 
 <body>
 
+    <div id="canvas_container"></div> 
 
-    <nav class="navbar navbar-expand-md navbar-dark">
+    <nav class="navbar navbar-expand-md navbar-dark" style="z-index: 1; margin-top: -100vh;">
         <!--class navbar-expand-md-->
         <div class="container-fluid">
             <a class="navbar-brand pt-0 pb-0" href="../../../index.html">
@@ -1284,6 +1286,9 @@
     <div class="footer d-flex align-items-center justify-content-center">
         <p class="footer_text" style="margin-bottom: 0">All Rights Reserved &copy; MNNIT Allahabad, 2020</p>
     </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js'></script>
+    <script src="../../js/background.js"></script>
     <script src="../js/bookblock.min.js"></script>
     <script src="../js/classie.js"></script>
     <script src="../js/bookshelf.js"></script>
