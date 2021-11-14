@@ -2,6 +2,13 @@ body {
     margin: 0;
     overflow: visible;
     position: relative;
+    /*
+
+    ! Adding max width after noticing that some pages are overflowing in the x-direction.
+    If any problem is caused by this, fell free to remove it
+
+    */
+    max-width: 100%;
     width: 100vw;
     height: 100vh;
     background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.wallpapersafari.com%2F43%2F91%2FXgzqEC.jpg&f=1&nofb=1");
