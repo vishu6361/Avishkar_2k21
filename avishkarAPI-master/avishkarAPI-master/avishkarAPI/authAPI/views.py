@@ -4,7 +4,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.authtoken.models import Token
 from .validations import *
 from .models import UserDetails
-from .models import EventTeam,Event
+from events.models import EventTeam,Event
 
 from django.contrib.auth import authenticate
 
