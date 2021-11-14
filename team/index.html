@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="../css/navbar/navbar.css">
+    <link rel="stylesheet" href="css/background.css">
 
     <!-- Resource style -->
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
@@ -61,12 +62,13 @@
 <body>
 <!-- <source src="img/5.webm" type="video/webm"> -->
 
-<video id="videoBG" poster="../img/snowflakes.png" autoplay muted loop>
+<!-- <video id="videoBG" poster="../img/snowflakes.png" autoplay muted loop>
     <source src="../img/Snowflakes.mp4" type="video/mp4">
-</video>
+</video> -->
+<div id="canvas_container"></div>
 
 
-<nav class="navbar navbar-expand-md navbar-dark">
+<nav class="navbar navbar-expand-md navbar-dark" style="z-index: 1; margin-top: -100vh;">
     <!--class navbar-expand-md-->
     <div class="container-fluid">
         <a class="navbar-brand pt-0 pb-0" href="../index.html">
@@ -170,8 +172,6 @@
 </div>
 
 <main class="cd-main-content">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,700' rel='stylesheet'
-          type='text/css'>
 
     <div align="center">
 
@@ -561,6 +561,8 @@
 
 </script>
 <script src="../js/navbar/main.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js'></script>
+<script src="js/background.js"></script>
 </body>
 
 </html>
