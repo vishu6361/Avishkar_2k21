@@ -483,8 +483,8 @@ async function getUserDetails() {
         headers: myHeaders,
         body: formdata,
     };
-
-    let response = await fetch("https://avishkarapi.sahajbamba.me/auth/getuserdetails/", requestOptions);
+    const api_url="http://localhost:8000"
+    let response = await fetch(api_url+"/auth/getuserdetails/", requestOptions);
     return response.json();
 }
 
@@ -499,8 +499,8 @@ async function sendCreateTeamRequest(teamname) {
         headers: myHeaders,
         body: formdata,
     };
-
-    let response = await fetch("https://avishkarapi.sahajbamba.me/event/createteam/", requestOptions);
+    const api_url="http://localhost:8000"
+    let response = await fetch(api_url+"/event/createteam/", requestOptions);
     return response.json();
 }
 
@@ -516,8 +516,8 @@ async function sendAddMemberRequest(teamid, username) {
         headers: myHeaders,
         body: formdata,
     };
-
-    let response = await fetch("https://avishkarapi.sahajbamba.me/event/addteammember/", requestOptions);
+    const api_url="http://localhost:8000"
+    let response = await fetch(api_url+"/event/addteammember/", requestOptions);
     return response.json();
 }
 
@@ -533,8 +533,8 @@ async function sendRemoveMemberRequest(teamid, username) {
         headers: myHeaders,
         body: formdata,
     };
-
-    let response = await fetch("https://avishkarapi.sahajbamba.me/event/removeteammember/", requestOptions);
+    const api_url="http://localhost:8000"
+    let response = await fetch(api_url+"/event/removeteammember/", requestOptions);
     return response.json();
 }
 
@@ -550,7 +550,7 @@ async function sendUnregisterTeamRequest(eventid, teamid) {
         headers: myHeaders,
         body: formdata,
     };
-
-    let response = await fetch("https://avishkarapi.sahajbamba.me/event/unregistertoevent/", requestOptions);
+    const api_url="http://localhost:8000"
+    let response = await fetch(api_url+"/event/unregistertoevent/", requestOptions);
     return response.json();
 }
