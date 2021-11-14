@@ -15,12 +15,12 @@ function init() {
 }
 
 function getUserDetails(tokenId) {
-
+    const api_url="http://localhost:8000"
     var data = null;
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
     toastr.warning('Waiting for response!  .....  ', '', { timeOut: 0, extendedTimeOut: 0 });
-    xhr.open('POST', 'https://avishkarapi.sahajbamba.me/auth/getuserdetails/', true);
+    xhr.open('POST', api_url+'/auth/getuserdetails/', true);
     xhr.setRequestHeader('authorization', tokenId);
 
     xhr.onload = function () {
@@ -224,9 +224,10 @@ function updateOtherDetails(details, tokenId) {
             data.append("regno", regno);
 
             var xhr = new XMLHttpRequest();
+            const api_url="http://localhost:8000"
             xhr.withCredentials = true;
 
-            xhr.open("POST", "https://avishkarapi.sahajbamba.me/auth/updatecontact/", false);
+            xhr.open("POST", api_url+"/auth/updatecontact/", false);
             xhr.setRequestHeader("authorization", tokenId);
 
             xhr.onload = function () {
@@ -272,8 +273,8 @@ function updateNameEmail(details, tokenId) {
 
         var xhr = new XMLHttpRequest();
         xhr.withCredentials = true;
-
-        xhr.open('POST', 'https://avishkarapi.sahajbamba.me/auth/updatenameandemail/', false);
+         const api_url="http://localhost:8000"
+        xhr.open('POST', api_url+'/auth/updatenameandemail/', false);
         xhr.setRequestHeader('authorization', tokenId);
 
         xhr.onload = function () {
@@ -306,8 +307,8 @@ function lockProfile(tokenId) {
 
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
-
-    xhr.open('POST', 'https://avishkarapi.sahajbamba.me/auth/lock/', false);
+     const api_url="http://localhost:8000"
+    xhr.open('POST', api_url+'/auth/lock/', false);
     xhr.setRequestHeader('authorization', tokenId);
 
     xhr.onload = function () {
@@ -361,8 +362,8 @@ function updatePassword(tokenId) {
 
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
-
-    xhr.open("POST", "https://avishkarapi.sahajbamba.me/auth/changepassword/", false);
+     const api_url="http://localhost:8000"
+    xhr.open("POST", api_url+"/auth/changepassword/", false);
     xhr.setRequestHeader("authorization", tokenId);
 
     xhr.onload = function () {

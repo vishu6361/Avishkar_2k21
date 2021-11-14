@@ -301,8 +301,8 @@
           body: formdata,
           redirect: 'follow'
         };
-
-      fetch("https://avishkarapi.sahajbamba.me/auth/reset-password/", requestOptions)
+        const api_url="http://127.0.0.1:8000"
+      fetch(api_url+"/auth/reset-password/", requestOptions)
         .then((response) => {
           return response.text();
         })
@@ -358,8 +358,8 @@
         body: formdata,
         redirect: 'follow'
       };
-
-      await fetch("https://avishkarapi.sahajbamba.me/auth/login/", requestOptions)
+        const api_url="http://127.0.0.1:8000"
+      await fetch(api_url+"/auth/login/", requestOptions)
         .then((response) => {
           return response.text();
         })
