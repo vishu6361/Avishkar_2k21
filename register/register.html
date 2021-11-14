@@ -365,8 +365,9 @@ Thank you for your cooperation. Keep Innovating.
             body: formdata,
             redirect: 'follow'
             };
-            
-            await fetch("https://avishkarapi.sahajbamba.me/auth/register/", requestOptions)
+            const api_url="http://localhost:8000"
+            console.log(api_url+"/auth/register/");
+            await fetch(api_url+"/auth/register/", requestOptions)
             .then((response) => {
                 return response.text();
             })

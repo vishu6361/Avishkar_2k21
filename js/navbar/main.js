@@ -49,9 +49,9 @@ function getUserDetails() {
 			body: formdata,
 			redirect: "follow",
 		};
-
+		  const api_url="http://localhost:8000"
 		fetch(
-			"https://avishkarapi.sahajbamba.me/auth/getuserdetails/",
+			api_url+"/auth/getuserdetails/",
 			requestOptions
 		)
 			.then((response) => response.text())
@@ -123,8 +123,8 @@ function acceptRequest() {
 		body: formdata,
 		redirect: 'follow'
 	};
-
-	fetch("https://avishkarapi.sahajbamba.me/event/joinrequestdecision/", requestOptions)
+	  const api_url="http://localhost:8000"
+	fetch(api_url+"/event/joinrequestdecision/", requestOptions)
 		.then(response => response.text())
 		.then(result => {
 			$('#exampleModal').modal('hide');
@@ -155,8 +155,8 @@ function rejectRequest() {
 		body: formdata,
 		redirect: 'follow'
 	};
-
-	fetch("https://avishkarapi.sahajbamba.me/event/joinrequestdecision/", requestOptions)
+	  const api_url="http://localhost:8000"
+	fetch(api_url+"/event/joinrequestdecision/", requestOptions)
 		.then(response => response.text())
 		.then(result => {
 			$('#exampleModal').modal('hide');
@@ -204,7 +204,7 @@ async function logoutApiCall(){
 	body: formdata,
 	redirect: 'follow'
 	};
-
-	return (await fetch("https://avishkarapi.sahajbamba.me/auth/logout/", requestOptions)).json();
+	  const api_url="http://localhost:8000"
+	return (await fetch(api_url+"/auth/logout/", requestOptions)).json();
 	
 }

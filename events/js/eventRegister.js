@@ -300,8 +300,8 @@ async function getUserDetails() {
         headers: myHeaders,
         body: formdata,
     };
-
-    let response = await fetch("https://avishkarapi.sahajbamba.me/auth/getuserdetails/", requestOptions);
+    const api_url="http:localhost:8000"
+    let response = await fetch(api_url+"/auth/getuserdetails/", requestOptions);
     return response.json();
 }
 
@@ -320,8 +320,8 @@ async function apiCallRegisterEvent(teamID) {
         body: formdata,
         redirect: 'follow'
     };
-
-    return (await fetch("https://avishkarapi.sahajbamba.me/event/registertoevent/", requestOptions)).json();
+      const api_url="http:localhost:8000"
+    return (await fetch(api_url+"/event/registertoevent/", requestOptions)).json();
 
 }
 
