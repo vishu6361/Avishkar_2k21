@@ -31,6 +31,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,500,700' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="css/my.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="../css/background.css">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161923538-7"></script>
@@ -46,7 +47,9 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark">
+	<div id="canvas_container"></div>
+
+    <nav class="navbar navbar-expand-md navbar-dark" style="z-index: 1; margin-top: -100vh;">
         <!--class navbar-expand-md-->
         <div class="container-fluid">
             <a class="navbar-brand pt-0 pb-0" href="../index.html">
@@ -149,9 +152,7 @@
     </div>
 
     <main class="cd-main-content">
-        <center>
-            <div class="title">Frequently Asked Questions</div>
-        </center>
+        <div class="title text-center font-weight-bold text-white">Frequently Asked Questions</div>
         <div class="container">
             <div class="row">
                 <div class="accordion" id="accordionExample">
@@ -360,8 +361,10 @@
 
     </main>
     <div class="footer d-flex align-items-center justify-content-center">
-        <p class="footer_text" style="margin-bottom: 0">All Rights Reserved &copy; MNNIT Allahabad, 2020</p>
+        <p class="footer_text">All Rights Reserved &copy; MNNIT Allahabad, 2020</p>
     </div>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js'></script>
+    <script src="../js/background.js"></script>
     <script src="../js/navbar/main.js"></script>
 </body>
 

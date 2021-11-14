@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-body{
-    background: url("../../img/4.gif");
-    overflow: visible;
-    overflow-x:hidden;
-    background-size:cover;
-    background-repeat: no-repeat; 
-    color:white;
-}
+
 .accordion {
   width: 95%;
   font-family: 'Orbitron', sans-serif;

@@ -1,14 +1,10 @@
-body{
-    background: url("../../img/4.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}   
+   
 .footer{
   width: 100%;
   height: 150px;
   background-color: rgba(0, 0, 0, 0.49);
-
+  position: relative;
+  bottom: 0px;
  }
  .footer_text{
   font-size: 18px;
