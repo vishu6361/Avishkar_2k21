@@ -26,6 +26,7 @@ body {
   background-color: transparent;
   display: grid;
   cursor: pointer;
+  border: 0;
 }
 .card:after {
   bottom: 0;
@@ -485,6 +486,7 @@ body {
     background-color: transparent;
     display: grid;
     cursor: pointer;
+    border: 0;
   }
   .card:after {
     bottom: 0;

@@ -6,6 +6,8 @@ body {
     height: 100vh;
     background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.wallpapersafari.com%2F43%2F91%2FXgzqEC.jpg&f=1&nofb=1");
     background-size: cover;
+    background-repeat: repeat;
+    background-attachment: fixed;
 }
 
 canvas {
