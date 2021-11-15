@@ -154,14 +154,14 @@ function getSelectValue(id){
     var parent = document.getElementsByTagName("option")[x].value;
     return parent;
 }
-
+const api_url="http://localhost:8000"
 function getTeams(tokenId){
 
     var data = null;
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
 
-    xhr.open('POST','https://avishkarapi.sahajbamba.me/auth/getuserdetails/',true);
+    xhr.open('POST',api_url+'/auth/getuserdetails/',true);
     xhr.setRequestHeader('authorization',tokenId);
 
     xhr.onload = function(){
@@ -265,7 +265,7 @@ function eventRegister(tokenId, teamId, eventId) {
 
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
-    xhr.open('POST', 'https://avishkarapi.sahajbamba.me/event/registertoevent/', false);
+    xhr.open('POST', api_url+'/event/registertoevent/', false);
     xhr.setRequestHeader('authorization', tokenId);
     //xhr.setRequestHeader('cache-control', 'no-cache');
     //xhr.setRequestHeader("postman-token", "ae3469f2-dc36-da01-4647-8f8b00888d5d");

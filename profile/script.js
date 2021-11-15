@@ -1,6 +1,7 @@
 var tokenId;
 var details;
 var isLocked = false;
+ const api_url="http://localhost:8000"
 init();
 
 function init() {
@@ -15,12 +16,13 @@ function init() {
 }
 
 function getUserDetails(tokenId) {
-    const api_url="http://localhost:8000"
     var data = null;
     var xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
+    //xhr.withCredentials = true;
+
     toastr.warning('Waiting for response!  .....  ', '', { timeOut: 0, extendedTimeOut: 0 });
     xhr.open('POST', api_url+'/auth/getuserdetails/', true);
+     //xhr.setRequestHeader("HTTP_X_REQUESTED_WITH", "XMLHttpRequest")
     xhr.setRequestHeader('authorization', tokenId);
 
     xhr.onload = function () {
@@ -224,8 +226,8 @@ function updateOtherDetails(details, tokenId) {
             data.append("regno", regno);
 
             var xhr = new XMLHttpRequest();
-            const api_url="http://localhost:8000"
-            xhr.withCredentials = true;
+
+            //xhr.withCredentials = true;
 
             xhr.open("POST", api_url+"/auth/updatecontact/", false);
             xhr.setRequestHeader("authorization", tokenId);
@@ -272,8 +274,9 @@ function updateNameEmail(details, tokenId) {
         data.append('email', email);
 
         var xhr = new XMLHttpRequest();
-        xhr.withCredentials = true;
-         const api_url="http://localhost:8000"
+        //xhr.withCredentials = true;
+
+
         xhr.open('POST', api_url+'/auth/updatenameandemail/', false);
         xhr.setRequestHeader('authorization', tokenId);
 
@@ -306,8 +309,8 @@ function lockProfile(tokenId) {
     var data = new FormData();
 
     var xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
-     const api_url="http://localhost:8000"
+    //xhr.withCredentials = true;
+
     xhr.open('POST', api_url+'/auth/lock/', false);
     xhr.setRequestHeader('authorization', tokenId);
 
@@ -361,11 +364,12 @@ function updatePassword(tokenId) {
     data.append("password", newPassword);
 
     var xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
-     const api_url="http://localhost:8000"
+    // xhr.withCredentials = true;
+    //
     xhr.open("POST", api_url+"/auth/changepassword/", false);
     xhr.setRequestHeader("authorization", tokenId);
-
+   // xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    //xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
     xhr.onload = function () {
         var tmp = JSON.parse(this.response);
         toastr.remove();

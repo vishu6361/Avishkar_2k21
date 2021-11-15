@@ -1,7 +1,7 @@
 window.onload = getUserDetails();
 var pendingRequest = [];
 var teamID = undefined;
-
+const api_url="http://localhost:8000"
 function initialize(userDetails) {
 	const userName = userDetails.userName;
 	var count = 0;
@@ -48,7 +48,7 @@ function getUserDetails() {
 		};
 
 		fetch(
-			"https://avishkarapi.sahajbamba.me/auth/getuserdetails/",
+			api_url+"/auth/getuserdetails/",
 			requestOptions
 		)
 			.then((response) => response.text())
@@ -118,7 +118,7 @@ function acceptRequest() {
 		redirect: 'follow'
 	};
 
-	fetch("https://avishkarapi.sahajbamba.me/event/joinrequestdecision/", requestOptions)
+	fetch("" + api_url+"/event/joinrequestdecision/", requestOptions)
 		.then(response => response.text())
 		.then(result => {
 			$('#exampleModal').modal('hide');
@@ -148,7 +148,7 @@ function rejectRequest() {
 		redirect: 'follow'
 	};
 
-	fetch("https://avishkarapi.sahajbamba.me/event/joinrequestdecision/", requestOptions)
+	fetch(api_url+"/event/joinrequestdecision/", requestOptions)
 		.then(response => response.text())
 		.then(result => {
 			$('#exampleModal').modal('hide');
