@@ -5,7 +5,7 @@ let registeredEvents = [];
 let eventID = undefined;
 // to download csv
 let isStaff = false;
-
+ const api_url="http://localhost:8000"
 $(document).ready(function () {
 
     authtoken = localStorage.getItem('authtoken');
@@ -300,7 +300,7 @@ async function getUserDetails() {
         headers: myHeaders,
         body: formdata,
     };
-    const api_url="http:localhost:8000"
+
     let response = await fetch(api_url+"/auth/getuserdetails/", requestOptions);
     return response.json();
 }
@@ -320,7 +320,7 @@ async function apiCallRegisterEvent(teamID) {
         body: formdata,
         redirect: 'follow'
     };
-      const api_url="http:localhost:8000"
+
     return (await fetch(api_url+"/event/registertoevent/", requestOptions)).json();
 
 }
@@ -337,6 +337,6 @@ async function getRegisteredStudents(authtoken, eventid) {
         body: formdata,
     };
 
-    let response = await fetch("https://avishkarapi.sahajbamba.me/event/getregistereduserslistofevent/", requestOptions);
+    let response = await fetch(api_url+"/event/getregistereduserslistofevent/", requestOptions);
     return response.json();
 }

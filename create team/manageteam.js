@@ -5,7 +5,7 @@ let accordionIndex = 1;
 let currentTeamSelected;
 let removeMemberTeamId;
 let removeMemberUsername;
-
+const api_url="http://localhost:8000"
 toastr.options = {
     "positionClass": "toast-bottom-right",
     maxOpened: 1,
@@ -483,7 +483,6 @@ async function getUserDetails() {
         headers: myHeaders,
         body: formdata,
     };
-    const api_url="http://localhost:8000"
     let response = await fetch(api_url+"/auth/getuserdetails/", requestOptions);
     return response.json();
 }
@@ -499,7 +498,7 @@ async function sendCreateTeamRequest(teamname) {
         headers: myHeaders,
         body: formdata,
     };
-    const api_url="http://localhost:8000"
+
     let response = await fetch(api_url+"/event/createteam/", requestOptions);
     return response.json();
 }
@@ -516,7 +515,7 @@ async function sendAddMemberRequest(teamid, username) {
         headers: myHeaders,
         body: formdata,
     };
-    const api_url="http://localhost:8000"
+
     let response = await fetch(api_url+"/event/addteammember/", requestOptions);
     return response.json();
 }
@@ -533,7 +532,7 @@ async function sendRemoveMemberRequest(teamid, username) {
         headers: myHeaders,
         body: formdata,
     };
-    const api_url="http://localhost:8000"
+
     let response = await fetch(api_url+"/event/removeteammember/", requestOptions);
     return response.json();
 }
@@ -550,7 +549,6 @@ async function sendUnregisterTeamRequest(eventid, teamid) {
         headers: myHeaders,
         body: formdata,
     };
-    const api_url="http://localhost:8000"
     let response = await fetch(api_url+"/event/unregistertoevent/", requestOptions);
     return response.json();
 }
