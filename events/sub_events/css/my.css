@@ -842,7 +842,7 @@ body {
     margin-top: -10%;
 }
 header.header h1{
-    text-transform: none;
+    /* text-transform: none; */
     /**font-family: 'Sedgwick Ave Display', cursive;**/
 }
 @media only screen and (max-width: 600px) and (min-width: 200px)  {
