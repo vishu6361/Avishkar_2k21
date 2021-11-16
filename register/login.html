@@ -301,7 +301,7 @@
           body: formdata,
           redirect: 'follow'
         };
-        const api_url="http://127.0.0.1:8000"
+        const api_url="http://20.204.6.238:8000"
       fetch(api_url+"/auth/reset-password/", requestOptions)
         .then((response) => {
           return response.text();
@@ -358,7 +358,7 @@
         body: formdata,
         redirect: 'follow'
       };
-        const api_url="http://127.0.0.1:8000"
+        const api_url="http://20.204.6.238:8000"
       await fetch(api_url+"/auth/login/", requestOptions)
         .then((response) => {
           return response.text();

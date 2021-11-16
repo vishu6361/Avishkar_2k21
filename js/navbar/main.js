@@ -2,7 +2,7 @@ window.onload = getUserDetails();
 var pendingRequest = [];
 var teamID = undefined;
 var token;
-
+const api_url="http://localhost:8000"
 function initialize(userDetails) {
 	const userName = userDetails.userName;
 	var count = 0;
@@ -49,7 +49,7 @@ function getUserDetails() {
 			body: formdata,
 			redirect: "follow",
 		};
-		  const api_url="http://localhost:8000"
+
 		fetch(
 			api_url+"/auth/getuserdetails/",
 			requestOptions
@@ -123,7 +123,7 @@ function acceptRequest() {
 		body: formdata,
 		redirect: 'follow'
 	};
-	  const api_url="http://localhost:8000"
+
 	fetch(api_url+"/event/joinrequestdecision/", requestOptions)
 		.then(response => response.text())
 		.then(result => {
@@ -155,7 +155,8 @@ function rejectRequest() {
 		body: formdata,
 		redirect: 'follow'
 	};
-	  const api_url="http://localhost:8000"
+
+
 	fetch(api_url+"/event/joinrequestdecision/", requestOptions)
 		.then(response => response.text())
 		.then(result => {
@@ -204,7 +205,5 @@ async function logoutApiCall(){
 	body: formdata,
 	redirect: 'follow'
 	};
-	  const api_url="http://localhost:8000"
 	return (await fetch(api_url+"/auth/logout/", requestOptions)).json();
-	
 }
