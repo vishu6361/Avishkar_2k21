@@ -5,7 +5,6 @@ let accordionIndex = 1;
 let currentTeamSelected;
 let removeMemberTeamId;
 let removeMemberUsername;
-const api_url="http://api.divyansh.rocks"
 toastr.options = {
     "positionClass": "toast-bottom-right",
     maxOpened: 1,

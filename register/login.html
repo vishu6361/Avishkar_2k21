@@ -301,8 +301,7 @@
           body: formdata,
           redirect: 'follow'
         };
-        var api_url="http://api.divyansh.rocks"
-      fetch(api_url+"/auth/reset-password/", requestOptions)
+      fetch("http://api.divyansh.rocks/auth/reset-password/", requestOptions)
         .then((response) => {
           return response.text();
         })
@@ -358,8 +357,7 @@
         body: formdata,
         redirect: 'follow'
       };
-        var api_url="http://api.divyansh.rocks"
-      await fetch(api_url+"/auth/login/", requestOptions)
+      await fetch("http://api.divyansh.rocks/auth/login/", requestOptions)
         .then((response) => {
           return response.text();
         })

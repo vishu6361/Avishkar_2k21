@@ -154,14 +154,13 @@ function getSelectValue(id){
     var parent = document.getElementsByTagName("option")[x].value;
     return parent;
 }
-const api_url="http://api.divyansh.rocks"
 function getTeams(tokenId){
 
     var data = null;
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
 
-    xhr.open('POST',api_url+'/auth/getuserdetails/',true);
+    xhr.open('POST','http://api.divyansh.rocks/auth/getuserdetails/',true);
     xhr.setRequestHeader('authorization',tokenId);
 
     xhr.onload = function(){

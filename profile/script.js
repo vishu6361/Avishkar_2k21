@@ -1,7 +1,6 @@
 var tokenId;
 var details;
 var isLocked = false;
- const api_url="http://api.divyansh.rocks"
 init();
 
 function init() {
