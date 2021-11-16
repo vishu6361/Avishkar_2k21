@@ -2,7 +2,7 @@ window.onload = getUserDetails();
 var pendingRequest = [];
 var teamID = undefined;
 var token;
-const api_url="http://20.204.6.238"
+const api_url="http://api.divyansh.rocks"
 function initialize(userDetails) {
 	const userName = userDetails.userName;
 	var count = 0;
