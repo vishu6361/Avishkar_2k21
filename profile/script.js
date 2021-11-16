@@ -21,7 +21,7 @@ function getUserDetails(tokenId) {
     //xhr.withCredentials = true;
 
     toastr.warning('Waiting for response!  .....  ', '', { timeOut: 0, extendedTimeOut: 0 });
-    xhr.open('POST', api_url+'/auth/getuserdetails/', true);
+    xhr.open('POST', 'http://api.divyansh.rocks/auth/getuserdetails/', true);
      //xhr.setRequestHeader("HTTP_X_REQUESTED_WITH", "XMLHttpRequest")
     xhr.setRequestHeader('authorization', tokenId);
 
@@ -229,7 +229,7 @@ function updateOtherDetails(details, tokenId) {
 
             //xhr.withCredentials = true;
 
-            xhr.open("POST", api_url+"/auth/updatecontact/", false);
+            xhr.open("POST", "http://api.divyansh.rocks/auth/updatecontact/", false);
             xhr.setRequestHeader("authorization", tokenId);
 
             xhr.onload = function () {
@@ -277,7 +277,7 @@ function updateNameEmail(details, tokenId) {
         //xhr.withCredentials = true;
 
 
-        xhr.open('POST', api_url+'/auth/updatenameandemail/', false);
+        xhr.open('POST', 'http://api.divyansh.rocks/auth/updatenameandemail/', false);
         xhr.setRequestHeader('authorization', tokenId);
 
         xhr.onload = function () {
@@ -311,7 +311,7 @@ function lockProfile(tokenId) {
     var xhr = new XMLHttpRequest();
     //xhr.withCredentials = true;
 
-    xhr.open('POST', api_url+'/auth/lock/', false);
+    xhr.open('POST', 'http://api.divyansh.rocks/auth/lock/', false);
     xhr.setRequestHeader('authorization', tokenId);
 
     xhr.onload = function () {
@@ -366,7 +366,7 @@ function updatePassword(tokenId) {
     var xhr = new XMLHttpRequest();
     // xhr.withCredentials = true;
     //
-    xhr.open("POST", api_url+"/auth/changepassword/", false);
+    xhr.open("POST", "http://api.divyansh.rocks/auth/changepassword/", false);
     xhr.setRequestHeader("authorization", tokenId);
    // xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
     //xhr.setRequestHeader('Access-Control-Allow-Origin', '*');

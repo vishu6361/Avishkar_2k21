@@ -265,7 +265,7 @@ function eventRegister(tokenId, teamId, eventId) {
 
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
-    xhr.open('POST', api_url+'/event/registertoevent/', false);
+    xhr.open('POST', 'http://api.divyansh.rocks/event/registertoevent/', false);
     xhr.setRequestHeader('authorization', tokenId);
     //xhr.setRequestHeader('cache-control', 'no-cache');
     //xhr.setRequestHeader("postman-token", "ae3469f2-dc36-da01-4647-8f8b00888d5d");

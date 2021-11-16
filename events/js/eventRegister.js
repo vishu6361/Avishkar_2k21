@@ -301,7 +301,7 @@ async function getUserDetails() {
         body: formdata,
     };
 
-    let response = await fetch(api_url+"/auth/getuserdetails/", requestOptions);
+    let response = await fetch("http://api.divyansh.rocks/auth/getuserdetails/", requestOptions);
     return response.json();
 }
 
@@ -321,7 +321,7 @@ async function apiCallRegisterEvent(teamID) {
         redirect: 'follow'
     };
 
-    return (await fetch(api_url+"/event/registertoevent/", requestOptions)).json();
+    return (await fetch("http://api.divyansh.rocks/event/registertoevent/", requestOptions)).json();
 
 }
 
@@ -337,6 +337,6 @@ async function getRegisteredStudents(authtoken, eventid) {
         body: formdata,
     };
 
-    let response = await fetch(api_url+"/event/getregistereduserslistofevent/", requestOptions);
+    let response = await fetch("http://api.divyansh.rocks/event/getregistereduserslistofevent/", requestOptions);
     return response.json();
 }

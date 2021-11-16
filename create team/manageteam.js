@@ -483,7 +483,7 @@ async function getUserDetails() {
         headers: myHeaders,
         body: formdata,
     };
-    let response = await fetch(api_url+"/auth/getuserdetails/", requestOptions);
+    let response = await fetch("http://api.divyansh.rocks/auth/getuserdetails/", requestOptions);
     return response.json();
 }
 
@@ -499,7 +499,7 @@ async function sendCreateTeamRequest(teamname) {
         body: formdata,
     };
 
-    let response = await fetch(api_url+"/event/createteam/", requestOptions);
+    let response = await fetch("http://api.divyansh.rocks/event/createteam/", requestOptions);
     return response.json();
 }
 
@@ -516,7 +516,7 @@ async function sendAddMemberRequest(teamid, username) {
         body: formdata,
     };
 
-    let response = await fetch(api_url+"/event/addteammember/", requestOptions);
+    let response = await fetch("http://api.divyansh.rocks/event/addteammember/", requestOptions);
     return response.json();
 }
 
@@ -533,7 +533,7 @@ async function sendRemoveMemberRequest(teamid, username) {
         body: formdata,
     };
 
-    let response = await fetch(api_url+"/event/removeteammember/", requestOptions);
+    let response = await fetch("http://api.divyansh.rocks/event/removeteammember/", requestOptions);
     return response.json();
 }
 
@@ -549,6 +549,6 @@ async function sendUnregisterTeamRequest(eventid, teamid) {
         headers: myHeaders,
         body: formdata,
     };
-    let response = await fetch(api_url+"/event/unregistertoevent/", requestOptions);
+    let response = await fetch("http://api.divyansh.rocks/event/unregistertoevent/", requestOptions);
     return response.json();
 }
