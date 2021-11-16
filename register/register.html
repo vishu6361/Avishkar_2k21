@@ -62,7 +62,7 @@
       };
 
       fetch(
-        "https://avishkarapi.sahajbamba.me/auth/getuserdetails/",
+          "http://api.divyansh.rocks/auth/getuserdetails/",
         requestOptions
       )
         .then((response) => response.text())
@@ -365,7 +365,7 @@ Thank you for your cooperation. Keep Innovating.
             body: formdata,
             redirect: 'follow'
             };
-            const api_url="http://api.divyansh.rocks"
+            var api_url="http://api.divyansh.rocks"
             console.log(api_url+"/auth/register/");
             await fetch(api_url+"/auth/register/", requestOptions)
             .then((response) => {

@@ -154,7 +154,7 @@ function getSelectValue(id){
     var parent = document.getElementsByTagName("option")[x].value;
     return parent;
 }
-const api_url="http://localhost:8000"
+const api_url="http://api.divyansh.rocks"
 function getTeams(tokenId){
 
     var data = null;

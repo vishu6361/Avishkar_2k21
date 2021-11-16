@@ -23,7 +23,7 @@
             redirect: 'follow'
             };
 
-            fetch("https://avishkarapi.sahajbamba.me/auth/getuserdetails/", requestOptions)
+            fetch("http://api.divyansh.rocks/auth/getuserdetails/", requestOptions)
             .then(response => response.text())
             .then(result => console.log(result))
             .catch(error => console.log('error', error));

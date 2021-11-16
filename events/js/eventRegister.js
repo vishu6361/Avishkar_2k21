@@ -5,7 +5,7 @@ let registeredEvents = [];
 let eventID = undefined;
 // to download csv
 let isStaff = false;
- const api_url="http://localhost:8000"
+ const api_url="http://api.divyansh.rocks"
 $(document).ready(function () {
 
     authtoken = localStorage.getItem('authtoken');
