@@ -1,7 +1,6 @@
 window.onload = getUserDetails();
 var pendingRequest = [];
 var teamID = undefined;
-const api_url="http://localhost:8000"
 function initialize(userDetails) {
 	const userName = userDetails.userName;
 	var count = 0;
@@ -48,7 +47,7 @@ function getUserDetails() {
 		};
 
 		fetch(
-			api_url+"/auth/getuserdetails/",
+			"http://api.divyansh.rocks/auth/getuserdetails/",
 			requestOptions
 		)
 			.then((response) => response.text())
@@ -118,7 +117,7 @@ function acceptRequest() {
 		redirect: 'follow'
 	};
 
-	fetch("" + api_url+"/event/joinrequestdecision/", requestOptions)
+	fetch("http://api.divyansh.rocks/event/joinrequestdecision/", requestOptions)
 		.then(response => response.text())
 		.then(result => {
 			$('#exampleModal').modal('hide');
@@ -148,7 +147,7 @@ function rejectRequest() {
 		redirect: 'follow'
 	};
 
-	fetch(api_url+"/event/joinrequestdecision/", requestOptions)
+	fetch("http://api.divyansh.rocks/event/joinrequestdecision/", requestOptions)
 		.then(response => response.text())
 		.then(result => {
 			$('#exampleModal').modal('hide');
