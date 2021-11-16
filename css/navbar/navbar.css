@@ -1,62 +1,201 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 @media only screen and (max-width: 768px) {
-
-    .style li a{
-        color:#00E3EF !important;
-        font-size: 12px;
-        padding: .8em;
-        line-height: 1;
-        border-bottom: none;
-        text-align:center;
-        font-size: 12px;
-        font-family: 'Orbitron', sans-serif;
-    }
-    
-    .nav-link{
-        margin-bottom:12px;
-        text-align: center;
-    }
-    
-    .navbar-dark{
-        background-color: rgba(0,0,0,0.6);
-        margin-bottom: 2.5rem;
-        padding-top: 0px;
-        padding-bottom: 0px;
-    }
-
-
-    
+  .style li a {
+    color: white !important;
+    font-size: 12px;
+    padding: 0.8em;
+    line-height: 1;
+    border-bottom: none;
+    text-align: center;
+    font-size: 12px;
+    font-family: "Orbitron", sans-serif;
+    letter-spacing: 0.15ch;
+  }
+  .nav-link {
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  .navbar-dark {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 2.5rem;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
-
-    .style li a{
-        border-radius: 10%;
-        color:#00E3EF !important;
-        font-size: 12px;
-        padding: .8em;
-        line-height: 1;
-        border-bottom: none;
-        border: 3px solid #00E3EF;
-        font-size: 12px;
-        font-family: 'Orbitron', sans-serif;
+  .nav-item a.font-weight-bold::after, .nav-item a.font-weight-bold::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .nav-item a.font-weight-bold {
+    font-family: "Orbitron", sans-serif;
+    position: relative;
+    color: white !important;
+    font-size: 12222px;
+    padding: 1em;
+    letter-spacing: 0.15ch;
+    margin: 0.45rem 0.6rem;
+    line-height: 1;
+    border-bottom: none;
+    border: 1px solid white;
+    font-size: 14px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .nav-item a.font-weight-bold:hover {
+    color: black !important;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  .nav-item a.font-weight-bold::after {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    z-index: 99;
+    inset: 92% 0 0 0;
+  }
+  .nav-item a.font-weight-bold:hover::after {
+    background: white;
+  }
+  .nav-item a.font-weight-bold::before {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    z-index: -1;
+    background: white;
+    inset: 0 0 0 0;
+  }
+  .nav-item a.font-weight-bold:hover::before {
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
+    background: white;
+    -webkit-transform: scaleY(1.01);
+            transform: scaleY(1.01);
+  }
+  @-webkit-keyframes change {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left;
     }
-    
-    
-    .nav-link{
-        margin-left:12px;
+    49% {
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left;
     }
-    
-    #faq-link{
-        margin-right:12px;
+    50% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: bottom right;
+              transform-origin: bottom right;
     }
-    
-    .navbar-dark{
-        margin-bottom: 2.5rem;
-        padding-top: 0px;
-        padding-bottom: 0px;
+    99% {
+      -webkit-transform-origin: bottom right;
+              transform-origin: bottom right;
     }
-
-
+    100% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left;
+    }
+  }
+  @keyframes change {
+    0% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left;
+    }
+    49% {
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left;
+    }
+    50% {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transform-origin: bottom right;
+              transform-origin: bottom right;
+    }
+    99% {
+      -webkit-transform-origin: bottom right;
+              transform-origin: bottom right;
+    }
+    100% {
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left;
+    }
+  }
+  @-webkit-keyframes changeY {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left;
+    }
+    49% {
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left;
+    }
+    50% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: top right;
+              transform-origin: top right;
+    }
+    99% {
+      -webkit-transform-origin: top right;
+              transform-origin: top right;
+    }
+    100% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left;
+    }
+  }
+  @keyframes changeY {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left;
+    }
+    49% {
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left;
+    }
+    50% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: top right;
+              transform-origin: top right;
+    }
+    99% {
+      -webkit-transform-origin: top right;
+              transform-origin: top right;
+    }
+    100% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left;
+    }
+  }
+  .navbar-items-logo {
+    padding: 0.3rem;
+  }
 }
+/*# sourceMappingURL=navbar.css.map */

@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+
+// $text-color: #00e3ef;
+$text-color: white;
+$thickness: 8%;
+
+@function randomNum($min, $max) {
+    $rand: random();
+    $randomNum: $min + floor($rand * (($max - $min) + 1));
+
+    @return $randomNum;
+}
+
+@media only screen and (max-width: 768px) {
+    .style li a {
+        color: $text-color !important;
+        font-size: 12px;
+        padding: 0.8em;
+        line-height: 1;
+        border-bottom: none;
+        text-align: center;
+        font-size: 12px;
+        font-family: "Orbitron", sans-serif;
+        letter-spacing: 0.15ch;
+    }
+
+    .nav-link {
+        margin-bottom: 12px;
+        text-align: center;
+    }
+
+    .navbar-dark {
+        background-color: rgba(0, 0, 0, 0.6);
+        margin-bottom: 2.5rem;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    %pseudo-block {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        // bottom: 0;
+        // content: "";
+        // display: block;
+        // height: 2px;
+        // // left: 0;
+        // inset: 0 0 0 0;
+        // position: absolute;
+        // background: $text-color;
+        // transform: scale(0);
+        // width: 0;
+    }
+
+    .nav-item a.font-weight-bold {
+        font-family: "Orbitron", sans-serif;
+        position: relative;
+        color: $text-color !important;
+        font-size: 12222px;
+        padding: 1em;
+        letter-spacing: 0.15ch;
+        margin: 0.45rem 0.6rem;
+        line-height: 1;
+        border-bottom: none;
+        border: 1px solid $text-color;
+        font-size: 14px;
+        transition: 0.3s ease;
+
+        // font-family: "Orbitron", sans-serif;
+        &:hover {
+            color: black !important;
+            transform: scale(1.1);
+        }
+        &::after {
+            @extend %pseudo-block;
+            transform: scaleX(0);
+            z-index: 99;
+            inset: ((100% - $thickness)) 0 0 0;
+        }
+
+        &:hover::after {
+            // animation: change 0.6s infinite;
+            // background: aquamarine;
+            background: white;
+
+            // transform: scaleX(1);
+            // transform-origin: bottom left;
+        }
+        &::before {
+            @extend %pseudo-block;
+            transform: scaleY(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+            z-index: -1;
+            background: $text-color;
+            inset: 0 0 0 0;
+        }
+
+        &:hover::before {
+            transform-origin: top left;
+            background: $text-color;
+            transform: scaleY(1.01);
+        }
+
+        // animation: name duration timing-function delay iteration-count direction
+        //     fill-mode;
+        @keyframes change {
+            0% {
+                transform: scaleX(0);
+                transform-origin: bottom left;
+            }
+
+            49% {
+                transform-origin: bottom left;
+            }
+
+            50% {
+                transform: scaleX(1);
+                transform-origin: bottom right;
+            }
+
+            99% {
+                transform-origin: bottom right;
+            }
+            100% {
+                transform: scaleX(0);
+                transform-origin: bottom left;
+            }
+        }
+
+        @keyframes changeY {
+            0% {
+                transform: scaleY(0);
+                transform-origin: bottom left;
+            }
+
+            49% {
+                transform-origin: bottom left;
+            }
+
+            50% {
+                transform: scaleY(1);
+                transform-origin: top right;
+            }
+
+            99% {
+                transform-origin: top right;
+            }
+            100% {
+                transform: scaleY(0);
+                transform-origin: bottom left;
+            }
+        }
+
+        // .nav-link {
+        //     margin-left: 12px;
+        // }
+
+        // #faq-link {
+        //     margin-right: 12px;
+        // }
+
+        // .navbar-dark {
+        //     margin-bottom: 2.5rem;
+        //     padding-top: 0px;
+        //     padding-bottom: 0px;
+        // }
+    }
+
+    .navbar-items-logo {
+        padding: 0.3rem;
+
+        // remove this filter to return the icon to blue
+        // filter: sepia(90%) saturate(1726%) hue-rotate(136deg) brightness(103%) contrast(106%);
+    }
+
+    // #faq-link {
+    //     margin-right: 1.5rem ;
+    // }
+}
