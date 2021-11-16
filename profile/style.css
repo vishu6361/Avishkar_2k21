@@ -65,3 +65,14 @@
     color:#00e3ef;
 }
 
+#BG {
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+}
+
+#eventList {
+    background-color: rgba(0, 0, 0, 0.7);
+}

@@ -239,11 +239,26 @@
     </div>
   </div>
 
+  <div id="BG"></div>
+
   <div class="footer">
     <p class="footer_text">All Rights Reserved &copy; MNNIT Allahabad, 2020</p>
   </div>
 
-
+  <script src="three.js"></script>
+  <script src="bg.js"></script>
+  <script>
+    VANTA.RINGS({
+      el: "#BG",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00
+    })
+  </script>
   <!-- Optional JavaScript -->
   <script src="../js/navbar/main.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
