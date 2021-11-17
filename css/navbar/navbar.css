@@ -1,22 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+.navbar {
+  font-size: 12px;
+}
+
 @media only screen and (max-width: 768px) {
   .style li a {
     color: white !important;
-    font-size: 12px;
     padding: 0.8em;
     line-height: 1;
     border-bottom: none;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     font-family: "Orbitron", sans-serif;
     letter-spacing: 0.15ch;
   }
   .nav-link {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     text-align: center;
   }
   .navbar-dark {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     margin-bottom: 2.5rem;
     padding-top: 0px;
     padding-bottom: 0px;
@@ -37,10 +40,9 @@
     font-family: "Orbitron", sans-serif;
     position: relative;
     color: white !important;
-    font-size: 12222px;
     padding: 1em;
     letter-spacing: 0.15ch;
-    margin: 0.45rem 0.6rem;
+    margin: 0.45em 0.6em;
     line-height: 1;
     border-bottom: none;
     border: 1px solid white;
