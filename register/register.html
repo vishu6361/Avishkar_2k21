@@ -62,7 +62,7 @@
       };
 
       fetch(
-          "http://api.divyansh.rocks/auth/getuserdetails/",
+          "https://api.divyansh.rocks/auth/getuserdetails/",
         requestOptions
       )
         .then((response) => response.text())
@@ -382,7 +382,7 @@ Thank you for your cooperation. Keep Innovating.
             body: formdata,
             redirect: 'follow'
             };
-            await fetch("http://api.divyansh.rocks/auth/register/", requestOptions)
+            await fetch("https://api.divyansh.rocks/auth/register/", requestOptions)
             .then((response) => {
                 return response.text();
             })

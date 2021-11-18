@@ -47,7 +47,7 @@ function getUserDetails() {
 		};
 
 		fetch(
-			"http://api.divyansh.rocks/auth/getuserdetails/",
+			"https://api.divyansh.rocks/auth/getuserdetails/",
 			requestOptions
 		)
 			.then((response) => response.text())
@@ -117,7 +117,7 @@ function acceptRequest() {
 		redirect: 'follow'
 	};
 
-	fetch("http://api.divyansh.rocks/event/joinrequestdecision/", requestOptions)
+	fetch("https://api.divyansh.rocks/event/joinrequestdecision/", requestOptions)
 		.then(response => response.text())
 		.then(result => {
 			$('#exampleModal').modal('hide');
@@ -147,7 +147,7 @@ function rejectRequest() {
 		redirect: 'follow'
 	};
 
-	fetch("http://api.divyansh.rocks/event/joinrequestdecision/", requestOptions)
+	fetch("https://api.divyansh.rocks/event/joinrequestdecision/", requestOptions)
 		.then(response => response.text())
 		.then(result => {
 			$('#exampleModal').modal('hide');

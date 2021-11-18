@@ -49,7 +49,7 @@
 		};
 
 		fetch(
-			"http://api.divyansh.rocks/auth/getuserdetails/",
+			"https://api.divyansh.rocks/auth/getuserdetails/",
 			requestOptions
 		)
 			.then((response) => response.text())
@@ -317,7 +317,7 @@
           body: formdata,
           redirect: 'follow'
         };
-      fetch("http://api.divyansh.rocks/auth/reset-password/", requestOptions)
+      fetch("https://api.divyansh.rocks/auth/reset-password/", requestOptions)
         .then((response) => {
           return response.text();
         })
@@ -373,7 +373,7 @@
         body: formdata,
         redirect: 'follow'
       };
-      await fetch("http://api.divyansh.rocks/auth/login/", requestOptions)
+      await fetch("https://api.divyansh.rocks/auth/login/", requestOptions)
         .then((response) => {
           return response.text();
         })
