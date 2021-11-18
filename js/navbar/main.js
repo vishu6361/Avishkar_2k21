@@ -1,4 +1,4 @@
-const api_url = "http://api.divyansh.rocks";
+const api_url = "https://api.divyansh.rocks";
 
 window.onload = getUserDetails();
 var pendingRequest = [];
@@ -53,7 +53,7 @@ function getUserDetails() {
 		};
 
 		fetch(
-			"http://api.divyansh.rocks/auth/getuserdetails/",
+			"https://api.divyansh.rocks/auth/getuserdetails/",
 			requestOptions
 		)
 			.then((response) => response.text())
@@ -126,7 +126,7 @@ function acceptRequest() {
 		redirect: 'follow'
 	};
 
-	fetch("http://api.divyansh.rocks/event/joinrequestdecision/", requestOptions)
+	fetch("https://api.divyansh.rocks/event/joinrequestdecision/", requestOptions)
 		.then(response => response.text())
 		.then(result => {
 			$('#exampleModal').modal('hide');
@@ -159,7 +159,7 @@ function rejectRequest() {
 	};
 
 
-	fetch("http://api.divyansh.rocks/event/joinrequestdecision/", requestOptions)
+	fetch("https://api.divyansh.rocks/event/joinrequestdecision/", requestOptions)
 		.then(response => response.text())
 		.then(result => {
 			$('#exampleModal').modal('hide');
@@ -207,5 +207,5 @@ async function logoutApiCall(){
 	body: formdata,
 	redirect: 'follow'
 	};
-	return (await fetch("http://api.divyansh.rocks/auth/logout/", requestOptions)).json();
+	return (await fetch("https://api.divyansh.rocks/auth/logout/", requestOptions)).json();
 }
