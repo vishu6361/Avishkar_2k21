@@ -121,15 +121,20 @@ body {
     text-align: center;
 }
 
+:root {
+    --button-text-color:orange;
+}
+
 .buttons a {
     display: inline-block;
     padding: 0 8px;
     color: orange;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 0.65em;
+    font-size: 1em;
+    /* font-weight: 800; */
     line-height: 1.5;
-
+    transition: 0.2s ease;
 }
 
 .buttons a:first-child:not(:only-child) { 
@@ -137,7 +142,12 @@ body {
 }
 
 .buttons a:hover,
-.buttons a:active { color: #64696a }
+.buttons a:active {
+     color: black;
+     background-color: var(--button-text-color);
+     text-decoration: none;
+     border: 1px solid var(--button-text-color)!important;
+}
 
 .bookshelf figcaption {
     position: relative;
