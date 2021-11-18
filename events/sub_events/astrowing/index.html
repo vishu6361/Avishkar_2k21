@@ -2,28 +2,28 @@
 <html lang="en" class="no-js">
 
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astrowing - Avishkar 2021</title>
+    <title>Science Exhibition - Avishkar 2020</title>
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="../css/normalize.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/demo.css"/>
-    <link rel="stylesheet" type="text/css" href="../css/bookblock.css"/>
-    <link rel="stylesheet" type="text/css" href="css/component.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="../css/bookblock.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
 
     <link rel="stylesheet" href="../../css/my.css"> <!-- Resource style -->
     <link rel="stylesheet" href="../css/my.css"> <!-- Resource style -->
@@ -34,140 +34,139 @@
 </head>
 
 <body>
-<div id="canvas_container"></div>
+    <div id="canvas_container"></div>
 
-<nav class="navbar navbar-expand-md navbar-dark" style="z-index: 1; margin-top: -100vh;">
-    <!--class navbar-expand-md-->
-    <div class="container-fluid">
-        <a class="navbar-brand pt-0 pb-0" href="../../../index.html">
-            <img class="navbar-items-logo" src="../../../img/Neon_triangle.png" height="80" alt="">
-        </a>
+    <nav class="navbar navbar-expand-md navbar-dark" style="z-index: 1; margin-top: -100vh;">
+        <!--class navbar-expand-md-->
+        <div class="container-fluid">
+            <a class="navbar-brand pt-0 pb-0" href="../../../index.html">
+                <img class="navbar-items-logo" src="../../../img/Neon_triangle.png" height="80" alt="">
+            </a>
 
-        <button class="navbar-toggler ml-auto pt-0 pb-0" type="button" data-toggle="collapse"
+            <button class="navbar-toggler ml-auto pt-0 pb-0" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse pt-0 pb-0" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto style">
-                <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="../../../events/">EVENTS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="../../../schedule/">SCHEDULE</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="../../../sponsors/">SPONSORS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link font-weight-bold" href="../../../team/">TEAM</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link font-weight-bold" id="faq-link" href="../../../faq/">FAQ</a>
-                </li>
-            </ul>
-
-            <!--login div container-->
-            <div id="login">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="navbarDropdown" role="button"
-                           onclick="showPendingRequests()" data-toggle="dropdown" aria-haspopup="true"
-                           aria-expanded="false" style="margin-right:12px">
-                            <img class="navbar-items-logo" src="../../../img/notification.svg"><span
-                                class="badge badge-warning" id="notificationCount"></span></a>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
-                             id="pendingRequests" style="display: none; background-color: black;">
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false">
-                            <img class="navbar-items-logo" src="../../../img/person.svg">
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
-                             style="background-color: black;">
-                            <a class="dropdown-item" href="../../../profile/index.html"
-                               style="color:#00E3EF;">Profile</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="../../../create team/createteam.html"
-                               style="color:#00E3EF;">Manage Teams</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#" onclick="logout()" style="color:#00E3EF;">Logout</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div id="notlogin" style="display: none;">
+            <div class="collapse navbar-collapse pt-0 pb-0" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto style">
                     <li class="nav-item">
-                        <a class="nav-link font-weight-bold" href="../../../register/login.html">Login</a>
+                        <a class="nav-link font-weight-bold" href="../../../events/">EVENTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="../../../schedule/">SCHEDULE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="../../../sponsors/">SPONSORS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" href="../../../team/">TEAM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link font-weight-bold" id="faq-link" href="../../../faq/">FAQ</a>
                     </li>
                 </ul>
-            </div>
-        </div>
-    </div>
-</nav>
 
+                <!--login div container-->
+                <div id="login">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button"
+                                onclick="showPendingRequests()" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false" style="margin-right:12px">
+                                <img class="navbar-items-logo" src="../../../img/notification.svg"><span
+                                    class="badge badge-warning" id="notificationCount"></span></a>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
+                                id="pendingRequests" style="display: none; background-color: black;">
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img class="navbar-items-logo" src="../../../img/person.svg">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"
+                                style="background-color: black;">
+                                <a class="dropdown-item" href="../../../profile/index.html"
+                                    style="color:#00E3EF;">Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="../../../create team/createteam.html"
+                                    style="color:#00E3EF;">Manage Teams</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" onclick="logout()" style="color:#00E3EF;">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel" style="color:black">Confirmation</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div>
-                    <h5 style="color:black"><small>Do you want to accept or reject the request?</small></h5>
+                <div id="notlogin" style="display: none;">
+                    <ul class="navbar-nav ml-auto style">
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" href="../../../register/login.html">Login</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-success" onclick="acceptRequest()">Accept</button>
-                <button type="button" class="btn btn-primary" onclick="rejectRequest()">Reject</button>
+        </div>
+    </nav>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color:black">Confirmation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <h5 style="color:black"><small>Do you want to accept or reject the request?</small></h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" onclick="acceptRequest()">Accept</button>
+                    <button type="button" class="btn btn-primary" onclick="rejectRequest()">Reject</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!--Modal ends here-->
-<!--select team modal start here-->
-<div class="modal" id="selectTeamModal" tabindex="-1" role="dialog" aria-labelledby="selectTeamModalLabel"
-     aria-hidden="true" style="z-index: 5000;">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="selectTeamModalLabel" style="color:black">Select Team to Register</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <select id="teamDropdownMenu">
-                </select>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary"
-                        onclick="registerAfterSelectingTeam(event)">Register
-                </button>
+    <!--Modal ends here-->
+    <!--select team modal start here-->
+    <div class="modal" id="selectTeamModal" tabindex="-1" role="dialog" aria-labelledby="selectTeamModalLabel"
+        aria-hidden="true" style="z-index: 5000;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="selectTeamModalLabel" style="color:black">Select Team to Register</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <select id="teamDropdownMenu">
+                    </select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary"
+                        onclick="registerAfterSelectingTeam(event)">Register</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!--select team modal ends here-->
+    <!--select team modal ends here-->
 
-<main class="cd-main-content">
+    <main class="cd-main-content">
 
-    <header class="header" style="position: relative;">
-        <h1>Astrowing</h1>
-    </header>
+        <header class="header" style="position: relative;">
+            <h1>Astrowing</h1>
+        </header>
 
     <div id="scroll-wrap" class="container mybookcont">
         <div class="main">
@@ -201,68 +200,36 @@
                     </div>
                 </figure>
             </div>
+            <!-- /main -->
         </div>
-        <!-- /main -->
-    </div>
 
-    <div>
+        <div>
 
-        <h3
-                style="text-align:center;font-family: 'Orbitron',sans-serif;font-size: 2.3em;margin-top: 2%;color:white;">
-            Branch Coordinator's
-        </h3>
-        <!-- Button Container -->
-        <div id="btns">
-            <!-- Start Button 1 -->
-            <div class="btn">
-                <div class="btn-inner">
-                    <div class="btn-top">
-                        <!-- Icon -->
-                        <!-- Title -->
-                        <h4>Yash Sahay</h4>
-                    </div>
-                    <!-- End ButtonTop -->
-                    <div class="btn-bottom">
-                        <!-- Icon -->
-                        <!-- Title -->
-                        <h4>Yash Sahay</h4>
-                        <!-- Text -->
-                        <p>8540986020<br>yashsahay2014@gmail.com</p>
-                        <!-- End Button Bottom -->
-                    </div>
-                    <!-- End Button Inner -->
-                </div>
-                <!-- End Button 1 -->
-            </div>
             <!-- /container -->
             <!-- Fullscreen BookBlock -->
             <!-- for demo purpose we repeat each bookblock -->
-            <div class="bb-custom-wrapper" id="book-1">
+            <!-- <div class="bb-custom-wrapper" id="book-1">
                 <div class="bb-bookblock">
                     <div class="bb-item">
                         <div class="bb-custom-side page-layout-1">
                             <h3>
-                                Astrowing<span>Astrophotography</span>
+                                Science Exhibition<span>TechToy</span>
                             </h3>
                         </div>
                         <div class="bb-custom-side page-layout-1">
-                            <p>Look for the stars, if you miss you will land on the moon.</p>
+                            <p>Most enduring modifications in toys are never the work of manufacturers, but are the
+                                result of children at play.</p>
                             <div class="d-flex justify-content-center download-list">
-                                <button type="button" style="margin: 5px; display: none;" data-event-id="astrophoto"
-                                        class="btn btn-success download-list">Download List
-                                </button>
+                                <button type="button" style="margin: 5px; display: none;" data-event-id="techtoy"
+                                    class="btn btn-success download-list">Download List</button>
                             </div>
                             <div class="d-flex justify-content-center register-button">
-                                <button type="button" id="astrophotoButtonId"
-                                        style="background-color: darkslategrey; color:white;"
-                                        onclick="registerForEvent(event)" class="btn">Register
-                                </button>
+                                <button type="button" id="techtoyButtonId" style="background-color: darkslategrey; color:white;"
+                                    onclick="registerForEvent(event)" class="btn">Register</button>
                             </div>
                             <div class="d-flex justify-content-center download-problem-statement">
-                                <button type="button" style="background-color: darkslategrey; color:white;" class="btn">
-                                    <a
-                                            href="" target="_blank"
-                                            style="text-transform: capitalize;">Problem
+                                <button type="button" style="background-color: darkslategrey; color:white;" class="btn"><a
+                                        href="./EVENT_ TechTOY.pdf" target="_blank" style="text-transform: capitalize;">Problem
                                         Statements</a></button>
                             </div>
                         </div>
@@ -271,19 +238,14 @@
                         <div class="bb-custom-side page-layout-2">
                             <div>
                                 <h3>About</h3>
-                                <p>As the name suggests, this event is for you to showcase your true photography skills
-                                    and your love for space. All you need is a mobile phone and clear night skies :)
-                                    You will have multiple attempts to take your best photo. It will be judged on its
-                                    composition, creativity and uniqueness.</p>
+                                <p>The best toys are like unicorns. They include enough horse to seem real, but enough
+                                    horn to become magical. If little else, the brain is an educational toy.Here you
+                                    have a stage to present your prototype and ideas for making of toys</p>
                             </div>
                             <div>
                                 <h3 style="font-size: 2em">Participation Criteria</h3>
-                                <ul>
-                                    <li>Team Size: 1(Individual event)</li>
-                                    <li>Year allowed: All</li>
-                                    <li>Outside Participation: Yes</li>
-                                    <li>All branches allowed</li>
-                                </ul>
+                                <p>School students of class 7th to 12th, 2nd and 3rd year students (all branches)</p>
+                                <p>Size- team of 1 to 3.</p>
                             </div>
                         </div>
                         <div class="bb-custom-side page-layout-2">
@@ -291,22 +253,24 @@
                                 <h3 style="font-size: 2em">Contact Info</h3>
                                 <p>
                                 <ul>
-                                    <li>Nilotpal Mukherjee
-                                        <ul>
-                                            <li>nilotpalmukherjee.909@gmail.com</li>
-                                            <li>9297848673</li>
+                                    <li>Ajay Patidar<ul>
+                                            <li>apatidar26881@gmail.com</li>
+                                            <li>9617446459</li>
                                         </ul>
                                     </li>
-                                    <li>Yash Sahayl
-                                        <ul>
-                                            <li>yashsahay2014@gmail.com</li>
-                                            <li>8540986020</li>
+                                    <li>Chandrama Patel<ul>
+                                            <li>chandramapatel021@gmail.com</li>
+                                            <li>7985204412</li>
                                         </ul>
                                     </li>
-                                    <li>Siddharth Tiwari
-                                        <ul>
-                                            <li>siddharthtiwari958@gmail.com</li>
-                                            <li>6265211987</li>
+                                    <li>Ankit Kumar Tripathi<ul>
+                                            <li>aktripathi00001@gmail.com</li>
+                                            <li>8318613153</li>
+                                        </ul>
+                                    </li>
+                                    <li>Akshat Agrawal<ul>
+                                            <li>akshatagrawal107@gmail.com</li>
+                                            <li>8269753275</li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -314,9 +278,12 @@
                             </div>
                             <div>
                                 <h5>Rules:</h5>
-                                <p>Onsite Round
-                                    *Note - mobile phone having camera is required*
-                                    Photographs will be judged on composition, creativity and uniqueness.</p>
+                                <ol>
+                                    <li>A Live Quiz.</li>
+                                    <li>Abstract submission.</li>
+                                    <li>Presentation.</li>
+                                    <li>Viva (80%) and 3D model(20%).</li>
+                                </ol>
                             </div>
                         </div>
                     </div>
@@ -326,7 +293,7 @@
                     <a href="#" class="bb-nav-next">Next</a>
                     <a href="#" class="bb-nav-close">Close</a>
                 </nav>
-            </div>
+            </div> -->
 
             <div class="bb-custom-wrapper" id="book-2">
                 <div class="bb-bookblock">
@@ -337,25 +304,22 @@
                             </h3>
                         </div>
                         <div class="bb-custom-side page-layout-1">
-                            <p>Look for the stars, if you miss you will land on the moon.</p>
+                            <p>​Extraordinary things are always hiding in places people never think to look</p>
                             <div class="d-flex justify-content-center download-list">
-                                <button type="button" style="margin: 5px; display: none;" data-event-id="lostinspace"
-                                        class="btn btn-success download-list">Download List
-                                </button>
+                                <button type="button" style="margin: 5px; display: none;" data-event-id="techtoy"
+                                    class="btn btn-success download-list">Download List</button>
                             </div>
                             <div class="d-flex justify-content-center register-button">
-                                <button type="button" id="lostinspaceButtonId"
-                                        style="background-color: darkslategrey; color:white;"
-                                        onclick="registerForEvent(event)" class="btn">Register
-                                </button>
+                                <button type="button" id="techtoyButtonId"
+                                    style="background-color: darkslategrey; color:white;"
+                                    onclick="registerForEvent(event)" class="btn">Register</button>
                             </div>
                             <div class="d-flex justify-content-center download-problem-statement">
                                 <button type="button" style="background-color: darkslategrey; color:white;"
-                                        class="btn"><a
+                                    class="btn"><a
                                         href="https://drive.google.com/file/d/1TBfVqBcddLWfMFfib36XXQ-Uz3PXPH1J/view?fbclid=IwAR061G-EXGqRbsr_pE-8Vw66Llv93xo1G873J_21-OVqctLktQ2_FO1JWMM"
-                                        target="_blank"
-                                        style="text-transform: capitalize;">Problem
-                                    Statements</a></button>
+                                        target="_blank" style="text-transform: capitalize;">Problem
+                                        Statements</a></button>
                             </div>
                         </div>
                     </div>
@@ -363,17 +327,20 @@
                         <div class="bb-custom-side page-layout-2">
                             <div>
                                 <h3>About</h3>
-                                <p>Add details</p>
+                                <p>Amidst all the mind-blowing workshops and brainstorming competitions, one must take
+                                    some timeout to let it loose. Keeping this in mind, we do have a fun event "LOST IN
+                                    SPACE"
+                                    under"ASTRONOMY/AEROSPACE DIVISION". Just bring your pen and dive into the world
+                                    of Stars and Galaxies!</p>
                             </div>
                             <div>
                                 <h3 style="font-size: 2em">Participation Criteria</h3>
-                                <ul>
-                                    <li>Team Size: 3 (max)</li>
-                                    <li>Year allowed: All</li>
-                                    <li>Outside Participation: Yes</li>
-                                    <li>Inter-Year teams: Yes</li>
-                                    <li>All branches allowed</li>
-                                </ul>
+                                <p>Size- team of 1 to 3.</p>
+                                <p>
+                                    Year allowed: All <br>
+                                    Outside Participation: Yes<br>
+                                    Inter-Year teams: Yes<br>
+                                    All branches allowed</p>
                             </div>
                         </div>
                         <div class="bb-custom-side page-layout-2">
@@ -381,20 +348,17 @@
                                 <h3 style="font-size: 2em">Contact Info</h3>
                                 <p>
                                 <ul>
-                                    <li>Nilotpal Mukherjee
-                                        <ul>
+                                    <li>Nilotpal Mukherjee<ul>
                                             <li>nilotpalmukherjee.909@gmail.com</li>
                                             <li>9297848673</li>
                                         </ul>
                                     </li>
-                                    <li>Yash Sahayl
-                                        <ul>
+                                    <li>Yash Sahay<ul>
                                             <li>yashsahay2014@gmail.com</li>
                                             <li>8540986020</li>
                                         </ul>
                                     </li>
-                                    <li>Siddharth Tiwari
-                                        <ul>
+                                    <li>Siddharth Tiwari<ul>
                                             <li>siddharthtiwari958@gmail.com</li>
                                             <li>6265211987</li>
                                         </ul>
@@ -405,12 +369,27 @@
                             <div>
                                 <h5>Rules:</h5>
                                 <ol>
-                                    <li>Round 1: Craft Design.</li>
-                                    <li>Round 2: Mission Execution & Features.</li>
-                                    <li>Round 3: Report & Interview.</li>
-                                    <li>Final evaluation will be done on the basis of the marks obtained in:
-                                        Round1 + Round2 + Round3 + All Bonus Points.
-                                    </li>
+                                    <li style="font-size: 12px;"><u>Round 1: Craft Design</u>&ensp;
+                                        Teams/Individuals will have an interview explaining their craft, where they will
+                                        be scored as well. (described in the
+                                        PS)</li>
+                                    <li style="font-size: 12px;"><u></u>Round 2: Mission Execution & Features</u>&ensp;
+                                        Teams/Individuals will achieve goals of Round 2 using craft built in Round 1.
+                                        They will be judged on implementation of
+                                        features, execution of mission and creativity in achieving it.</li>
+                                    <li style="font-size: 12px;"><u>Round 3: Report & Interview</u>
+                                        In Round 3, 20 marks will be based upon the Report. The aspects of marking will
+                                        be
+                                        based upon both technical and presentation aspects of the report.
+                                        One must be able to explain the process how the entire process was done due to
+                                        plagiarism concerns.
+                                        Participants are required to share their screen and show us the screen recording
+                                        of
+                                        the entire process. If you did
+                                        multiple attempts, you just need to show us the
+                                        final attempt.</li>
+                                    <li style="font-size: 12px;">Final evaluation will be done on the basis of the marks
+                                        obtained in:Round1 + Round2 + Round3 + All Bonus Points</li>
                                 </ol>
                             </div>
                         </div>
@@ -432,24 +411,23 @@
                             </h3>
                         </div>
                         <div class="bb-custom-side page-layout-1">
-                            <p>Look for the stars, if you miss you will land on the moon.</p>
+                            <p>Most enduring modifications in toys are never the work of manufacturers, but are the
+                                result of children at play.</p>
                             <div class="d-flex justify-content-center download-list">
-                                <button type="button" style="margin: 5px; display: none;" data-event-id="astroquiz"
-                                        class="btn btn-success download-list">Download List
-                                </button>
+                                <button type="button" style="margin: 5px; display: none;" data-event-id="techtoy"
+                                    class="btn btn-success download-list">Download List</button>
                             </div>
                             <div class="d-flex justify-content-center register-button">
-                                <button type="button" id="astroquizButtonId"
-                                        style="background-color: darkslategrey; color:white;"
-                                        onclick="registerForEvent(event)" class="btn">Register
-                                </button>
+                                <button type="button" id="techtoyButtonId"
+                                    style="background-color: darkslategrey; color:white;"
+                                    onclick="registerForEvent(event)" class="btn">Register</button>
                             </div>
-                            <div class="d-flex justify-content-center download-problem-statement">
+                            <!-- <div class="d-flex justify-content-center download-problem-statement">
                                 <button type="button" style="background-color: darkslategrey; color:white;"
-                                        class="btn"><a href="" target="_blank"
-                                                       style="text-transform: capitalize;">Problem
-                                    Statements</a></button>
-                            </div>
+                                    class="btn"><a href="./EVENT_ TechTOY.pdf" target="_blank"
+                                        style="text-transform: capitalize;">Problem
+                                        Statements</a></button>
+                            </div> -->
                         </div>
                     </div>
                     <div class="bb-item">
@@ -461,13 +439,12 @@
                             </div>
                             <div>
                                 <h3 style="font-size: 2em">Participation Criteria</h3>
-                                <ul>
-                                    <li>Team Size: 3 (max)</li>
-                                    <li>Year allowed: All</li>
-                                    <li>Outside Participation: Yes</li>
-                                    <li>Inter-Year teams: Yes</li>
-                                    <li>All branches allowed</li>
-                                </ul>
+                                <p><u></u>Team Size: 3 (max)<br>
+                                    <u>Year allowed</u>: All<br>
+                                    <u>Outside Participation</u> Outside Participation: Yes<br>
+                                    <u>Inter-Year teams</u>: Yes<br>
+                                    <u>All branches allowed</u>
+                                </p>
                             </div>
                         </div>
                         <div class="bb-custom-side page-layout-2">
@@ -475,20 +452,17 @@
                                 <h3 style="font-size: 2em">Contact Info</h3>
                                 <p>
                                 <ul>
-                                    <li>Yash Sahayl
-                                        <ul>
+                                    <li>Yash Sahayl<ul>
                                             <li>yashsahay2014@gmail.com</li>
                                             <li>8540986020</li>
                                         </ul>
                                     </li>
-                                    <li>Nilotpal Mukherjee
-                                        <ul>
+                                    <li>Nilotpal Mukherjee<ul>
                                             <li>nilotpalmukherjee.909@gmail.com</li>
                                             <li>9297848673</li>
                                         </ul>
                                     </li>
-                                    <li>Siddharth Tiwari
-                                        <ul>
+                                    <li>Siddharth Tiwari<ul>
                                             <li>siddharthtiwari958@gmail.com</li>
                                             <li>6265211987</li>
                                         </ul>
@@ -498,11 +472,17 @@
                             </div>
                             <div>
                                 <h5>Rules:</h5>
+                                The quiz will have 2 rounds.
+
                                 <ol>
-                                    <li>The quiz will have 2 rounds.</li>
-                                    <li>Preliminary Round Quiz</li>
-                                    <li>Final Round Quiz.</li>
-                                    <li>hose who clear Prelims will appear for the finals during Avishkar 2021.</li>
+                                    <li>
+                                        Preliminary Round Quiz
+
+                                    </li>
+                                    <li>Final Round Quiz</li>
+                                    <li>
+                                        Those who clear Prelims will appear for the finals during Avishkar 2021"
+                                    </li>
                                 </ol>
                             </div>
                         </div>
@@ -574,22 +554,22 @@ deem fit.</li>
 
         </div>
 
-</main>
-<div class="footer d-flex align-items-center justify-content-center">
-    <p class="footer_text" style="margin-bottom: 0">All Rights Reserved &copy; MNNIT Allahabad, 2021</p>
-</div>
+    </main>
+    <div class="footer d-flex align-items-center justify-content-center">
+        <p class="footer_text" style="margin-bottom: 0">All Rights Reserved &copy; MNNIT Allahabad, 2021</p>
+    </div>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js'></script>
-<script src="../../js/background.js"></script>
-<script src="../js/bookblock.min.js"></script>
-<script src="../js/classie.js"></script>
-<script src="../js/bookshelf.js"></script>
-<script type="text/javascript">
-    $("header").append("<div class='glitch-window'></div>");
-    $("h1.glitched").clone().appendTo(".glitch-window");
-</script>
-<script src="../../../js/navbar/main.js"></script> <!-- Resource jQuery -->
-<script src="../../js/eventRegister.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js'></script>
+    <script src="../../js/background.js"></script>
+    <script src="../js/bookblock.min.js"></script>
+    <script src="../js/classie.js"></script>
+    <script src="../js/bookshelf.js"></script>
+    <script type="text/javascript">
+        $("header").append("<div class='glitch-window'></div>");
+        $("h1.glitched").clone().appendTo(".glitch-window");
+    </script>
+    <script src="../../../js/navbar/main.js"></script> <!-- Resource jQuery -->
+    <script src="../../js/eventRegister.js"></script>
 </body>
 
 </html>
