@@ -22,6 +22,7 @@
 		<link rel="stylesheet" href="css/slogan.css" />
 		<link rel="stylesheet" href="css/my.css"/>
 		<link rel="stylesheet" href="css/lasertext.css">
+		<link rel="stylesheet" href="./css/index-bg.css">
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -136,12 +137,13 @@
 
 		<div class="demo5">
 			<div class="content">
-				<!-- The canvas where ThreeJs renders the WebGL -->
-				<!-- <canvas id="scene"></canvas> -->
+				<div id="canvas_container"></div>
+				<!-- The canvas where ThreeJs renders the WebGL
+				<canvas id="scene"></canvas>
 				<video id="videoBG" poster="img/earth_ss.png" autoplay muted loop>
-					<!-- <source class="active" src="img/earth_zoom_in.mov" type="video/mp4"> -->
+					<source class="active" src="img/earth_zoom_in.mov" type="video/mp4">
 					<source src="img/earth_in_out.mp4" type="video/mp4">
-				</video>
+				</video> -->
 			</div>
 			<!-- <div>
 				<img id="santa" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fclipart-library.com%2Fimages_k%2Fsatellite-transparent%2Fsatellite-transparent-18.png&f=1&nofb=1" width="300px">
@@ -208,6 +210,11 @@
 		<script src="js/vendors/perlin.js"></script>
 		<script src="js/demo5.js"></script>
 		<script src="js/lasertext.js"></script>
+
+		<script src='https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.min.js'></script>
+		<script src='https://cdn.jsdelivr.net/npm/three@0.121.1/examples/js/controls/OrbitControls.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js'></script>
+		<script  src="./js/index-bg.js"></script>
 
 		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
 		<script>
