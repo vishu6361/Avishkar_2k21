@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 551">
+    <defs>
+        <style>
+            .cls-1 {
+                fill: #f0b0cf;
+            }
+
+            .cls-2 {
+                fill: #4e4e4e;
+            }
+
+            .cls-3 {
+                fill: #333;
+            }
+
+            .cls-4 {
+                fill: #1a1a1a;
+            }
+
+            .cls-10,
+            .cls-4,
+            .cls-7,
+            .cls-9 {
+                fill-rule: evenodd;
+            }
+
+            .cls-5 {
+                fill: #010101;
+            }
+
+            .cls-6 {
+                fill: #fbecf4;
+            }
+
+            .cls-7 {
+                fill: #f6dfec;
+            }
+
+            .cls-8 {
+                font-size: 193.67px;
+                fill: #da2863;
+                font-family: Arial-BoldMT, Arial;
+                font-weight: 700;
+            }
+
+            .cls-9 {
+                fill: #fff;
+            }
+
+            .cls-10 {
+                fill: #ef5386;
+            }
+
+        </style>
+    </defs>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_1-2" data-name="Layer 1">
+            <circle class="cls-1" cx="275.5" cy="275.5" r="275.5" />
+            <path class="cls-2" d="M388.9,442.7c-75.43-1.41-151-1.61-226.8,0v8H388.9Z" />
+            <path class="cls-3" d="M388.9,442.7H162.1l11.55-17.33h203.7Z" />
+            <path class="cls-4" d="M247.27,391.39h56.46l29.49,40.24a624.35,624.35,0,0,1-115.44,0Z" />
+            <rect class="cls-5" x="82.86" y="110.27" width="385.27" height="292.71" rx="17.56" />
+            <rect class="cls-6" x="105.97" y="133.42" width="339.07" height="226.2" />
+            <polygon class="cls-7" points="445.03 359.62 105.97 133.41 105.97 359.62 445.03 359.62" /><text
+                class="cls-8" transform="translate(140.5 315.86)">&lt;/&gt;</text>
+            <path class="cls-9" d="M275.5,392.25a11,11,0,1,0-11-11A11,11,0,0,0,275.5,392.25Z" />
+            <path class="cls-9" d="M411.23,386.2a4.93,4.93,0,1,0-4.93-4.92A4.93,4.93,0,0,0,411.23,386.2Z" />
+            <path class="cls-9" d="M432.37,386.2a4.93,4.93,0,1,0-4.92-4.92A4.94,4.94,0,0,0,432.37,386.2Z" />
+            <polygon class="cls-10" points="244.01 221.65 244.01 194.69 215.99 206.82 240.33 223.05 244.01 221.65" />
+            <polygon class="cls-10" points="287.75 254.69 307.08 174.84 287.14 174.84 270.73 243.33 287.75 254.69" />
+            <polygon class="cls-10"
+                points="411.02 236.01 315.87 194.89 315.87 221.45 382.26 247.28 315.87 273.39 315.87 273.45 340.08 289.6 411.02 258.7 411.02 236.01" />
+        </g>
+    </g>
+</svg>
