@@ -1,52 +1,8 @@
-body {
-    margin: 0;
-    overflow: visible;
-    position: relative;
-    /*
-
-    ! Adding max width after noticing that some pages are overflowing in the x-direction.
-    If any problem is caused by this, fell free to remove it
-
-    */
-    max-width: 100%;
-    width: 100vw;
+#BG {
     height: 100vh;
-    background-image: url("https://user-images.githubusercontent.com/26748614/96337412-581f2e80-1087-11eb-90f3-f033a8a1b41e.jpg");
-    background-size: cover;
-    background-repeat: repeat;
-    background-attachment: fixed;
-}
-
-canvas {
-    display: block;
+    width: 100%;
+    z-index: -1;
     position: fixed;
     top: 0;
-    left: 0;
+	transform: scale(-1);
 }
-
-#canvas_container {
-    width: 100%;
-    height: 100%;
-}
-
-/* button {
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 1px solid white;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    padding: 0.5rem 0.9em;
-    background: #000000;
-    color: white;
-    -webkit-font-smoothing: antialiased;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all .5s;
-}
-
-button:hover {
-    background: #ffffff;
-    color: #000000;
-} */

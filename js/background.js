@@ -120,7 +120,7 @@ function init() {
     );
     terrain_line.rotation.x = -0.47 * Math.PI;
     terrain_line.rotation.z = THREE.Math.degToRad(90);
-    scene.add(terrain_line);
+    // scene.add(terrain_line);
 
 
 
