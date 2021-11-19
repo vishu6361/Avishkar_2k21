@@ -12,19 +12,14 @@
 
 @font-face {
   font-family: Avishkar;
-  src: url(../fonts/metro-retro.regular.ttf);
+  src: url(../fonts/fast-hand-font/FastHand-lgBMV.ttf);
 }
 
 h1 {
   font-family: Avishkar;
 }
 
-@font-face {
-  font-family: slogan1;
-  src: url(../fonts/metro-retro.regular.ttf);
-}
-
 p {
-  font-family: slogan1;
+  font-family: 'Orbitron', sans-serif;;
   font-size: 24px;
 }

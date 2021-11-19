@@ -46,7 +46,7 @@ header.header {
 }
 
 header.header h1 {
-    font-family: Allerta;
+    font-family: "Orbitron", sans-serif;
     font-size: 4rem;
     padding-bottom: 6rem;
     color: #e3e9f7 !important;

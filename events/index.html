@@ -26,16 +26,20 @@
 	<link rel="stylesheet" type="text/css" href="../css/navbar/navbar.css">
 	<link rel="stylesheet" href="https://use.typekit.net/vad8env.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/background.css">
+	<link rel="stylesheet" href="../css/background.css">
+	
+	<!-- <link rel="stylesheet" href="css/background.css"> -->
 </head>
 <body>
 	<!-- <video autoplay muted loop id="myVideo">
   		<source src="../images/video_ngIQb4dO_F7FJ.mp4" type="video/mp4">
 	</video>
 	 -->
-	  <div id="canvas_container"></div> 
+	  <!-- <div id="canvas_container"></div>  -->
+	<div id="BG"></div>
 
-	<nav class="navbar navbar-expand-md navbar-dark" style="z-index: 1; margin-top: -100vh;">
+
+	<nav class="navbar navbar-expand-md navbar-dark">
 		<!--class navbar-expand-md-->
 		<div class="container-fluid">
 		  <a class="navbar-brand pt-0 pb-0" href="../index.html">
@@ -337,8 +341,20 @@
 	  </div>
 	  <!-- partial -->
 	  
-	  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js'></script>
-	  <script src="js/background.js"></script>
+	  <script src="../js/three.js"></script>
+	<script src="../js/bg.js"></script>
+	<script>
+		VANTA.RINGS({
+		el: "#BG",
+		mouseControls: true,
+		touchControls: true,
+		gyroControls: false,
+		minHeight: 200.00,
+		minWidth: 200.00,
+		scale: 1.00,
+		scaleMobile: 1.00
+		})
+	</script>
 
 	
 	<script type="text/javascript">
