@@ -57,7 +57,7 @@ function init() {
 
     /*  Nucleus  */   
     texturenucleus.anisotropy = 16;
-    let icosahedronGeometry = new THREE.IcosahedronGeometry(30, 10);
+    let icosahedronGeometry = new THREE.IcosahedronGeometry(50, 10);
     let lambertMaterial = new THREE.MeshPhongMaterial({ map: texturenucleus });
     nucleus = new THREE.Mesh(icosahedronGeometry, lambertMaterial);
     scene.add(nucleus);
@@ -65,7 +65,7 @@ function init() {
 
     /*    Sphere  Background   */
     textureSphereBg.anisotropy = 16;
-    let geometrySphereBg = new THREE.SphereBufferGeometry(150, 40, 40);
+    let geometrySphereBg = new THREE.SphereBufferGeometry(200, 40, 40);
     let materialSphereBg = new THREE.MeshBasicMaterial({
         side: THREE.BackSide,
         map: textureSphereBg,
