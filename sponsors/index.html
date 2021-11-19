@@ -46,9 +46,9 @@
 
 <body>
 
-	<div id="canvas_container"></div>
+	<div id="BG"></div>
 
-	<nav class="navbar navbar-expand-md navbar-dark" style="z-index: 1; margin-top: -100vh;">
+	<nav class="navbar navbar-expand-md navbar-dark">
 		<!--class navbar-expand-md-->
 		<div class="container-fluid">
 			<a class="navbar-brand pt-0 pb-0" href="../index.html">
@@ -165,13 +165,13 @@
 					<a href="https://github.com/" target="_blank">
 						<img class="text-center hvr-bounce-in logoimgSponsors img-responsive"
 							src="logos/2020/gituhb.png" alt=""
-							style="height: 120px;padding: 10px;background-color: white;">
+							style="padding: 10px;background-color: white;">
 					</a>
 				</div>
 				<div class="col-md-6 text-center logo">
 					<a href="https://skillenza.com/" target="_blank">
 						<img class="text-center hvr-bounce-in logoimgSponsors img-responsive"
-							src="logos/2020/skillenza_logo_icon_blue.png" alt="" style="height: 120px;">
+							src="logos/2020/skillenza_logo_icon_blue.png" alt="">
 					</a>
 				</div>
 			</div>
@@ -179,14 +179,14 @@
 				<div class="col-md-6 text-center logo">
 					<a href="https://www.portis.io/" target="_blank">
 						<img class="text-center hvr-bounce-in logoimgSponsors img-responsive"
-							src="logos/2020/Portis_Logo-White@2x.png" alt="" style="height: 120px;padding: 10px;">
+							src="logos/2020/Portis_Logo-White@2x.png" alt="" style="padding: 10px;">
 					</a>
 				</div>
 				<div class="col-md-6 text-center logo">
 					<a href="https://proto.io/" target="_blank">
 						<img class="text-center hvr-bounce-in logoimgSponsors img-responsive"
 							src="logos/2020/Protoio-logo.png" alt=""
-							style="height: 120px;background-color: white;padding: 15px;">
+							style="background-color: white;padding: 15px;">
 					</a>
 				</div>
 			</div>
@@ -196,13 +196,13 @@
 					<a href="https://devfolio.co/" target="_blank">
 						<img class="text-center hvr-bounce-in logoimgSponsors img-responsive"
 							src="logos/2020/devfolio.png" alt=""
-							style="height: 120px;padding: 10px;background-color: white;">
+							style="padding: 10px;background-color: white;">
 					</a>
 				</div>
 				<div class="col-md-6 text-center logo">
 					<a href="https://matic.network/" target="_blank">
 						<img class="text-center hvr-bounce-in logoimgSponsors img-responsive" src="logos/2020/matic.png"
-							alt="" style="height: 120px;background-color: white;">
+							alt="" style="background-color: white;">
 					</a>
 				</div>
 
@@ -213,14 +213,14 @@
 					<a href="https://buythevalue.in/" target="_blank">
 						<img class="text-center hvr-bounce-in logoimgSponsors img-responsive"
 							src="logos/2020/bythevalue.jpeg" alt=""
-							style="height: 120px;padding: 10px;background-color: white;">
+							style="padding: 10px;background-color: white;">
 					</a>
 				</div>
 				<div class="col-md-6 text-center logo">
 					<a href="https://tezos.com/" target="_blank">
 						<img class="text-center hvr-bounce-in logoimgSponsors img-responsive"
 							src="logos/2020/Tezos_Logo-Colored@2x.png" alt=""
-							style="height: 120px;background-color: white;padding: 15px;">
+							style="background-color: white;padding: 15px;">
 					</a>
 				</div>
 			</div>
@@ -229,13 +229,13 @@
 				<div class="col-md-6 text-center logo">
 					<a href="https://www.youtube.com/channel/UCHytQI3z_Rx-JGVayx8PG4g" target="_blank">
 						<img class="text-center hvr-bounce-in logoimgSponsors img-responsive"
-							src="logos/2020/MHM Logo 2020 White.png" alt="" style="height: 300px;">
+							src="logos/2020/MHM Logo 2020 White.png" alt="">
 					</a>
 				</div>
 				<div class="col-md-6 text-center logo">
 					<a href="https://www.stepsetgo.com/" target="_blank">
 						<img class="text-center hvr-bounce-in logoimgSponsors img-responsive"
-							src="logos/2020/SSG Radial Logo.png" alt="" style="padding: 15px;height: 200px;">
+							src="logos/2020/SSG Radial Logo.png" alt="" style="padding: 15px;">
 					</a>
 				</div>
 			</div>
@@ -244,7 +244,7 @@
 					<a href="https://www.scaler.com/edge/?utm_source=aavishkar" target="_blank">
 						<img class="text-center hvr-bounce-in logoimgSponsors img-responsive"
 							src="logos/2020/Scaler Edge.png" alt=""
-							style="height: 120px;padding: 10px;background-color: white;">
+							style="padding: 10px;background-color: white;">
 					</a>
 				</div>
 			</div>
@@ -361,8 +361,20 @@
 		<p class="footer_text" style="margin-bottom: 0">All Rights Reserved &copy; MNNIT Allahabad, 2021</p>
 	</div>
 	<script src="../js/navbar/main.js"></script>
-	<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js'></script>
-	<script src="../js/background.js"></script>
+	<script src="../js/three.js"></script>
+	<script src="../js/bg.js"></script>
+	<script>
+		VANTA.RINGS({
+		el: "#BG",
+		mouseControls: true,
+		touchControls: true,
+		gyroControls: false,
+		minHeight: 200.00,
+		minWidth: 200.00,
+		scale: 1.00,
+		scaleMobile: 1.00
+		})
+	</script>
 
 </body>
 

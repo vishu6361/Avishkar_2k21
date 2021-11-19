@@ -37,13 +37,17 @@ main{
  	margin-left: 100px;
  	margin-bottom: 50px;
  }
+ .logo {
+   display: grid;
+   justify-items: center;
+   align-items: center;
+ }
  .logoimg{
  	height: 150px;
  	width: 200px;
  }
   .logoimgSponsors{
-  height: 100px;
-  width: 300px;
+  width: 200px;
  }
  .container{
  	text-align: center;
