@@ -25,7 +25,8 @@
 .no-csstransforms3d .book[data-book="book-2"],
 .no-js .book[data-book="book-2"],
 .book[data-book="book-2"] .front {
-    background: url(../img/2.svg);
+    background: url(../img/lostinspace.png);
+    background-size: cover;
     /*background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(211, 211, 211, 0.1) 5%, rgba(255, 255, 255, 0.15) 5%, rgba(255, 255, 255, 0.1) 9%, rgba(0, 0, 0, 0.01) 100%), url(../img/2.svg), #f6a7a5;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, rgba(211, 211, 211, 0.1) 5%, rgba(255, 255, 255, 0.15) 5%, rgba(255, 255, 255, 0.1) 9%, rgba(0, 0, 0, 0.01) 100%), url(../img/2.svg), #f6a7a5;
     background-repeat: no-repeat;*/
@@ -34,7 +35,8 @@
 /*.book[data-book="book-2"] .inner { border-color: #f6a7a5 }*/
 
 .book[data-book="book-2"] .cover::before {
-    background: url(../img/2.svg);
+    background: url(../img/lostinspace.png);
+    background-size: cover;
     /*background: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.01) 1%, rgba(0, 0, 0, 0.1) 50%, transparent 100%), url(../img/insomnia.svg), #f6a7a5;
     background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.01) 1%, rgba(0, 0, 0, 0.1) 50%, transparent 100%), url(../img/insomnia.svg), #f6a7a5;
     background-repeat: no-repeat;*/
@@ -43,7 +45,7 @@
 .no-csstransforms3d .book[data-book="book-3"],
 .no-js .book[data-book="book-3"],
 .book[data-book="book-3"] .front {
-    background: url(../img/3.svg);
+    background: url(../img/astroquiz.svg);
    /* background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(211, 211, 211, 0.1) 5%, rgba(255, 255, 255, 0.15) 5%, rgba(255, 255, 255, 0.1) 9%, rgba(0, 0, 0, 0.01) 100%), url(../img/3.svg), #ebc989;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, rgba(211, 211, 211, 0.1) 5%, rgba(255, 255, 255, 0.15) 5%, rgba(255, 255, 255, 0.1) 9%, rgba(0, 0, 0, 0.01) 100%), url(../img/3.svg), #ebc989;
     background-repeat: no-repeat;*/
@@ -52,7 +54,7 @@
 /*.book[data-book="book-3"] .inner { border-color: #ebc989 }*/
 
 .book[data-book="book-3"] .cover::before {
-    background: url(../img/3.svg);
+    background: url(../img/astroquiz.svg);
     /*background: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.01) 1%, rgba(0, 0, 0, 0.1) 50%, transparent 100%), url(../img/impromptu.svg), #ebc989;
     background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.01) 1%, rgba(0, 0, 0, 0.1) 50%, transparent 100%), url(../img/droidrush.svg), #ebc989;
     background-repeat: no-repeat;*/
