@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+nav {
+  z-index: 9999;
+}
+
 .navbar {
   font-size: 12px;
 }
@@ -13,6 +17,11 @@
     font-size: 14px;
     font-family: "Orbitron", sans-serif;
     letter-spacing: 0.15ch;
+    -webkit-transition: 0.1s ease-in-out, letter-spacing 0.3s ease;
+    transition: 0.1s ease-in-out, letter-spacing 0.3s ease;
+  }
+  .style li a:hover {
+    letter-spacing: 0.4ch;
   }
   .nav-link {
     margin-bottom: 14px;
@@ -199,5 +208,22 @@
   .navbar-items-logo {
     padding: 0.3rem;
   }
+}
+
+#login a.dropdown-item {
+  color: white;
+  font-size: 14px;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 0.15ch;
+  font-weight: 800;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+#login a.dropdown-item:hover {
+  color: black !important;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: white;
 }
 /*# sourceMappingURL=navbar.css.map */

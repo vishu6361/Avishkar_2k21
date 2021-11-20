@@ -17,9 +17,15 @@
 
 h1 {
   font-family: Avishkar;
+  letter-spacing: 0.18em;
 }
 
 p {
   font-family: 'Orbitron', sans-serif;;
   font-size: 24px;
+  letter-spacing: 0.15em;
+}
+
+#logo {
+    user-select: none;
 }

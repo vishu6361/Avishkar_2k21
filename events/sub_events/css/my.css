@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Bubbler+One');
 @import url('https://fonts.googleapis.com/css?family=Dosis');
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
-
+@import url('dc.css');
 
 html,
 body{
@@ -898,7 +898,7 @@ header.header h1{
 
 
 #btns * {
- transition: all .3s ease-in-out;
+ transition: all .2s ease-in-out;
 }
 
 #btns {
@@ -910,7 +910,7 @@ header.header h1{
   flex-flow: row wrap;
   padding: 5%
 }
-
+/* 
 .btn {
   padding: 10px 0;
   width: 26%;
@@ -922,7 +922,7 @@ header.header h1{
 .btn .btn-top h4:before,
 .btn-inner,
 .btn-inner:hover .btn-bottom {
-  background: rgba(40,53,147,0.8);
+  background: rgba(0, 0, 0, 0.561);
 }
 
 .btn .btn-inner {
@@ -968,19 +968,6 @@ header.header h1{
   font-size: 1.3em;
 }
 
-.btn .btn-top h4:before {
-  /*content: "";
-  margin: -2px auto;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -18px;
-  display: block;
-  height: 2px;
-  width: 40px;
-  background-color: #333;*/
-}
-
 
 .btn a {
   color: #fff;
@@ -988,8 +975,6 @@ header.header h1{
   text-transform: uppercase;
   font-size: 1em;
 }
-
-/* FA Icon */
 
 .btn .fa {
   font-size: 3.5em;
@@ -1014,7 +999,6 @@ header.header h1{
   color: #fff;
 }
 
-/* Hover Styles */
 
 .btn .btn-inner:hover .btn-bottom {
   bottom: 0;
@@ -1024,7 +1008,7 @@ header.header h1{
 .btn .btn-inner:hover .btn-top {
   top: -200px;
   transition: all .3s ease-in-out;
-}
+} */
 
 /* Media Queries */
 

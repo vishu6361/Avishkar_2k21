@@ -1,0 +1,113 @@
+.dc-card-event-page {
+  padding: 10px 0;
+  width: 31%;
+  font-size: 1em;
+  font-family: "dosis", serif;
+  text-align: center;
+}
+
+.dc-card-event-page .btn-inner {
+  position: relative;
+  min-height: 250px;
+  border: 2px solid #fff;
+  overflow: hidden;
+  letter-spacing: 0.15ch;
+}
+
+.dc-card-event-page .btn-inner .btn-top {
+  width: 100%;
+  padding: 0px 0px;
+  position: absolute;
+  top: 0px;
+  height: 75%;
+  background-color: #fff;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.dc-card-event-page .btn-inner .btn-top h4 {
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: relative;
+  font-size: 1.6em;
+  font-family: "dosis", serif;
+  font-weight: 900;
+  color: #333;
+}
+
+.dc-card-event-page .btn-inner .btn-bottom {
+  width: 100%;
+  position: absolute;
+  bottom: -310px;
+  height: 75%;
+  padding: 20px 15px 20px 15px;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.dc-card-event-page .btn-inner .btn-bottom h4 {
+  display: none;
+  font-family: oswald;
+  font-weight: 900;
+  color: white;
+  font-size: 1.3em;
+}
+
+.dc-card-event-page .btn-inner .btn-bottom p {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: #fff;
+}
+
+.dc-card-event-page .btn-inner .btn-bottom p br {
+  display: block;
+  margin: 0.5em 0;
+}
+
+.dc-card-event-page .btn-inner .btn-bottom .fa {
+  display: none;
+}
+
+.dc-card-event-page .btn-inner:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.dc-card-event-page .btn-inner:hover .btn-top {
+  height: 25%;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.dc-card-event-page .btn-inner:hover .btn-bottom {
+  bottom: 0;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+@media screen and (max-width: 600px) and (min-width: 200px) {
+  .dc-card-event-page .btn-inner {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .dc-card-event-page .btn-inner .btn-top {
+    height: 25%;
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+  .dc-card-event-page .btn-inner .btn-bottom {
+    bottom: 0;
+    -webkit-transition: 0.1s ease-in-out;
+    transition: 0.1s ease-in-out;
+  }
+}
+/*# sourceMappingURL=dc.css.map */
