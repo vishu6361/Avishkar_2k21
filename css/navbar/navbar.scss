@@ -6,7 +6,7 @@ $text-color-hover: black;
 $thickness: 8%;
 
 nav {
-    z-index: 9999;
+    // z-index: 1;
 }
 
 .navbar {
@@ -21,6 +21,10 @@ nav {
 }
 
 @media only screen and (max-width: 768px) {
+    nav {
+        z-index: 5;
+    }
+
     .style li a {
         color: $text-color !important;
         padding: 0.8em;
@@ -91,7 +95,7 @@ nav {
         &::after {
             @extend %pseudo-block;
             transform: scaleX(0);
-            z-index: 99;
+            // z-index: 99;
             inset: ((100% - $thickness)) 0 0 0;
         }
 
@@ -206,7 +210,7 @@ nav {
         transition: 0.1s ease-in-out;
 
         &:hover {
-            color: $text-color-hover!important;
+            color: $text-color-hover !important;
             transform: scale(1.1);
             background-color: $text-color;
         }

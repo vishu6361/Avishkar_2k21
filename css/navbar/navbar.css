@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
-nav {
-  /*z-index: 9999;*/
-}
-
 .navbar {
   font-size: 12px;
 }
 
 @media only screen and (max-width: 768px) {
+  nav {
+    z-index: 5;
+  }
   .style li a {
     color: white !important;
     padding: 0.8em;
@@ -67,7 +66,6 @@ nav {
   .nav-item a.font-weight-bold::after {
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
-    /*z-index: 99;*/
     inset: 92% 0 0 0;
   }
   .nav-item a.font-weight-bold:hover::after {

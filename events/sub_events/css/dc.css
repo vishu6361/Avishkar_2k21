@@ -110,4 +110,76 @@
     transition: 0.1s ease-in-out;
   }
 }
+
+.dc-red .btn-inner {
+  border: 2px solid rgba(255, 124, 124, 0.95);
+}
+
+.dc-red .btn-inner .btn-top {
+  background-color: rgba(255, 124, 124, 0.95);
+}
+
+.dc-red .btn-inner:hover .btn-top {
+  background-color: #ff7c7c;
+}
+
+.dc-blue .btn-inner {
+  border: 2px solid rgba(124, 235, 255, 0.95);
+}
+
+.dc-blue .btn-inner .btn-top {
+  background-color: rgba(124, 235, 255, 0.95);
+}
+
+.dc-blue .btn-inner:hover .btn-top {
+  background-color: #7cebff;
+}
+
+.dc-green .btn-inner {
+  border: 2px solid rgba(161, 255, 124, 0.95);
+}
+
+.dc-green .btn-inner .btn-top {
+  background-color: rgba(161, 255, 124, 0.95);
+}
+
+.dc-green .btn-inner:hover .btn-top {
+  background-color: #a1ff7c;
+}
+
+.dc-purple .btn-inner {
+  border: 2px solid rgba(229, 124, 255, 0.95);
+}
+
+.dc-purple .btn-inner .btn-top {
+  background-color: rgba(229, 124, 255, 0.95);
+}
+
+.dc-purple .btn-inner:hover .btn-top {
+  background-color: #e57cff;
+}
+
+.dc-yellow .btn-inner {
+  border: 2px solid rgba(255, 253, 124, 0.95);
+}
+
+.dc-yellow .btn-inner .btn-top {
+  background-color: rgba(255, 253, 124, 0.95);
+}
+
+.dc-yellow .btn-inner:hover .btn-top {
+  background-color: #fffd7c;
+}
+
+.dc-orange .btn-inner {
+  border: 2px solid rgba(255, 194, 124, 0.95);
+}
+
+.dc-orange .btn-inner .btn-top {
+  background-color: rgba(255, 194, 124, 0.95);
+}
+
+.dc-orange .btn-inner:hover .btn-top {
+  background-color: #ffc27c;
+}
 /*# sourceMappingURL=dc.css.map */
