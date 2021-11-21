@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 nav {
-  z-index: 9999;
+  /*z-index: 9999;*/
 }
 
 .navbar {
@@ -67,7 +67,7 @@ nav {
   .nav-item a.font-weight-bold::after {
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
-    z-index: 99;
+    /*z-index: 99;*/
     inset: 92% 0 0 0;
   }
   .nav-item a.font-weight-bold:hover::after {
