@@ -62,7 +62,7 @@ class TextScramble {
 // ——————————————————————————————————————————————————
 
 const phrases = [
-    'Avishkar 2020'];
+    'Avishkar 2021'];
 
 
 const el = document.querySelector('.head_text');

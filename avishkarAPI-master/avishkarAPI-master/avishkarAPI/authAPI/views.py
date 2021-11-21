@@ -74,8 +74,8 @@ class RegisterUser(APIView):
         token = Token.objects.get_or_create(user=u)
         context["token"] = token[0].key
 
-        info_msg = "You are successfully registered for Avishkar 2020. Your username is <span style='color: green; font-weight:bold;'>{}</span> and password is <span style='color: red; font-weight:bold;'>{}</span>".format(u.username, password)
-        send_info_mail(u, "Avishkar 2020 Registration", info_msg)
+        info_msg = "You are successfully registered for Avishkar 2021. Your username is <span style='color: green; font-weight:bold;'>{}</span> and password is <span style='color: red; font-weight:bold;'>{}</span>".format(u.username, password)
+        send_info_mail(u, "Avishkar 2021 Registration", info_msg)
 
         return Response(context)
 
