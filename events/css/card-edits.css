@@ -1,0 +1,30 @@
+/**
+* This is an edit file made to add enhancements to already present style.css
+* There will only be minor changes here.
+*! To disable all changes from this file, you need only remove this file's import statement
+*! from style.css
+*/
+.card .card-body,
+.card1 .card-body {
+  letter-spacing: 0.1ch;
+}
+
+.card .card-button,
+.card1 .card-button {
+  font-weight: bold;
+  letter-spacing: 0.25ch;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 0;
+  border-color: rgba(255, 255, 255, 0.25);
+  -webkit-transition: 0.1s ease;
+  transition: 0.1s ease;
+}
+
+@media screen and (max-width: 600px) {
+  .card,
+  .card1 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+}
+/*# sourceMappingURL=card-edits.css.map */
