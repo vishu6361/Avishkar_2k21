@@ -1,7 +1,13 @@
 $top-height: 75%;
 $bottom-height: (100% - $top-height);
 $transition: 0.1s ease-in-out;
-
+$red: rgb(255, 124, 124);
+$blue: rgb(124, 235, 255);
+$green: rgb(161, 255, 124);
+$purple: rgb(229, 124, 255);
+$yellow: rgb(255, 253, 124);
+$orange: rgb(255, 194, 124);
+$opacity: 0.95;
 .dc-card-event-page {
     padding: 10px 0;
     width: 31%;
@@ -95,6 +101,90 @@ $transition: 0.1s ease-in-out;
             .btn-bottom {
                 bottom: 0;
                 transition: $transition;
+            }
+        }
+    }
+}
+
+.dc-red {
+    .btn-inner {
+        border: 2px solid rgba($red, $opacity);
+        .btn-top {
+            background-color: rgba($red, $opacity);
+        }
+        &:hover {
+            .btn-top {
+                background-color: rgba($red, 1);
+            }
+        }
+    }
+}
+
+.dc-blue {
+    .btn-inner {
+        border: 2px solid rgba($blue, $opacity);
+        .btn-top {
+            background-color: rgba($blue, $opacity);
+        }
+        &:hover {
+            .btn-top {
+                background-color: rgba($blue, 1);
+            }
+        }
+    }
+}
+
+.dc-green {
+    .btn-inner {
+        border: 2px solid rgba($green, $opacity);
+        .btn-top {
+            background-color: rgba($green, $opacity);
+        }
+        &:hover {
+            .btn-top {
+                background-color: rgba($green, 1);
+            }
+        }
+    }
+}
+
+.dc-purple {
+    .btn-inner {
+        border: 2px solid rgba($purple, $opacity);
+        .btn-top {
+            background-color: rgba($purple, $opacity);
+        }
+        &:hover {
+            .btn-top {
+                background-color: rgba($purple, 1);
+            }
+        }
+    }
+}
+
+.dc-yellow {
+    .btn-inner {
+        border: 2px solid rgba($yellow, $opacity);
+        .btn-top {
+            background-color: rgba($yellow, $opacity);
+        }
+        &:hover {
+            .btn-top {
+                background-color: rgba($yellow, 1);
+            }
+        }
+    }
+}
+
+.dc-orange {
+    .btn-inner {
+        border: 2px solid rgba($orange, $opacity);
+        .btn-top {
+            background-color: rgba($orange, $opacity);
+        }
+        &:hover {
+            .btn-top {
+                background-color: rgba($orange, 1);
             }
         }
     }
