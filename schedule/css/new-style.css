@@ -1,0 +1,112 @@
+ul.dates-list li.dates button div::after, ul.dates-list li.dates button div::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+ul.dates-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+}
+
+@media screen and (max-width: 576px) {
+  ul.dates-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+ul.dates-list li.dates {
+  list-style: none;
+}
+
+ul.dates-list li.dates button {
+  background: none;
+  outline: none;
+  border: none;
+}
+
+ul.dates-list li.dates button div {
+  background-color: rgba(0, 0, 0, 0.37);
+  font-family: "Orbitron", sans-serif;
+  position: relative;
+  color: white;
+  padding: 1em;
+  margin: 0.45em;
+  font-weight: bold;
+  letter-spacing: 0.15ch;
+  line-height: 1;
+  border: 1px solid white;
+  font-size: 14px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+@media screen and (max-width: 576px) {
+  ul.dates-list li.dates button div {
+    margin: 0.25em;
+    width: 50vw;
+  }
+}
+
+ul.dates-list li.dates button div:hover {
+  background-color: transparent;
+  color: black;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+ul.dates-list li.dates button div::after {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  inset: 92% 0 0 0;
+}
+
+ul.dates-list li.dates button div:hover::after {
+  background: white;
+}
+
+ul.dates-list li.dates button div::before {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  z-index: -1;
+  background: white;
+  inset: 0 0 0 0;
+}
+
+ul.dates-list li.dates button div:hover::before {
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  background: white;
+  -webkit-transform: scaleY(1.01);
+          transform: scaleY(1.01);
+}
+
+.date-navigation, .accordion {
+  display: block;
+}
+
+.schedule-is-not-visible {
+  display: none;
+}
+/*# sourceMappingURL=new-style.css.map */

@@ -1,0 +1,97 @@
+// $text-color: #00e3ef;
+$text-color: white;
+$text-color-hover: black;
+$thickness: 8%;
+
+$switch-screen-width: 576px;
+
+%pseudo-block {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+ul.dates-list {
+    // margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+
+    @media screen and (max-width: $switch-screen-width) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li.dates {
+        list-style: none;
+        button {
+            background: none;
+            outline: none;
+            border: none;
+            div {
+                background-color: rgba(0, 0, 0, 0.37);
+                font-family: "Orbitron", sans-serif;
+                position: relative;
+                color: $text-color;
+                padding: 1em;
+                margin: 0.45em;
+                font-weight: bold;
+                letter-spacing: 0.15ch;
+                line-height: 1;
+                border: 1px solid $text-color;
+                font-size: 14px;
+                transition: 0.3s ease;
+
+                @media screen and (max-width: $switch-screen-width) {
+                    margin: 0.25em;
+                    width: 50vw;
+                }
+
+                // font-family: "Orbitron", sans-serif;
+                &:hover {
+                    background-color: transparent;
+                    color: $text-color-hover;
+                    transform: scale(1.1);
+                }
+                &::after {
+                    @extend %pseudo-block;
+                    transform: scaleX(0);
+                    inset: ((100% - $thickness)) 0 0 0;
+                }
+
+                &:hover::after {
+                    background: white;
+                }
+                &::before {
+                    @extend %pseudo-block;
+                    transform: scaleY(0);
+                    transform-origin: bottom right;
+                    transition: transform 0.3s ease;
+                    z-index: -1;
+                    background: $text-color;
+                    inset: 0 0 0 0;
+                }
+
+                &:hover::before {
+                    transform-origin: top left;
+                    background: $text-color;
+                    transform: scaleY(1.01);
+                }
+            }
+        }
+    }
+}
+
+
+// do not change the sequence of these classes
+.date-navigation, .accordion {
+    display: block;
+}
+// do not change the sequence of these classes
+.schedule-is-not-visible {
+    display: none;
+}

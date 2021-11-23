@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
 .navbar {
   font-size: 12px;
 }
@@ -52,11 +53,11 @@
     letter-spacing: 0.15ch;
     margin: 0.45em 0.6em;
     line-height: 1;
-    border-bottom: none;
     border: 1px solid white;
     font-size: 14px;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
+    text-shadow: none;
   }
   .nav-item a.font-weight-bold:hover {
     color: black !important;
