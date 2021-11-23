@@ -1,0 +1,40 @@
+/**
+* This is an edit file made to add enhancements to already present style.css
+* There will only be minor changes here.
+*! To disable all changes from this file, you need only remove this file's import statement
+*! from style.css
+*/
+
+$button-color: white;
+$button-border-opacity: 0.25;
+$button-background-opacity: 0.05;
+
+.card,
+.card1 {
+    // .card-label {
+    // }
+    .card-body {
+        letter-spacing: 0.1ch;
+    }
+    .card-button {
+        // text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 0.25ch;
+        background-color: rgba($button-color, $button-background-opacity);
+        border-radius: 0;
+        border-color: rgba($button-color, $button-border-opacity);
+        transition: 0.1s ease;
+    }
+    &:hover {
+        .card-button {
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card,
+    .card1 {
+        margin-top: 1rem!important;
+        margin-bottom: 1rem!important;
+    }
+}
