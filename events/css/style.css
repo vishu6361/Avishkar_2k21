@@ -474,7 +474,7 @@ body {
     bottom: 0;
     display: grid;
     overflow: scroll;
-    height: 500px;
+    height: 80vh;
     padding: 0px;
     justify-content: center;
     position: fixed;
@@ -482,10 +482,11 @@ body {
     right: 0;
   }
   .card {
-    height: 200px;
+    height: 35vh;
     margin: 0 -25px;
     position: relative;
-    width: 300px;
+    width: 90vw;
+    max-width: 300px;
     background-color: transparent;
     display: grid;
     cursor: pointer;
