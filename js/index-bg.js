@@ -11,6 +11,7 @@ noise = new SimplexNoise(),
 cameraSpeed = 0,
 blobScale = 3;
 
+let icosahedronsize = 50;
 
 init();
 animate();
@@ -57,7 +58,12 @@ function init() {
 
     /*  Nucleus  */   
     texturenucleus.anisotropy = 16;
-    let icosahedronGeometry = new THREE.IcosahedronGeometry(50, 10);
+    // making icohedron a bit small for mobile screens
+    // comment out the if statement if changes don't look good
+    if (document.documentElement.clientWidth < 600) {
+        icosahedronsize = 40;
+    }
+    let icosahedronGeometry = new THREE.IcosahedronGeometry(icosahedronsize, 10);
     let lambertMaterial = new THREE.MeshPhongMaterial({ map: texturenucleus });
     nucleus = new THREE.Mesh(icosahedronGeometry, lambertMaterial);
     scene.add(nucleus);
