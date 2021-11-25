@@ -49,11 +49,17 @@ function setInfoAlert(details) {
 
     var str1 = 'not paid.';
     var str2 = 'not locked';
+    var fl=0;
     if (details.confirmed)
         str2 = 'locked';
-    if (details.feesPaid)
+    if (details.feesPaid) {
         str1 = 'paid';
-
+        fl=1;
+    }
+    if(fl==0)
+    {
+        document.getElementById('feeButtonInfo').style.visibility='visible';
+    }
     document.getElementById('alertProfile').style.display = "block";
     document.getElementById('infoProfile').innerHTML = 'Your fee is <strong>' + str1 + '</strong>.' +
         ' Your profile is <strong>' + str2 + '</strong>.' + ' Fill "NA" in fields which is not applicable.';
