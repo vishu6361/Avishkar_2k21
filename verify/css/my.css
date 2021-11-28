@@ -88,3 +88,46 @@
   color: white;
 }
 
+#verify-heading {
+    font-size: 32px;
+    text-shadow: 3px 0px rgba(0, 0, 0, 0.459);
+}
+
+#verify {
+    margin: 1em;
+    font-size: 20px;
+    padding:0.5em 1em;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.678);
+    border-color: white;
+    border-width: 2px;
+    color:white;
+    font-weight: bold;
+    text-shadow: black;
+    transition: 0.2s ease;
+}
+
+#verify:hover {
+    transform: scale(1.2);
+}
+
+#verify:focus {
+    background-color: white;
+    color: black;
+    outline: none;
+    border: 2px block;
+}
+
+#verify-status {
+    padding: 1em;
+    font-size: 20px;
+    background-color: #0000007a;
+    transition: 0.3s ease;
+    /* opacity: 0; */
+}
+
+#verify-status > a,
+#verify-status > a:focus,
+#verify-status > a:hover {
+    color: rgb(11, 186, 255);
+}

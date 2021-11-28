@@ -153,13 +153,16 @@
 
     <main class="cd-main-content">
         <div class="container">
-        <div class="row justify-content-center">
-         <h1 style="color: white">Activate your account</h1>
+            <div class="row justify-content-center">
+                <h1 style="color: white" id="verify-heading">Activate your account</h1>
             </div>
             <div class="row justify-content-center">
-             <button class="btn" id="verify">Verify</button>
+                <button class="btn" id="verify">Verify</button>
             </div>
+            <div class="row justify-content-center">
+                <p id="verify-status" style="color: white" align="center"></p>
             </div>
+        </div>
     </main>
     <div class="footer d-flex align-items-center justify-content-center">
         <p class="footer_text">All Rights Reserved &copy; MNNIT Allahabad, 2021</p>
@@ -167,7 +170,16 @@
 	<script src="../js/three.js"></script>
 	<script src="../js/bg.js"></script>
     <script type="text/javascript">
+        // add this link if successfullu registered
+        var link = document.createElement("a");
+        link.href = `../profile/`;
+        link.innerHTML = "<br>Go to Profile";
+
         $(document).ready(function (event) {
+            // $("#verify-status").append(link);
+            $("#verify-status").css("display", "none");
+            $("#verify-status").css("opacity", 0);
+            
         $(document).on('click', '#verify', function (event) {
              var url_string = window.location.href
              var url = new URL(url_string);
@@ -185,7 +197,29 @@
                     'csrfmiddlewaretoken': '{{csrf_token}}'
                 },
                 success: function (data) {
-                    console.log(data['message'])
+                    console.log(data['message']);
+                    $("#verify").css("display", "none");
+                    $("#verify-status").css("display", "block");
+                    $("#verify-status").css("opacity", 1);
+
+                    if(data["message"] == `Activation link is invalid!`) {
+                        $("#verify-status").prepend(data['message'] + "<br>");
+                        $("#verify-status").append("Either your email is already verified <br>");
+                        $("#verify-status").append("OR <br>");
+                        $("#verify-status").append("The activation link expired<br>");
+                        $("#verify-status").append("Contant us at <a href='mailto:avishkar@mnnit.ac.in'>avishkar@mnnit.ac.in</a> if the issue persists<br>");
+                    } else {
+                        $("#verify-status").prepend(data['message']);
+                        $("#verify-status").append(link);
+                    } 
+                },
+                
+                error: function (data) {
+                    console.log(data['message']);
+                    $("#verify").css("display", "none");
+                    $("#verify-status").css("display", "block");
+                    $("#verify-status").css("opacity", 1);
+                    $("#verify-status").prepend(data['message']);
                 }
             })
         })

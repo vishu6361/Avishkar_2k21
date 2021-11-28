@@ -16,6 +16,16 @@
     margin-top: 40px;
     display: none;
     text-align: center;
+    color: white;
+}
+
+.prompt > h3 {
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.438);
+}
+
+.prompt > h3 > a {
+    color: rgb(0, 132, 255);
 }
 
 .profileSection {
