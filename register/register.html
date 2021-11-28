@@ -251,6 +251,15 @@
             <h4 class="modal-title" id="instructionModalLabel">Instructions to participate in Techfest Avishkar:</h4>
           </div>
           <div class="modal-body" id="instructions-for-registration">
+            <div id="instructions-for-registration-for-mnnit">
+                <ol>
+                    Regarding the <strong>Email verification of MNNIT students</strong>
+                    <li> You must go to your registered email addresses and click the verification link</li>
+                    <li> In case you face problems logging into your college G-suite ID for email verification,
+                        use any other email address and contact the Festival Secretaries for your registraction fee. </li>
+                </ol>
+                After verification is completed<br>
+            </div>
             <ol>
               <li>Go to your profile section.</li>
               <li>Complete all the details (about and contact). and keep saving your changes in <b>each section</b>.</li>
@@ -281,7 +290,7 @@
           </div>
             <div class="modal-body">
                 <p>Congratulations for registering for Avishkar 2021.<br>
-                    First, you need to <strong>verify your email address</strong> by clicking the link sent to you on your registered email address<br>
+                    First, you need to <strong>verify your email address</strong> by clicking the link sent to you on your registered email address<br><br>
 
                     To continue your registration for the events, you are requested to drop a mail to avishkar@mnnit.ac.in
                     requesting the payment link for participation. As mentioned in the FAQs, the registration fee for the events are
@@ -341,7 +350,7 @@
 
         $(document).ready(function () {
           $('#proceedBtn').click(function(){
-              window.location = "../profile/";
+              window.location = "../register/login.html";
           })
           $('#nonMnnitModal').click(function(){
             $('#nonMnnitModal').modal('hide');
@@ -390,18 +399,8 @@
 
             
             // Displaying additional information for MNNIT students
-            if(domain == "mnnit.ac.in") {
-                var instruction = `
-                    <ol>
-                        Regarding the <strong>Email verification of MNNIT students</strong>
-                        <li> You must go to your registered email addresses and click the verification link</li>
-                        <li> In case you face problems logging into your college G-suite ID for email verification,
-                        use any other email address and contact the Festival Secretaries for your registraction fee. </li>
-                    </ol>
-
-                    After verification is completed<br>
-                `;
-                $("#instructions-for-registration").prepend(instruction)
+            if(domain != "mnnit.ac.in") {
+                $("#instructions-for-registration-for-mnnit").css("display","none");
             }
             
             formdata.append("username", userName);
