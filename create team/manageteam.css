@@ -44,6 +44,18 @@ h1 {
     margin-top: 100px;
     display: none;
 }
+
+#prompt-login > h3 {
+    font-weight: bold;
+    padding: 1em;
+    letter-spacing: 0.1ch;
+    background-color: rgba(0, 0, 0, 0.514);
+}
+
+#prompt-login > h3 > a{
+    color: rgb(2, 196, 255);
+}
+
 .card {
     width: 100%;
 }
