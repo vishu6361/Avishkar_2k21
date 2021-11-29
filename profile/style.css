@@ -3,11 +3,11 @@
 .bodyStyle {
     background-image: url('../img/4.gif');
     background-repeat: no-repeat;
-    background-attachment:fixed;
+    background-attachment: fixed;
     background-size: cover;
 }
 
-.bodyStyle label,.listTab, h4, .btn-lg{
+.bodyStyle label, .listTab, h4, .btn-lg {
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 1px;
 }
@@ -19,13 +19,37 @@
     color: white;
 }
 
-.prompt > h3 {
+.prompt>h3 {
+    font-weight: bold;
+    padding: 1em;
+    letter-spacing: 0.1ch;
+    background-color: rgba(0, 0, 0, 0.438);
+}
+
+.prompt>h3>a {
+    color: rgb(0, 132, 255);
+}
+
+#regarding-email-verification {
+    margin-top: 1em;
     padding: 1em;
     background-color: rgba(0, 0, 0, 0.438);
 }
 
-.prompt > h3 > a {
-    color: rgb(0, 132, 255);
+#regarding-email-verification>h3 {
+    letter-spacing: 0.20ch;
+    font-weight: bold;
+    /* background-color: rgba(0, 0, 0, 0.438); */
+}
+
+#regarding-email-verification>p {
+    font-size: 1.1em;
+    /* padding: 1em; */
+    margin: 1em 1em;
+    letter-spacing: 0.1ch;
+    font-weight: 600;
+    text-align: justify;
+    /* background-color: rgba(0, 0, 0, 0.438); */
 }
 
 .profileSection {
@@ -41,11 +65,11 @@
     max-height: 300px;
 }
 
-.footer{
+.footer {
     width: 100%;
     height: 150px;
     background-color: rgba(0, 0, 0, 0.49);
-    
+
     margin-top: 100px;
 }
 
@@ -59,20 +83,20 @@
 }
 
 .border {
-    border:0px !important;
+    border: 0px !important;
 }
 
-.btn-color{
+.btn-color {
     background-color: #00e3ef;
-    color:white;
+    color: white;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-    background-color:#00e3ef;
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #00e3ef;
 }
 
-.nav-link{
-    color:#00e3ef;
+.nav-link {
+    color: #00e3ef;
 }
 
 #BG {
