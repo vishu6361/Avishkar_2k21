@@ -8,6 +8,7 @@ function init() {
     var token = localStorage.getItem('authtoken');
     if (token == null) {
         document.getElementById('prompt-login').style.display = "block";
+        document.getElementById('instructionBtn').style.visibility = "hidden";
     }
     else {
         tokenId = 'Token ' + token.toString();
@@ -34,6 +35,7 @@ function getUserDetails(tokenId) {
         }
         else {
             document.getElementById('prompt-login').style.display = "block";
+            document.getElementById('instructionBtn').style.visibility = "hidden";
             // swal({
             //     title: "Error!",
             //     text: "" + details.errors,

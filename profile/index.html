@@ -150,10 +150,14 @@
     </button>
 </div>
 <!-- Button trigger modal -->
-<div class="container">
+<div class="container" style="display: grid; grid-template-columns: repeat(6, 1fr); grid-column-gap: 2%;">
     <button type="button" id="feeButtonInfo" style="visibility: hidden" class="btn nav-link active btn-primary"
             data-toggle="modal" data-target="#exampleModal1">
         Steps to pay fees
+    </button>
+    <button type="button" class="btn nav-link active btn-primary" id="instructionBtn" 
+            data-toggle="modal" data-target="#instructionModal">
+        Instructions
     </button>
 </div>
 
@@ -188,6 +192,7 @@
         </div>
     </div>
 </div>
+
 <div class="container profileSection mt-3 mb-5" id="profile">
     <div class="row d-flex justify-content-between">
         <div class="col-md-6 col-lg-4 col-sm-8 col-12 mt-3" style="color: white;border: 0;">
@@ -290,13 +295,97 @@
             </div>
         </div>
         <div class="col-md-7 col-lg-6 col-sm-8 mt-3" style="color: white; padding-top: 10px;">
-            <div id="eventList" class="table-responsive" style="overflow: auto;">
+            <div id="eventList" class="table-responsive" style="overflow: auto; text-align: center;">
                 <h4 style="text-align: center;color: white;"><strong>Registered Events</strong></h4>
                 </table>
             </div>
         </div>
     </div>
 </div>
+
+
+<!--Instruction Modal -->
+<div class="modal fade" id="instructionModal" tabindex="-1" role="dialog" aria-labelledby="instructionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style=" width:100%;max-width:1000px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="instructionModalLabel">Instructions to participate in Techfest Avishkar:</h4>
+        </div>
+        <div class="modal-body" id="instructions-for-registration">
+          <div id="instructions-for-registration-for-mnnit">
+              <ol>
+                  Regarding the <strong>Email verification of MNNIT students</strong>
+                  <li> You must go to your registered email addresses and click the verification link</li>
+                  <li> In case you face problems logging into your college G-suite ID for email verification,
+                      use any other email address and contact the Festival Secretaries for your registration fee. </li>
+              </ol>
+              After verification is completed<br>
+          </div>
+          <ol>
+            <li>Go to your profile section.</li>
+            <li>Complete all the details (about and contact) and keep saving your changes in <b>each section</b>.</li>
+            <li>After completing all the sections <b>lock your profile</b>.</li>
+          <ol>
+          <p>
+            <br>
+            Above are the one time steps.
+            <br><br>
+            Now once all your team members have registered themselves and locked their profile, the team leader can create a new team under the Manage teams section and add other members using their usernames.
+            <br><br>
+            You can create as many teams as you want for different events. Even if you wish to register as a lone wolf then also you need to 
+            <b>create a team with no additional members</b>. For events having <b>individual participation</b> also you need <b>a team with you as the only member</b>.
+          </p>
+        </div>
+        <div class="modal-footer justify-content-between">
+            <button type="button" class="btn btn-danger" id="instructionClose">Close</button>
+          <button type="button" class="btn btn-primary" id="proceedBtn" data-toggle="modal" data-target="#nonMnnitModal">Proceed</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Non-mnnit modal-->
+  <div class="modal fade" id="nonMnnitModal" tabindex="-1" role="dialog" aria-labelledby="nonMnnitModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style=" width:100%;max-width:1000px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="nonMnnitModalLabel">Instructions to participate in Techfest Avishkar:</h4>
+        </div>
+          <div class="modal-body">
+              <p>Congratulations for registering for Avishkar 2021.<br>
+                  First, you need to <strong>verify your email address</strong> by clicking the link sent to you on your registered email address<br><br>
+
+                  To continue your registration for the events, you are requested to drop a mail to avishkar@mnnit.ac.in
+                  requesting the payment link for participation. As mentioned in the FAQs, the registration fee for the events are
+                  as follows:-
+              </p>
+              <ol>
+                  <li>For all events of Avishkar - Rs. 250</li>
+                  <!-- <li>For Gnosiomania quizzes - Rs. 100</li> -->
+                  <li>For Gnotalks and Gnosiomania Quizzes - Rs. 100</li>
+              </ol>
+              <p>
+                  <!-- The above three categories are independent of each other and in order to register for multiple categories, you
+                  are requested to add up the amount and pay the respective added fee. -->
+                  If you want to participate in Avishkar Events only then you have to pay Rs. 250 as fees, and if you want to participate
+                  in Avishkar Events and also take part in Gnosiomania Quizzes and Gnotalks then you'll have to pay Rs. 350 as the fees.
+                  <br>
+                  As stated earlier, dropping the mail is necessary failing which you won't be able to register for the events and
+                  will be debarred in further rounds.
+                  <br>
+                  After receiving the mail, pay the fee within 72 hours and send the payment receipt in response to the payment
+                  link mail.
+                  <br>
+                  Thank you for your cooperation. Keep Innovating.
+              </p>
+          </div>
+        <div class="modal-footer justify-content-between">
+            <button type="button" class="btn btn-primary mr-auto" id="back" data-toggle="modal" data-target="#instructionModal">Back</button>
+          <button type="button" class="btn btn-danger" id="nonMnnitClose">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 <div id="BG"></div>
 
@@ -332,6 +421,22 @@
         crossorigin="anonymous"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="./script.js"></script>
+<script>
+    $(document).ready(function () {
+          $('#proceedBtn').click(function(){
+              $('#instructionModal').modal('hide');
+          })
+          $('#nonMnnitClose').click(function(){
+            $('#nonMnnitModal').modal('hide');
+          })
+          $('#instructionClose').click(function(){
+              $('#instructionModal').modal('hide');
+          })     
+          $('#back').click(function(){
+            $('#nonMnnitModal').modal('hide');
+          })  
+        })
+</script>
 
 </body>
 
