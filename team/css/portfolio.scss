@@ -133,6 +133,7 @@ $scooter: #39bbdc;
 
 .section-header {
     margin-bottom: 20px;
+    margin-top: 30px;
     text-align: center;
     font-family: "Orbitron", sans-serif;
     color: white;
@@ -140,6 +141,11 @@ $scooter: #39bbdc;
     text-transform: uppercase;
     display: block;
     width: 100%;
+
+    span {
+        padding: 0.2em;
+        box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.6);
+    }
 }
 
 .section {
