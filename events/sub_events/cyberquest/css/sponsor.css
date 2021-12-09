@@ -165,7 +165,7 @@
 }
 /*# sourceMappingURL=sponsor.css.map */
 
-.dev {
+#dev {
   width: 100%;
   position: absolute;
   left: 35%;
@@ -173,7 +173,7 @@
   max-width: 312px;
 }
 @media (max-width: 700px) {
-  .dev {
+  #dev {
     left: 0%;
   }
 }
