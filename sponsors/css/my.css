@@ -72,8 +72,8 @@ main{
        height: 50px;
     }
       .logoimgSponsors{
-    height: 100px;
-    width: 200px;
+    /* height: 100px; */
+    width: 40vw;
    }
 }
 

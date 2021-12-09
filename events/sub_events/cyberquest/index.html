@@ -421,7 +421,7 @@
                     </div>
                     <div class="bb-custom-side page-layout-1">
                         <p>Step into the world of software development, by building your own software!</p>
-                        <div class="d-flex justify-content-center" style="position:absolute; top:78%; left:35%">
+                        <!-- <div class="d-flex justify-content-center" style="position:absolute; top:78%; left:35%">
                             <button id="devfolio-apply-now">
                                 <svg class="logo" xmlns="http://www.w3.org/2000/svg" fill="#fff"
                                     viewBox="0 0 115.46 123.46" style="height:24px;width:24px;margin-right:8px">
@@ -430,7 +430,13 @@
                                     <path
                                         d="M110.93 55.87A55.43 55.43 0 0 1 60.08 111s-36.48.92-48.58-.12C5 110.29.15 104.22 0 97.52l.2-83.84C.38 7 5.26.94 11.76.41c12.11-1 48.59.12 48.59.12a55.41 55.41 0 0 1 50.58 55.34z" />
                                 </svg>Apply with Devfolio</button>
-                        </div>
+                        </div> -->
+                        <div 
+                            class="apply-button" 
+                            data-hackathon-slug="softablitz"
+                            data-button-theme="light"
+                            style="height: 44px; width: 312px"
+                        ></div>
                         <div class="d-flex justify-content-center download-list">
                             <button type="button" style="margin: 5px; display: none;" data-event-id="softablitz"
                                 class="btn btn-success download-list">Download List</button>
@@ -2327,7 +2333,7 @@
     </script>
     <script src="../../../js/navbar/main.js"></script> <!-- Resource jQuery -->
     <script src="../../js/eventRegister.js"></script>
-    <script>
+    <!-- <script>
         document.addEventListener('DOMContentLoaded', function () {
             let devfolioOptions = {
                 buttonSelector: '#devfolio-apply-now',
@@ -2348,7 +2354,8 @@
                 });
             }
         });
-    </script>
+    </script> -->
+    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
     <script src="../../js/dc.js"></script>
 
 </body>
