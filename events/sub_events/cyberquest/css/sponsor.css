@@ -164,3 +164,17 @@
   }
 }
 /*# sourceMappingURL=sponsor.css.map */
+
+.dev {
+  width: 100%;
+  position: absolute;
+  left: 35%;
+  top: 78%;
+  max-width: 312px;
+  overflow-x: scroll;
+}
+@media (max-width: 700px) {
+  .dev {
+    left: 0%;
+  }
+}
