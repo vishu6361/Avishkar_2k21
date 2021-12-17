@@ -34,7 +34,7 @@ function getUserDetails() {
 		if(childNodes)
 			childNodes.remove();
 		document.getElementById("notlogin").style.display = "block";
-		
+
 	}
 	else {
 		var myHeaders = new Headers();
@@ -53,7 +53,7 @@ function getUserDetails() {
 		};
 
 		fetch(
-			"https://api.divyansh.rocks/auth/getuserdetails1/",
+			"https://api.divyansh.rocks/auth/getuserdetails/",
 			requestOptions
 		)
 			.then((response) => response.text())
@@ -67,7 +67,7 @@ function getUserDetails() {
 				var childNodes = document.getElementById("login");
 				childNodes.remove();
 				document.getElementById("notlogin").style.display = "block";
-				
+
 			});
 	}
 
@@ -107,7 +107,7 @@ function showModal(event) {
 	$('#exampleModal').modal('show');
 	showPendingRequests();
 	teamID = event.target.id;
-	
+
 }
 
 function acceptRequest() {
@@ -172,11 +172,11 @@ function rejectRequest() {
 			console.log('error', error);			//to be removed later
 		});
 
-		
+
 }
 
 function logout(){
-	
+
 	console.log(token);
 	logoutApiCall()
 	.then(result => {
