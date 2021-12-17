@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 
 from .models import *
-from authAPI.validations import send_info_mail
+from authapi.validations import send_info_mail
 
 
 class CreateTeam(APIView):
