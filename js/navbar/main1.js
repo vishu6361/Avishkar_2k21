@@ -42,10 +42,6 @@ function getUserDetails() {
             "Authorization",
             "Token " + token
         );
-        myHeaders.append(
-            "Access-Control-Allow-Origin",
-            "*"
-        );
 
         var formdata = new FormData();
 
@@ -93,10 +89,6 @@ function getUserDetails1() {
         myHeaders.append(
             "Authorization",
             "Token " + token
-        );
-        myHeaders.append(
-            "Access-Control-Allow-Origin",
-            "*"
         );
 
         var formdata = new FormData();
