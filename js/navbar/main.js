@@ -53,7 +53,7 @@ function getUserDetails() {
 		};
 
 		fetch(
-			"https://api.divyansh.rocks/auth/getuserdetails1/",
+			"https://api.divyansh.rocks/auth/getuserdetails/",
 			requestOptions
 		)
 			.then((response) => response.text())
