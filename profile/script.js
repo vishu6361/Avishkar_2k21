@@ -22,7 +22,7 @@ function getUserDetails(tokenId) {
     //xhr.withCredentials = true;
 
     toastr.warning('Waiting for response!  .....  ', '', { timeOut: 0, extendedTimeOut: 0 });
-    xhr.open('POST', 'https://api.divyansh.rocks/auth/getuserdetails/', true);
+    xhr.open('POST', 'https://api.divyansh.rocks/auth/getuserdetails1/', true);
      //xhr.setRequestHeader("HTTP_X_REQUESTED_WITH", "XMLHttpRequest")
     xhr.setRequestHeader('authorization', tokenId);
 
