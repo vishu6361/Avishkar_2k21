@@ -34,7 +34,7 @@ function getUserDetails() {
 		if(childNodes)
 			childNodes.remove();
 		document.getElementById("notlogin").style.display = "block";
-		
+
 	}
 	else {
 		var myHeaders = new Headers();
@@ -70,7 +70,54 @@ function getUserDetails() {
 				
 			});
 	}
+}
+/**
+ * This function fetches from the new API which intends to reduces the load on the website
+ */
+function getUserDetails1() {
 
+    token = localStorage.getItem("authtoken");
+
+    if (token == null) {
+        var childNodes = document.getElementById("login");
+        if (childNodes)
+            childNodes.remove();
+        document.getElementById("notlogin").style.display = "block";
+
+    }
+    else {
+        var myHeaders = new Headers();
+        myHeaders.append(
+            "Authorization",
+            "Token " + token
+        );
+
+        var formdata = new FormData();
+
+        var requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: formdata,
+            redirect: "follow",
+        };
+        // fetching from the new api
+        fetch(
+            "https://api.divyansh.rocks/auth/getuserdetails1/",
+            requestOptions
+        )
+            .then((response) => response.text())
+            .then((result) => {
+                var userDetails = JSON.parse(result);
+                if (!userDetails["success"]) throw result;
+                console.log(userDetails);
+                initialize(userDetails);
+            })
+            .catch((error) => {
+                var childNodes = document.getElementById("login");
+                childNodes.remove();
+                document.getElementById("notlogin").style.display = "block";
+            });
+    }
 }
 
 function showPendingRequests() {
