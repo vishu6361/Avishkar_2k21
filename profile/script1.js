@@ -128,11 +128,11 @@ function setAllFields(details) {
         document.getElementById('eventList').appendChild(table);
     }
     else {
-        let hr = document.createElement("hr");
-        let span = document.createElement("span");
-        span.appendChild(document.createTextNode("You have not registered for any event yet."));
-        document.getElementById('eventList').appendChild(hr);
-        document.getElementById('eventList').appendChild(span);
+        // let hr = document.createElement("hr");
+        // let span = document.createElement("span");
+        // span.appendChild(document.createTextNode("You have not registered for any event yet."));
+        // document.getElementById('eventList').appendChild(hr);
+        // document.getElementById('eventList').appendChild(span);
     }
     return details;
 }
